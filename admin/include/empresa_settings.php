@@ -23,17 +23,17 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$pageTitlesempresa["Portuguese(Brazil)"] = array();
 	$fieldLabelsempresa["Portuguese(Brazil)"]["id"] = "Id";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["id"] = "";
-	$fieldLabelsempresa["Portuguese(Brazil)"]["titulo_por"] = "Titulo Por";
+	$fieldLabelsempresa["Portuguese(Brazil)"]["titulo_por"] = "Titulo Português";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["titulo_por"] = "";
-	$fieldLabelsempresa["Portuguese(Brazil)"]["titulo_eng"] = "Titulo Eng";
+	$fieldLabelsempresa["Portuguese(Brazil)"]["titulo_eng"] = "Titulo Inglês";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["titulo_eng"] = "";
-	$fieldLabelsempresa["Portuguese(Brazil)"]["titulo_esp"] = "Titulo Esp";
+	$fieldLabelsempresa["Portuguese(Brazil)"]["titulo_esp"] = "Titulo Espanhol";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["titulo_esp"] = "";
-	$fieldLabelsempresa["Portuguese(Brazil)"]["texto_por"] = "Texto Por";
+	$fieldLabelsempresa["Portuguese(Brazil)"]["texto_por"] = "Texto Português";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["texto_por"] = "";
-	$fieldLabelsempresa["Portuguese(Brazil)"]["texto_eng"] = "Texto Eng";
+	$fieldLabelsempresa["Portuguese(Brazil)"]["texto_eng"] = "Texto Inglês";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["texto_eng"] = "";
-	$fieldLabelsempresa["Portuguese(Brazil)"]["texto_esp"] = "Texto Esp";
+	$fieldLabelsempresa["Portuguese(Brazil)"]["texto_esp"] = "Texto Espanhol";
 	$fieldToolTipsempresa["Portuguese(Brazil)"]["texto_esp"] = "";
 	if (count($fieldToolTipsempresa["Portuguese(Brazil)"]))
 		$tdataempresa[".isUseToolTips"] = true;
@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelsempresa[""] = array();
 	$fieldToolTipsempresa[""] = array();
 	$pageTitlesempresa[""] = array();
+	$fieldLabelsempresa[""]["id"] = "Id";
+	$fieldToolTipsempresa[""]["id"] = "";
 	if (count($fieldToolTipsempresa[""]))
 		$tdataempresa[".isUseToolTips"] = true;
 }
@@ -87,17 +89,10 @@ $tdataempresa[".edit"] = true;
 
 $tdataempresa[".list"] = true;
 
-$tdataempresa[".inlineEdit"] = true;
-$tdataempresa[".inlineAdd"] = true;
-$tdataempresa[".view"] = true;
 
-$tdataempresa[".import"] = true;
 
-$tdataempresa[".exportTo"] = true;
 
-$tdataempresa[".printFriendly"] = true;
 
-$tdataempresa[".delete"] = true;
 
 $tdataempresa[".showSimpleSearchOptions"] = false;
 
@@ -244,29 +239,10 @@ $tdataempresa[".hideMobileList"] = array();
 
 
 $tdataempresa[".viewFields"] = array();
-$tdataempresa[".viewFields"][] = "id";
-$tdataempresa[".viewFields"][] = "titulo_por";
-$tdataempresa[".viewFields"][] = "titulo_eng";
-$tdataempresa[".viewFields"][] = "titulo_esp";
-$tdataempresa[".viewFields"][] = "texto_por";
-$tdataempresa[".viewFields"][] = "texto_eng";
-$tdataempresa[".viewFields"][] = "texto_esp";
 
 $tdataempresa[".addFields"] = array();
-$tdataempresa[".addFields"][] = "titulo_por";
-$tdataempresa[".addFields"][] = "titulo_eng";
-$tdataempresa[".addFields"][] = "titulo_esp";
-$tdataempresa[".addFields"][] = "texto_por";
-$tdataempresa[".addFields"][] = "texto_eng";
-$tdataempresa[".addFields"][] = "texto_esp";
 
 $tdataempresa[".inlineAddFields"] = array();
-$tdataempresa[".inlineAddFields"][] = "titulo_por";
-$tdataempresa[".inlineAddFields"][] = "titulo_eng";
-$tdataempresa[".inlineAddFields"][] = "titulo_esp";
-$tdataempresa[".inlineAddFields"][] = "texto_por";
-$tdataempresa[".inlineAddFields"][] = "texto_eng";
-$tdataempresa[".inlineAddFields"][] = "texto_esp";
 
 $tdataempresa[".editFields"] = array();
 $tdataempresa[".editFields"][] = "titulo_por";
@@ -277,39 +253,12 @@ $tdataempresa[".editFields"][] = "texto_eng";
 $tdataempresa[".editFields"][] = "texto_esp";
 
 $tdataempresa[".inlineEditFields"] = array();
-$tdataempresa[".inlineEditFields"][] = "titulo_por";
-$tdataempresa[".inlineEditFields"][] = "titulo_eng";
-$tdataempresa[".inlineEditFields"][] = "titulo_esp";
-$tdataempresa[".inlineEditFields"][] = "texto_por";
-$tdataempresa[".inlineEditFields"][] = "texto_eng";
-$tdataempresa[".inlineEditFields"][] = "texto_esp";
 
 $tdataempresa[".exportFields"] = array();
-$tdataempresa[".exportFields"][] = "id";
-$tdataempresa[".exportFields"][] = "titulo_por";
-$tdataempresa[".exportFields"][] = "titulo_eng";
-$tdataempresa[".exportFields"][] = "titulo_esp";
-$tdataempresa[".exportFields"][] = "texto_por";
-$tdataempresa[".exportFields"][] = "texto_eng";
-$tdataempresa[".exportFields"][] = "texto_esp";
 
 $tdataempresa[".importFields"] = array();
-$tdataempresa[".importFields"][] = "id";
-$tdataempresa[".importFields"][] = "titulo_por";
-$tdataempresa[".importFields"][] = "titulo_eng";
-$tdataempresa[".importFields"][] = "titulo_esp";
-$tdataempresa[".importFields"][] = "texto_por";
-$tdataempresa[".importFields"][] = "texto_eng";
-$tdataempresa[".importFields"][] = "texto_esp";
 
 $tdataempresa[".printFields"] = array();
-$tdataempresa[".printFields"][] = "id";
-$tdataempresa[".printFields"][] = "titulo_por";
-$tdataempresa[".printFields"][] = "titulo_eng";
-$tdataempresa[".printFields"][] = "titulo_esp";
-$tdataempresa[".printFields"][] = "texto_por";
-$tdataempresa[".printFields"][] = "texto_eng";
-$tdataempresa[".printFields"][] = "texto_esp";
 
 //	id
 //	Custom field settings
@@ -332,14 +281,11 @@ $tdataempresa[".printFields"][] = "texto_esp";
 		
 		
 		
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -382,8 +328,7 @@ $tdataempresa[".printFields"][] = "texto_esp";
 	
 
 
-		$edata["IsRequired"] = true; 
-	
+		
 		
 		
 		
@@ -405,9 +350,7 @@ $tdataempresa[".printFields"][] = "texto_esp";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-			
+		
 		
 	//	End validation
 	
@@ -451,22 +394,16 @@ $tdataempresa[".printFields"][] = "texto_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
+		
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "titulo_por"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -576,22 +513,16 @@ $tdataempresa[".printFields"][] = "texto_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
+		
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "titulo_eng"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -701,22 +632,16 @@ $tdataempresa[".printFields"][] = "texto_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
+		
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "titulo_esp"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -826,22 +751,16 @@ $tdataempresa[".printFields"][] = "texto_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
+		
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "texto_por"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -895,8 +814,8 @@ $tdataempresa[".printFields"][] = "texto_esp";
 		
 		
 		
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
+				$edata["nRows"] = 300;
+			$edata["nCols"] = 400;
 	
 		
 		
@@ -950,22 +869,16 @@ $tdataempresa[".printFields"][] = "texto_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
+		
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "texto_eng"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1019,8 +932,8 @@ $tdataempresa[".printFields"][] = "texto_esp";
 		
 		
 		
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
+				$edata["nRows"] = 300;
+			$edata["nCols"] = 400;
 	
 		
 		
@@ -1074,22 +987,16 @@ $tdataempresa[".printFields"][] = "texto_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
+		
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "texto_esp"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1143,8 +1050,8 @@ $tdataempresa[".printFields"][] = "texto_esp";
 		
 		
 		
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
+				$edata["nRows"] = 300;
+			$edata["nCols"] = 400;
 	
 		
 		
@@ -1405,7 +1312,8 @@ $queryData_empresa = createSqlQuery_empresa();
 	
 $tdataempresa[".sqlquery"] = $queryData_empresa;
 
-$tableEvents["empresa"] = new eventsBase;
-$tdataempresa[".hasEvents"] = false;
+include_once(getabspath("include/empresa_events.php"));
+$tableEvents["empresa"] = new eventclass_empresa;
+$tdataempresa[".hasEvents"] = true;
 
 ?>

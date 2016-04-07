@@ -21,7 +21,7 @@ AddPage::handleBrokenRequest();
 
 
 
-$layout = new TLayout("add2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("add2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["all"] = array();

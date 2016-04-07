@@ -166,7 +166,7 @@ $tdatamenus[".strOrderBy"] = $tstrOrderBy;
 
 $tdatamenus[".orderindexes"] = array();
 
-$tdatamenus[".sqlHead"] = "SELECT id,  nome_por,  nome_eng,  nome_esp";
+$tdatamenus[".sqlHead"] = "SELECT id,  	nome_por,  	nome_eng,  	nome_esp";
 $tdatamenus[".sqlFrom"] = "FROM menus";
 $tdatamenus[".sqlWhereExpr"] = "";
 $tdatamenus[".sqlTail"] = "";
@@ -297,8 +297,7 @@ $tdatamenus[".printFields"] = array();
 	
 
 
-		$edata["IsRequired"] = true; 
-	
+		
 		
 		
 		
@@ -320,9 +319,7 @@ $tdatamenus[".printFields"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-			
+		
 		
 	//	End validation
 	
@@ -716,7 +713,7 @@ function createSqlQuery_menus()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  nome_por,  nome_eng,  nome_esp";
+$proto0["m_strFieldList"] = "id,  	nome_por,  	nome_eng,  	nome_esp";
 $proto0["m_strFrom"] = "FROM menus";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";

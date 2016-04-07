@@ -21,54 +21,6 @@ EditPage::handleBrokenRequest();
 
 
 
-$layout = new TLayout("edit2", "CityAvenue", "MobileAvenue");
-$layout->version = 2;
-$layout->blocks["top"] = array();
-$layout->containers["all"] = array();
-$layout->container_properties["all"] = array(  );
-$layout->containers["all"][] = array("name"=>"wrapper", 
-	"block"=>"", "substyle"=>1 , "container"=>"edit" );
-$layout->containers["edit"] = array();
-$layout->container_properties["edit"] = array(  );
-$layout->containers["edit"][] = array("name"=>"editheader", 
-	"block"=>"editheader", "substyle"=>2  );
-
-$layout->containers["edit"][] = array("name"=>"message", 
-	"block"=>"message_block", "substyle"=>1  );
-
-$layout->containers["edit"][] = array("name"=>"wrapper", 
-	"block"=>"", "substyle"=>1 , "container"=>"fields" );
-$layout->containers["fields"] = array();
-$layout->container_properties["fields"] = array(  );
-$layout->containers["fields"][] = array("name"=>"editfields", 
-	"block"=>"", "substyle"=>1  );
-
-$layout->containers["fields"][] = array("name"=>"editbuttons", 
-	"block"=>"editbuttons", "substyle"=>2  );
-
-$layout->skins["fields"] = "fields";
-
-
-$layout->skins["edit"] = "1";
-
-
-$layout->skins["all"] = "empty";
-
-$layout->blocks["top"][] = "all";
-$page_layouts["categorias_edit"] = $layout;
-
-$layout->skinsparams = array();
-$layout->skinsparams["empty"] = array("button"=>"button1");
-$layout->skinsparams["menu"] = array("button"=>"button1");
-$layout->skinsparams["hmenu"] = array("button"=>"button1");
-$layout->skinsparams["undermenu"] = array("button"=>"button1");
-$layout->skinsparams["fields"] = array("button"=>"button1");
-$layout->skinsparams["form"] = array("button"=>"button1");
-$layout->skinsparams["1"] = array("button"=>"button1");
-$layout->skinsparams["2"] = array("button"=>"button1");
-$layout->skinsparams["3"] = array("button"=>"button1");
-
-
 
 
 	

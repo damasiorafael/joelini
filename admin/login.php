@@ -10,7 +10,7 @@ add_nocache_headers();
 
 
 
-$layout = new TLayout("login2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("login2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["login"] = array();

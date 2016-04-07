@@ -23,13 +23,13 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$pageTitlessubcategorias["Portuguese(Brazil)"] = array();
 	$fieldLabelssubcategorias["Portuguese(Brazil)"]["id"] = "Id";
 	$fieldToolTipssubcategorias["Portuguese(Brazil)"]["id"] = "";
-	$fieldLabelssubcategorias["Portuguese(Brazil)"]["id_categoria"] = "Id Categoria";
+	$fieldLabelssubcategorias["Portuguese(Brazil)"]["id_categoria"] = "Categoria";
 	$fieldToolTipssubcategorias["Portuguese(Brazil)"]["id_categoria"] = "";
-	$fieldLabelssubcategorias["Portuguese(Brazil)"]["nome_por"] = "Nome Por";
+	$fieldLabelssubcategorias["Portuguese(Brazil)"]["nome_por"] = "Nome Português";
 	$fieldToolTipssubcategorias["Portuguese(Brazil)"]["nome_por"] = "";
-	$fieldLabelssubcategorias["Portuguese(Brazil)"]["nome_eng"] = "Nome Eng";
+	$fieldLabelssubcategorias["Portuguese(Brazil)"]["nome_eng"] = "Nome Inglês";
 	$fieldToolTipssubcategorias["Portuguese(Brazil)"]["nome_eng"] = "";
-	$fieldLabelssubcategorias["Portuguese(Brazil)"]["nome_esp"] = "Nome Esp";
+	$fieldLabelssubcategorias["Portuguese(Brazil)"]["nome_esp"] = "Nome Espanhol";
 	$fieldToolTipssubcategorias["Portuguese(Brazil)"]["nome_esp"] = "";
 	if (count($fieldToolTipssubcategorias["Portuguese(Brazil)"]))
 		$tdatasubcategorias[".isUseToolTips"] = true;
@@ -39,6 +39,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelssubcategorias[""] = array();
 	$fieldToolTipssubcategorias[""] = array();
 	$pageTitlessubcategorias[""] = array();
+	$fieldLabelssubcategorias[""]["id"] = "Id";
+	$fieldToolTipssubcategorias[""]["id"] = "";
 	if (count($fieldToolTipssubcategorias[""]))
 		$tdatasubcategorias[".isUseToolTips"] = true;
 }
@@ -79,19 +81,14 @@ $tdatasubcategorias[".listAjax"] = false;
 
 	$tdatasubcategorias[".locking"] = false;
 
-$tdatasubcategorias[".edit"] = true;
 
 $tdatasubcategorias[".list"] = true;
 
 $tdatasubcategorias[".inlineEdit"] = true;
 $tdatasubcategorias[".inlineAdd"] = true;
-$tdatasubcategorias[".view"] = true;
 
-$tdatasubcategorias[".import"] = true;
 
-$tdatasubcategorias[".exportTo"] = true;
 
-$tdatasubcategorias[".printFriendly"] = true;
 
 $tdatasubcategorias[".delete"] = true;
 
@@ -233,17 +230,8 @@ $tdatasubcategorias[".hideMobileList"] = array();
 
 
 $tdatasubcategorias[".viewFields"] = array();
-$tdatasubcategorias[".viewFields"][] = "id";
-$tdatasubcategorias[".viewFields"][] = "id_categoria";
-$tdatasubcategorias[".viewFields"][] = "nome_por";
-$tdatasubcategorias[".viewFields"][] = "nome_eng";
-$tdatasubcategorias[".viewFields"][] = "nome_esp";
 
 $tdatasubcategorias[".addFields"] = array();
-$tdatasubcategorias[".addFields"][] = "id_categoria";
-$tdatasubcategorias[".addFields"][] = "nome_por";
-$tdatasubcategorias[".addFields"][] = "nome_eng";
-$tdatasubcategorias[".addFields"][] = "nome_esp";
 
 $tdatasubcategorias[".inlineAddFields"] = array();
 $tdatasubcategorias[".inlineAddFields"][] = "id_categoria";
@@ -252,10 +240,6 @@ $tdatasubcategorias[".inlineAddFields"][] = "nome_eng";
 $tdatasubcategorias[".inlineAddFields"][] = "nome_esp";
 
 $tdatasubcategorias[".editFields"] = array();
-$tdatasubcategorias[".editFields"][] = "id_categoria";
-$tdatasubcategorias[".editFields"][] = "nome_por";
-$tdatasubcategorias[".editFields"][] = "nome_eng";
-$tdatasubcategorias[".editFields"][] = "nome_esp";
 
 $tdatasubcategorias[".inlineEditFields"] = array();
 $tdatasubcategorias[".inlineEditFields"][] = "id_categoria";
@@ -264,25 +248,10 @@ $tdatasubcategorias[".inlineEditFields"][] = "nome_eng";
 $tdatasubcategorias[".inlineEditFields"][] = "nome_esp";
 
 $tdatasubcategorias[".exportFields"] = array();
-$tdatasubcategorias[".exportFields"][] = "id";
-$tdatasubcategorias[".exportFields"][] = "id_categoria";
-$tdatasubcategorias[".exportFields"][] = "nome_por";
-$tdatasubcategorias[".exportFields"][] = "nome_eng";
-$tdatasubcategorias[".exportFields"][] = "nome_esp";
 
 $tdatasubcategorias[".importFields"] = array();
-$tdatasubcategorias[".importFields"][] = "id";
-$tdatasubcategorias[".importFields"][] = "id_categoria";
-$tdatasubcategorias[".importFields"][] = "nome_por";
-$tdatasubcategorias[".importFields"][] = "nome_eng";
-$tdatasubcategorias[".importFields"][] = "nome_esp";
 
 $tdatasubcategorias[".printFields"] = array();
-$tdatasubcategorias[".printFields"][] = "id";
-$tdatasubcategorias[".printFields"][] = "id_categoria";
-$tdatasubcategorias[".printFields"][] = "nome_por";
-$tdatasubcategorias[".printFields"][] = "nome_eng";
-$tdatasubcategorias[".printFields"][] = "nome_esp";
 
 //	id
 //	Custom field settings
@@ -305,14 +274,11 @@ $tdatasubcategorias[".printFields"][] = "nome_esp";
 		
 		
 		
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -424,22 +390,17 @@ $tdatasubcategorias[".printFields"][] = "nome_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id_categoria"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -491,12 +452,13 @@ $tdatasubcategorias[".printFields"][] = "nome_esp";
 			
 	$edata["LinkField"] = "id";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "id";
+	$edata["DisplayField"] = "nome_por";
 	
 		
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "id";
 	
-		
+		$edata["LookupDesc"] = true;
+	
 			
 		
 				
@@ -572,22 +534,17 @@ $tdatasubcategorias[".printFields"][] = "nome_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome_por"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -697,22 +654,17 @@ $tdatasubcategorias[".printFields"][] = "nome_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome_eng"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -822,22 +774,17 @@ $tdatasubcategorias[".printFields"][] = "nome_esp";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome_esp"; 
 	
 		$fdata["isSQLExpression"] = true;

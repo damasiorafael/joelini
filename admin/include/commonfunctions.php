@@ -278,8 +278,6 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("contato" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
-	if ("usuarios" == $shortTName && ($type===false || ($type!==false && $type == 0)))
-		return true;
 	return false;
 }
 
@@ -329,16 +327,51 @@ function GetEmailField($table = "")
 function GetTablesList($pdfMode = false)
 {
 	$arr = array();
+	$strPerm = GetUserPermissions("categorias");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="categorias";
+	}
+	$strPerm = GetUserPermissions("menus");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="menus";
+	}
+	$strPerm = GetUserPermissions("subcategorias");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="subcategorias";
+	}
+	$strPerm = GetUserPermissions("produtos");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="produtos";
+	}
+	$strPerm = GetUserPermissions("imagens_produtos");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="imagens_produtos";
+	}
+	$strPerm = GetUserPermissions("linhadotempo");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="linhadotempo";
+	}
+	$strPerm = GetUserPermissions("empresa");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="empresa";
+	}
+	$strPerm = GetUserPermissions("vendas");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="vendas";
+	}
+	$strPerm = GetUserPermissions("contato");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
 		$arr[]="contato";
-		$arr[]="usuarios";
+	}
 	return $arr;
 }
 
@@ -943,62 +976,47 @@ function GetUserPermissionsStatic( $table )
 //	default permissions	
 	if($table=="categorias")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="menus")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="subcategorias")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="produtos")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="imagens_produtos")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="linhadotempo")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="empresa")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="vendas")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="contato")
 	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
-	}
-//	default permissions	
-	if($table=="usuarios")
-	{
-		// grant all by default
-		return "ADESPI".$extraPerm;	
+		return "ADESPI".$extraPerm;
 	}
 	// grant nothing by default
 	return "";
@@ -1100,7 +1118,7 @@ function AfterFBLogIn($pUsername, $pPassword, &$pageObject = null)
 function SetAuthSessionData($pUsername, &$data, $fromFacebook, $password, &$pageObject = null)
 {
 	global $globalEvents;
-	$_SESSION["GroupID"] = "";
+	$_SESSION["GroupID"] = $data["email"];
 
 
 	if($globalEvents->exists("AfterSuccessfulLogin"))
@@ -1154,7 +1172,18 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	if( strpos($strPerm, "M") === false )
 	{
 	}
+	//	 check user group permissions
+	$localAction = strtolower($strAction);
+	if($localAction=="add" && !(strpos($strPerm, "A")===false) ||
+	   $localAction=="edit" && !(strpos($strPerm, "E")===false) ||
+	   $localAction=="delete" && !(strpos($strPerm, "D")===false) ||
+	   $localAction=="search" && !(strpos($strPerm, "S")===false) ||
+	   $localAction=="import" && !(strpos($strPerm, "I")===false) ||
+	   $localAction=="export" && !(strpos($strPerm, "P")===false) )
 		return true;
+	else
+		return false;
+	return true;
 }
 
 /**

@@ -21,54 +21,6 @@ AddPage::handleBrokenRequest();
 
 
 
-$layout = new TLayout("add2", "CityAvenue", "MobileAvenue");
-$layout->version = 2;
-$layout->blocks["top"] = array();
-$layout->containers["all"] = array();
-$layout->container_properties["all"] = array(  );
-$layout->containers["all"][] = array("name"=>"wrapper", 
-	"block"=>"", "substyle"=>1 , "container"=>"add" );
-$layout->containers["add"] = array();
-$layout->container_properties["add"] = array(  );
-$layout->containers["add"][] = array("name"=>"addheader", 
-	"block"=>"addheader", "substyle"=>2  );
-
-$layout->containers["add"][] = array("name"=>"message", 
-	"block"=>"message_block", "substyle"=>1  );
-
-$layout->containers["add"][] = array("name"=>"wrapper", 
-	"block"=>"", "substyle"=>1 , "container"=>"fields" );
-$layout->containers["fields"] = array();
-$layout->container_properties["fields"] = array(  );
-$layout->containers["fields"][] = array("name"=>"addfields", 
-	"block"=>"", "substyle"=>1  );
-
-$layout->containers["fields"][] = array("name"=>"addbuttons", 
-	"block"=>"addbuttons", "substyle"=>2  );
-
-$layout->skins["fields"] = "fields";
-
-
-$layout->skins["add"] = "1";
-
-
-$layout->skins["all"] = "empty";
-
-$layout->blocks["top"][] = "all";
-$page_layouts["categorias_add"] = $layout;
-
-$layout->skinsparams = array();
-$layout->skinsparams["empty"] = array("button"=>"button1");
-$layout->skinsparams["menu"] = array("button"=>"button1");
-$layout->skinsparams["hmenu"] = array("button"=>"button1");
-$layout->skinsparams["undermenu"] = array("button"=>"button1");
-$layout->skinsparams["fields"] = array("button"=>"button1");
-$layout->skinsparams["form"] = array("button"=>"button1");
-$layout->skinsparams["1"] = array("button"=>"button1");
-$layout->skinsparams["2"] = array("button"=>"button1");
-$layout->skinsparams["3"] = array("button"=>"button1");
-
-
 
 	
 	

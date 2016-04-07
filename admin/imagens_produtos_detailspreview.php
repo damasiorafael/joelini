@@ -29,7 +29,7 @@ $xt = new Xtempl();
 
 
 
-$layout = new TLayout("detailspreview", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("detailspreview", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["bare"] = array();
 $layout->containers["dcount"] = array();
@@ -119,7 +119,7 @@ if($rowcount)
 {
 	$xt->assign("details_data",true);
 
-	$display_count = 10;
+	$display_count = 5;
 	if($mode == "inline")
 		$display_count*=2;
 		
@@ -178,7 +178,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("id_produto")))
 				$class = ' rnr-field-number';
 			$row["id_produto_class"] = $class;
-	//	imagem - 
+	//	imagem - File-based Image
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("imagem", $data, $keylink);
 			$row["imagem_value"] = $value;
@@ -193,7 +193,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("imagem")))
 				$class = ' rnr-field-number';
 			$row["imagem_class"] = $class;
-	//	destaque - 
+	//	destaque - Checkbox
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("destaque", $data, $keylink);
 			$row["destaque_value"] = $value;

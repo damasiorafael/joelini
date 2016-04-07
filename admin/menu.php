@@ -19,7 +19,7 @@ if (($_SESSION["MyURL"] == "") || (!isLoggedAsGuest())) {
 
 
 
-$layout = new TLayout("menu2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("menu2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["menu"] = array();
@@ -51,8 +51,18 @@ $layout->skinsparams["3"] = array("button"=>"button1");
 require_once('include/xtempl.php');
 require_once(getabspath("classes/cipherer.php"));
 
+include_once(getabspath("include/categorias_events.php"));
+$tableEvents["categorias"] = new eventclass_categorias;
 include_once(getabspath("include/menus_events.php"));
 $tableEvents["menus"] = new eventclass_menus;
+include_once(getabspath("include/produtos_events.php"));
+$tableEvents["produtos"] = new eventclass_produtos;
+include_once(getabspath("include/imagens_produtos_events.php"));
+$tableEvents["imagens_produtos"] = new eventclass_imagens_produtos;
+include_once(getabspath("include/linhadotempo_events.php"));
+$tableEvents["linhadotempo"] = new eventclass_linhadotempo;
+include_once(getabspath("include/empresa_events.php"));
+$tableEvents["empresa"] = new eventclass_empresa;
 
 $xt = new Xtempl();
 

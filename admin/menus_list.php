@@ -24,7 +24,7 @@ if( !ListPage::processListPageSecurity( $strTableName ) )
 
 
 
-$layout = new TLayout("list2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("list_centered_vert", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["center"] = array();
 $layout->containers["recordcontrols"] = array();
@@ -32,7 +32,10 @@ $layout->container_properties["recordcontrols"] = array(  );
 $layout->containers["recordcontrols"][] = array("name"=>"recordcontrol", 
 	"block"=>"record_controls_block", "substyle"=>1  );
 
-$layout->skins["recordcontrols"] = "1";
+$layout->containers["recordcontrols"][] = array("name"=>"toplinks", 
+	"block"=>"more_list", "substyle"=>1  );
+
+$layout->skins["recordcontrols"] = "2";
 
 $layout->blocks["center"][] = "recordcontrols";
 $layout->containers["message"] = array();
@@ -43,6 +46,23 @@ $layout->containers["message"][] = array("name"=>"message",
 $layout->skins["message"] = "2";
 
 $layout->blocks["center"][] = "message";
+$layout->containers["pagination"] = array();
+$layout->container_properties["pagination"] = array(  );
+$layout->containers["pagination"][] = array("name"=>"details_found", 
+	"block"=>"details_block", "substyle"=>1  );
+
+$layout->containers["pagination"][] = array("name"=>"pagination", 
+	"block"=>"pagination_block", "substyle"=>1  );
+
+$layout->containers["pagination"][] = array("name"=>"page_of", 
+	"block"=>"pages_block", "substyle"=>1  );
+
+$layout->containers["pagination"][] = array("name"=>"recsperpage", 
+	"block"=>"recordspp_block", "substyle"=>1  );
+
+$layout->skins["pagination"] = "2";
+
+$layout->blocks["center"][] = "pagination";
 $layout->containers["grid"] = array();
 $layout->container_properties["grid"] = array(  );
 $layout->containers["grid"][] = array("name"=>"grid", 
@@ -51,26 +71,24 @@ $layout->containers["grid"][] = array("name"=>"grid",
 $layout->skins["grid"] = "grid";
 
 $layout->blocks["center"][] = "grid";
-$layout->containers["pagination"] = array();
-$layout->container_properties["pagination"] = array(  );
-$layout->containers["pagination"][] = array("name"=>"pagination", 
+$layout->containers["pagination_bottom"] = array();
+$layout->container_properties["pagination_bottom"] = array(  );
+$layout->containers["pagination_bottom"][] = array("name"=>"details_found", 
+	"block"=>"details_block", "substyle"=>1  );
+
+$layout->containers["pagination_bottom"][] = array("name"=>"pagination", 
 	"block"=>"pagination_block", "substyle"=>1  );
 
-$layout->skins["pagination"] = "2";
+$layout->containers["pagination_bottom"][] = array("name"=>"page_of", 
+	"block"=>"pages_block", "substyle"=>1  );
 
-$layout->blocks["center"][] = "pagination";
+$layout->containers["pagination_bottom"][] = array("name"=>"recsperpage", 
+	"block"=>"recordspp_block", "substyle"=>1  );
+
+$layout->skins["pagination_bottom"] = "2";
+
+$layout->blocks["center"][] = "pagination_bottom";
 $layout->blocks["left"] = array();
-$layout->skins["lang"] = "menu";
-
-$layout->blocks["left"][] = "lang";
-$layout->containers["logg"] = array();
-$layout->container_properties["logg"] = array(  );
-$layout->containers["logg"][] = array("name"=>"loggedas", 
-	"block"=>"security_block", "substyle"=>1  );
-
-$layout->skins["logg"] = "menu";
-
-$layout->blocks["left"][] = "logg";
 $layout->containers["left"] = array();
 $layout->container_properties["left"] = array(  );
 $layout->containers["left"][] = array("name"=>"vmenu", 
@@ -83,23 +101,17 @@ $layout->blocks["top"] = array();
 $layout->skins["master"] = "empty";
 
 $layout->blocks["top"][] = "master";
+$layout->containers["toplinks"] = array();
+$layout->container_properties["toplinks"] = array(  );
+$layout->containers["toplinks"][] = array("name"=>"loggedas", 
+	"block"=>"security_block", "substyle"=>1  );
+
 $layout->skins["toplinks"] = "empty";
 
 $layout->blocks["top"][] = "toplinks";
-$layout->containers["search"] = array();
-$layout->container_properties["search"] = array(  );
-$layout->containers["search"][] = array("name"=>"details_found", 
-	"block"=>"details_block", "substyle"=>1  );
+$layout->skins["hmenu"] = "undermenu";
 
-$layout->containers["search"][] = array("name"=>"page_of", 
-	"block"=>"pages_block", "substyle"=>1  );
-
-$layout->containers["search"][] = array("name"=>"recsperpage", 
-	"block"=>"recordspp_block", "substyle"=>1  );
-
-$layout->skins["search"] = "2";
-
-$layout->blocks["top"][] = "search";
+$layout->blocks["top"][] = "hmenu";
 $page_layouts["menus_list"] = $layout;
 
 $layout->skinsparams = array();

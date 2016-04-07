@@ -15,7 +15,7 @@ if( !Security::processPageSecurity( $strtablename, 'P' ) )
 
 
 
-$layout = new TLayout("export2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("export2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["export"] = array();

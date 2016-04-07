@@ -23,11 +23,11 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$pageTitlescategorias["Portuguese(Brazil)"] = array();
 	$fieldLabelscategorias["Portuguese(Brazil)"]["id"] = "Id";
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["id"] = "";
-	$fieldLabelscategorias["Portuguese(Brazil)"]["nome_por"] = "Nome Por";
+	$fieldLabelscategorias["Portuguese(Brazil)"]["nome_por"] = "Nome Português";
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["nome_por"] = "";
-	$fieldLabelscategorias["Portuguese(Brazil)"]["nome_eng"] = "Nome Eng";
+	$fieldLabelscategorias["Portuguese(Brazil)"]["nome_eng"] = "Nome Inglês";
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["nome_eng"] = "";
-	$fieldLabelscategorias["Portuguese(Brazil)"]["nome_esp"] = "Nome Esp";
+	$fieldLabelscategorias["Portuguese(Brazil)"]["nome_esp"] = "Nome Espanhol";
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["nome_esp"] = "";
 	$fieldLabelscategorias["Portuguese(Brazil)"]["imagem"] = "Imagem";
 	$fieldToolTipscategorias["Portuguese(Brazil)"]["imagem"] = "";
@@ -39,6 +39,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelscategorias[""] = array();
 	$fieldToolTipscategorias[""] = array();
 	$pageTitlescategorias[""] = array();
+	$fieldLabelscategorias[""]["id"] = "Id";
+	$fieldToolTipscategorias[""]["id"] = "";
 	if (count($fieldToolTipscategorias[""]))
 		$tdatacategorias[".isUseToolTips"] = true;
 }
@@ -79,19 +81,14 @@ $tdatacategorias[".listAjax"] = false;
 
 	$tdatacategorias[".locking"] = false;
 
-$tdatacategorias[".edit"] = true;
 
 $tdatacategorias[".list"] = true;
 
 $tdatacategorias[".inlineEdit"] = true;
 $tdatacategorias[".inlineAdd"] = true;
-$tdatacategorias[".view"] = true;
 
-$tdatacategorias[".import"] = true;
 
-$tdatacategorias[".exportTo"] = true;
 
-$tdatacategorias[".printFriendly"] = true;
 
 $tdatacategorias[".delete"] = true;
 
@@ -233,17 +230,8 @@ $tdatacategorias[".hideMobileList"] = array();
 
 
 $tdatacategorias[".viewFields"] = array();
-$tdatacategorias[".viewFields"][] = "id";
-$tdatacategorias[".viewFields"][] = "nome_por";
-$tdatacategorias[".viewFields"][] = "nome_eng";
-$tdatacategorias[".viewFields"][] = "nome_esp";
-$tdatacategorias[".viewFields"][] = "imagem";
 
 $tdatacategorias[".addFields"] = array();
-$tdatacategorias[".addFields"][] = "nome_por";
-$tdatacategorias[".addFields"][] = "nome_eng";
-$tdatacategorias[".addFields"][] = "nome_esp";
-$tdatacategorias[".addFields"][] = "imagem";
 
 $tdatacategorias[".inlineAddFields"] = array();
 $tdatacategorias[".inlineAddFields"][] = "nome_por";
@@ -252,10 +240,6 @@ $tdatacategorias[".inlineAddFields"][] = "nome_esp";
 $tdatacategorias[".inlineAddFields"][] = "imagem";
 
 $tdatacategorias[".editFields"] = array();
-$tdatacategorias[".editFields"][] = "nome_por";
-$tdatacategorias[".editFields"][] = "nome_eng";
-$tdatacategorias[".editFields"][] = "nome_esp";
-$tdatacategorias[".editFields"][] = "imagem";
 
 $tdatacategorias[".inlineEditFields"] = array();
 $tdatacategorias[".inlineEditFields"][] = "nome_por";
@@ -264,25 +248,10 @@ $tdatacategorias[".inlineEditFields"][] = "nome_esp";
 $tdatacategorias[".inlineEditFields"][] = "imagem";
 
 $tdatacategorias[".exportFields"] = array();
-$tdatacategorias[".exportFields"][] = "id";
-$tdatacategorias[".exportFields"][] = "nome_por";
-$tdatacategorias[".exportFields"][] = "nome_eng";
-$tdatacategorias[".exportFields"][] = "nome_esp";
-$tdatacategorias[".exportFields"][] = "imagem";
 
 $tdatacategorias[".importFields"] = array();
-$tdatacategorias[".importFields"][] = "id";
-$tdatacategorias[".importFields"][] = "nome_por";
-$tdatacategorias[".importFields"][] = "nome_eng";
-$tdatacategorias[".importFields"][] = "nome_esp";
-$tdatacategorias[".importFields"][] = "imagem";
 
 $tdatacategorias[".printFields"] = array();
-$tdatacategorias[".printFields"][] = "id";
-$tdatacategorias[".printFields"][] = "nome_por";
-$tdatacategorias[".printFields"][] = "nome_eng";
-$tdatacategorias[".printFields"][] = "nome_esp";
-$tdatacategorias[".printFields"][] = "imagem";
 
 //	id
 //	Custom field settings
@@ -305,14 +274,11 @@ $tdatacategorias[".printFields"][] = "imagem";
 		
 		
 		
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -355,8 +321,7 @@ $tdatacategorias[".printFields"][] = "imagem";
 	
 
 
-		$edata["IsRequired"] = true; 
-	
+		
 		
 		
 		
@@ -378,9 +343,7 @@ $tdatacategorias[".printFields"][] = "imagem";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-			
+		
 		
 	//	End validation
 	
@@ -424,22 +387,17 @@ $tdatacategorias[".printFields"][] = "imagem";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome_por"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -549,22 +507,17 @@ $tdatacategorias[".printFields"][] = "imagem";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome_eng"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -674,22 +627,17 @@ $tdatacategorias[".printFields"][] = "imagem";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome_esp"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -791,7 +739,7 @@ $tdatacategorias[".printFields"][] = "imagem";
 	$fdata["GoodName"] = "imagem";
 	$fdata["ownerTable"] = "categorias";
 	$fdata["Label"] = GetFieldLabel("categorias","imagem"); 
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 	
 		
 		
@@ -799,37 +747,42 @@ $tdatacategorias[".printFields"][] = "imagem";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
+		
 		$fdata["bInlineAdd"] = true; 
 	
-		$fdata["bEditPage"] = true; 
-	
+		
 		$fdata["bInlineEdit"] = true; 
 	
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "imagem"; 
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "imagem";
 	
-		
-		
+		$fdata["DeleteAssociatedFile"] = true;
+	
+		$fdata["CompatibilityMode"] = true; 
+	
 				$fdata["FieldPermissions"] = true;
 	
-				$fdata["UploadFolder"] = "files";
+				$fdata["UploadFolder"] = "../uploads/";
 		
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "File-based Image");
+	
+		
+		
+				$vdata["ShowThumbnail"] = true;
+	$vdata["ThumbWidth"] = 72;
+	$vdata["ThumbHeight"] = 72;	
+			$vdata["ImageWidth"] = 0;
+	$vdata["ImageHeight"] = 0;
 	
 		
 		
@@ -840,17 +793,13 @@ $tdatacategorias[".printFields"][] = "imagem";
 		
 		
 		
-		
-		
-		$vdata["NeedEncode"] = true;
-	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 	
 			
 	
@@ -869,11 +818,8 @@ $tdatacategorias[".printFields"][] = "imagem";
 		
 		
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -884,7 +830,10 @@ $tdatacategorias[".printFields"][] = "imagem";
 		
 	//	End validation
 	
-		
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+	
 				
 		
 	
@@ -896,6 +845,7 @@ $tdatacategorias[".printFields"][] = "imagem";
 	$fdata["isSeparate"] = false;
 	
 	
+	$fdata["Absolute"] = true;
 	
 	
 // the field's search options settings
@@ -1131,7 +1081,8 @@ $queryData_categorias = createSqlQuery_categorias();
 	
 $tdatacategorias[".sqlquery"] = $queryData_categorias;
 
-$tableEvents["categorias"] = new eventsBase;
-$tdatacategorias[".hasEvents"] = false;
+include_once(getabspath("include/categorias_events.php"));
+$tableEvents["categorias"] = new eventclass_categorias;
+$tdatacategorias[".hasEvents"] = true;
 
 ?>

@@ -31,7 +31,7 @@ if(!$accessGranted)
 
 
 
-$layout = new TLayout("search2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("search2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["search"] = array();

@@ -53,7 +53,7 @@ if ($gSettings->getNType() == DASHBOARD_SEARCH)
     $gSettings = new ProjectSettings($strTableName, $pageType);
 }
 
-if( $strTableName != "usuarios" )
+if( $strTableName != "" )
 {
 	if(!isLogged())  
 		return;	

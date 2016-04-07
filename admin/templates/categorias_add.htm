@@ -50,6 +50,16 @@
 
 
 <div  class="rnr-brickcontents style1 rnr-b-addfields {$brickclass_addfields}"><table class="fieldGrid">
+	{BEGIN id_fieldblock}
+<tr class="{$fielddispclass_id}" data-fieldname="id">
+	<td class="rnr-label">
+		{BEGIN id_label}{$label categorias id}{END id_label}
+	</td>
+	<td class="rnr-control style3">
+		{$id_editcontrol}&nbsp;
+	</td>
+</tr>
+{END id_fieldblock}
 	{BEGIN nome_por_fieldblock}
 <tr class="{$fielddispclass_nome_por}" data-fieldname="nome_por">
 	<td class="rnr-label">

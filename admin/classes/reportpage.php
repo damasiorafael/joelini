@@ -642,8 +642,8 @@ class ReportPage extends RunnerPage
 			$this->xt->assign('tableinfomobile_block', true);
 
 
-		$allow_search = true;
-		$allow_export = true;
+		$allow_search = $this->permis[ $this->tName ]["search"];
+		$allow_export = $this->permis[ $this->tName ]["export"]; 
 
 		$this->xt->assign("toplinks_block", $allow_search);
 		$this->xt->assign("asearch_link", $allow_search);

@@ -21,7 +21,7 @@ EditPage::handleBrokenRequest();
 
 
 
-$layout = new TLayout("edit2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("edit2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["all"] = array();

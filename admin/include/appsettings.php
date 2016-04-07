@@ -391,7 +391,7 @@ $globalSettings["openPDFFileDirectly"] = true;
 $globalSettings["override"] = array();
 
 
-$wr_pagestylepath = "CityAvenue";
+$wr_pagestylepath = "CoralOrange";
 $wr_is_standalone = false;
 $WRAdminPagePassword = "";
 
@@ -399,7 +399,7 @@ $cLoginTable = "usuarios";
 $cDisplayNameField = "nome";
 $cUserNameField	= "email";
 $cPasswordField	= "senha";
-$cUserGroupField = "";
+$cUserGroupField = "email";
 $cEmailField = "email";
 
 if ($cDisplayNameField == ''){
@@ -444,12 +444,18 @@ $tableCaptions["Portuguese(Brazil)"]["linhadotempo"] = "Linhadotempo";
 $tableCaptions["Portuguese(Brazil)"]["empresa"] = "Empresa";
 $tableCaptions["Portuguese(Brazil)"]["vendas"] = "Vendas";
 $tableCaptions["Portuguese(Brazil)"]["contato"] = "Contato";
-$tableCaptions["Portuguese(Brazil)"]["usuarios"] = "Usuarios";
 $tableCaptions["Portuguese(Brazil)"][""] = "";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
 $tableCaptions[""]["menus"] = "Menus";
 $tableCaptions[""]["categorias"] = "Categorias";
+$tableCaptions[""]["empresa"] = "Empresa";
+$tableCaptions[""]["vendas"] = "Vendas";
+$tableCaptions[""]["contato"] = "Contato";
+$tableCaptions[""]["linhadotempo"] = "Linhadotempo";
+$tableCaptions[""]["subcategorias"] = "Subcategorias";
+$tableCaptions[""]["produtos"] = "Produtos";
+$tableCaptions[""]["imagens_produtos"] = "Imagens Produtos";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -485,9 +491,9 @@ $scriptname = getFileNameFromURL();
 
 
 
-$isGroupSecurity = false;
+$isGroupSecurity = true;
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 

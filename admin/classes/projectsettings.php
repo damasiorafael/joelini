@@ -2205,7 +2205,7 @@ class ProjectSettings
 	 */
 	public static function getForLogin()
 	{
-		return new ProjectSettings("usuarios", PAGE_LIST);
+		return null;	
 	}
 	
 	/** 
@@ -2280,8 +2280,6 @@ function GetTableURL($table = "")
 		return "vendas";
 	if("contato" == $table) 
 		return "contato";
-	if("usuarios" == $table) 
-		return "usuarios";
 
 	return "";
 }
@@ -2310,8 +2308,6 @@ function GetTableByShort($shortTName = "")
 		return "vendas";
 	if("contato" == $shortTName) 
 		return "contato";
-	if("usuarios" == $shortTName) 
-		return "usuarios";
 }
 
 //	A

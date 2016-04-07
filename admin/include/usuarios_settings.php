@@ -25,7 +25,7 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipsusuarios["Portuguese(Brazil)"]["id"] = "";
 	$fieldLabelsusuarios["Portuguese(Brazil)"]["nome"] = "Nome";
 	$fieldToolTipsusuarios["Portuguese(Brazil)"]["nome"] = "";
-	$fieldLabelsusuarios["Portuguese(Brazil)"]["email"] = "Email";
+	$fieldLabelsusuarios["Portuguese(Brazil)"]["email"] = "E-mail";
 	$fieldToolTipsusuarios["Portuguese(Brazil)"]["email"] = "";
 	$fieldLabelsusuarios["Portuguese(Brazil)"]["senha"] = "Senha";
 	$fieldToolTipsusuarios["Portuguese(Brazil)"]["senha"] = "";
@@ -37,6 +37,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelsusuarios[""] = array();
 	$fieldToolTipsusuarios[""] = array();
 	$pageTitlesusuarios[""] = array();
+	$fieldLabelsusuarios[""]["id"] = "Id";
+	$fieldToolTipsusuarios[""]["id"] = "";
 	if (count($fieldToolTipsusuarios[""]))
 		$tdatausuarios[".isUseToolTips"] = true;
 }
@@ -70,6 +72,15 @@ $tdatausuarios[".popupPagesLayoutNames"] = $popupPagesLayoutNames;
 
 
 $tdatausuarios[".fieldsForRegister"] = array();
+	//Begin register settings
+			$tdatausuarios[".fieldsForRegister"] = array();
+$tdatausuarios[".fieldsForRegister"][] = "email";
+			$tdatausuarios[".fieldsForRegister"][] = "senha";
+/*
+$tdatausuarios[".PasswordField"] = "senha";
+$tdatausuarios[".UserNameField"] = "email";	
+*/
+//End register settings	
 
 $tdatausuarios[".listAjax"] = false;
 
@@ -81,15 +92,10 @@ $tdatausuarios[".edit"] = true;
 
 $tdatausuarios[".list"] = true;
 
-$tdatausuarios[".inlineEdit"] = true;
-$tdatausuarios[".inlineAdd"] = true;
-$tdatausuarios[".view"] = true;
 
-$tdatausuarios[".import"] = true;
 
 $tdatausuarios[".exportTo"] = true;
 
-$tdatausuarios[".printFriendly"] = true;
 
 $tdatausuarios[".delete"] = true;
 
@@ -226,10 +232,6 @@ $tdatausuarios[".hideMobileList"] = array();
 
 
 $tdatausuarios[".viewFields"] = array();
-$tdatausuarios[".viewFields"][] = "id";
-$tdatausuarios[".viewFields"][] = "nome";
-$tdatausuarios[".viewFields"][] = "email";
-$tdatausuarios[".viewFields"][] = "senha";
 
 $tdatausuarios[".addFields"] = array();
 $tdatausuarios[".addFields"][] = "nome";
@@ -237,9 +239,6 @@ $tdatausuarios[".addFields"][] = "email";
 $tdatausuarios[".addFields"][] = "senha";
 
 $tdatausuarios[".inlineAddFields"] = array();
-$tdatausuarios[".inlineAddFields"][] = "nome";
-$tdatausuarios[".inlineAddFields"][] = "email";
-$tdatausuarios[".inlineAddFields"][] = "senha";
 
 $tdatausuarios[".editFields"] = array();
 $tdatausuarios[".editFields"][] = "nome";
@@ -247,9 +246,6 @@ $tdatausuarios[".editFields"][] = "email";
 $tdatausuarios[".editFields"][] = "senha";
 
 $tdatausuarios[".inlineEditFields"] = array();
-$tdatausuarios[".inlineEditFields"][] = "nome";
-$tdatausuarios[".inlineEditFields"][] = "email";
-$tdatausuarios[".inlineEditFields"][] = "senha";
 
 $tdatausuarios[".exportFields"] = array();
 $tdatausuarios[".exportFields"][] = "id";
@@ -258,16 +254,8 @@ $tdatausuarios[".exportFields"][] = "email";
 $tdatausuarios[".exportFields"][] = "senha";
 
 $tdatausuarios[".importFields"] = array();
-$tdatausuarios[".importFields"][] = "id";
-$tdatausuarios[".importFields"][] = "nome";
-$tdatausuarios[".importFields"][] = "email";
-$tdatausuarios[".importFields"][] = "senha";
 
 $tdatausuarios[".printFields"] = array();
-$tdatausuarios[".printFields"][] = "id";
-$tdatausuarios[".printFields"][] = "nome";
-$tdatausuarios[".printFields"][] = "email";
-$tdatausuarios[".printFields"][] = "senha";
 
 //	id
 //	Custom field settings
@@ -290,12 +278,10 @@ $tdatausuarios[".printFields"][] = "senha";
 		
 		
 		
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "id"; 
@@ -340,8 +326,7 @@ $tdatausuarios[".printFields"][] = "senha";
 	
 
 
-		$edata["IsRequired"] = true; 
-	
+		
 		
 		
 		
@@ -363,11 +348,9 @@ $tdatausuarios[".printFields"][] = "senha";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-			
 		
-	//	End validation
+		
+					//	End validation
 	
 		
 				
@@ -411,18 +394,14 @@ $tdatausuarios[".printFields"][] = "senha";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "nome"; 
@@ -492,7 +471,7 @@ $tdatausuarios[".printFields"][] = "senha";
 	$edata["validateAs"]["customMessages"] = array();
 		
 		
-	//	End validation
+					//	End validation
 	
 		
 				
@@ -536,18 +515,14 @@ $tdatausuarios[".printFields"][] = "senha";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "email"; 
@@ -592,7 +567,8 @@ $tdatausuarios[".printFields"][] = "senha";
 	
 
 
-		
+		$edata["IsRequired"] = true; 
+	
 		
 		
 		
@@ -615,14 +591,23 @@ $tdatausuarios[".printFields"][] = "senha";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Email");	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			$edata["validateAs"]["basicValidate"][] = "DenyDuplicated";	
+	$edata["validateAs"]["customMessages"]["DenyDuplicated"] = array("message" => "E-mail %value% já cadastrado no sistema", "messageType" => "Text");
+	
 		
-		
-	//	End validation
+				if(count($edata["validateAs"]) && !in_array('IsRequired', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsRequired';
+			if(count($edata["validateAs"]) && !in_array('IsEmail', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsEmail';
+//	End validation
 	
 		
 				
 		
-	
+		$edata["denyDuplicates"] = true;	
+
 		
 	$fdata["EditFormats"]["edit"] = $edata;
 //	End Edit Formats
@@ -661,18 +646,14 @@ $tdatausuarios[".printFields"][] = "senha";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "senha"; 
@@ -710,7 +691,7 @@ $tdatausuarios[".printFields"][] = "senha";
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Password");
 	
 			
 	
@@ -729,8 +710,7 @@ $tdatausuarios[".printFields"][] = "senha";
 		
 		
 		
-			$edata["HTML5InuptType"] = "text";
-	
+		
 		$edata["EditParams"] = "";
 			$edata["EditParams"].= " maxlength=255";
 	
@@ -742,7 +722,9 @@ $tdatausuarios[".printFields"][] = "senha";
 	$edata["validateAs"]["customMessages"] = array();
 		
 		
-	//	End validation
+				if(count($edata["validateAs"]) && !in_array('IsRequired', $edata["validateAs"]['basicValidate']))
+		$edata["validateAs"]['basicValidate'][] = 'IsRequired';
+		//	End validation
 	
 		
 				
@@ -946,7 +928,8 @@ $queryData_usuarios = createSqlQuery_usuarios();
 	
 $tdatausuarios[".sqlquery"] = $queryData_usuarios;
 
-$tableEvents["usuarios"] = new eventsBase;
-$tdatausuarios[".hasEvents"] = false;
+include_once(getabspath("include/usuarios_events.php"));
+$tableEvents["usuarios"] = new eventclass_usuarios;
+$tdatausuarios[".hasEvents"] = true;
 
 ?>

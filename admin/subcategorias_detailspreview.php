@@ -29,7 +29,7 @@ $xt = new Xtempl();
 
 
 
-$layout = new TLayout("detailspreview", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("detailspreview", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["bare"] = array();
 $layout->containers["dcount"] = array();

@@ -37,6 +37,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelsimagens_produtos[""] = array();
 	$fieldToolTipsimagens_produtos[""] = array();
 	$pageTitlesimagens_produtos[""] = array();
+	$fieldLabelsimagens_produtos[""]["id"] = "Id";
+	$fieldToolTipsimagens_produtos[""]["id"] = "";
 	if (count($fieldToolTipsimagens_produtos[""]))
 		$tdataimagens_produtos[".isUseToolTips"] = true;
 }
@@ -81,15 +83,9 @@ $tdataimagens_produtos[".edit"] = true;
 
 $tdataimagens_produtos[".list"] = true;
 
-$tdataimagens_produtos[".inlineEdit"] = true;
-$tdataimagens_produtos[".inlineAdd"] = true;
-$tdataimagens_produtos[".view"] = true;
 
-$tdataimagens_produtos[".import"] = true;
 
-$tdataimagens_produtos[".exportTo"] = true;
 
-$tdataimagens_produtos[".printFriendly"] = true;
 
 $tdataimagens_produtos[".delete"] = true;
 
@@ -226,10 +222,6 @@ $tdataimagens_produtos[".hideMobileList"] = array();
 
 
 $tdataimagens_produtos[".viewFields"] = array();
-$tdataimagens_produtos[".viewFields"][] = "id";
-$tdataimagens_produtos[".viewFields"][] = "id_produto";
-$tdataimagens_produtos[".viewFields"][] = "imagem";
-$tdataimagens_produtos[".viewFields"][] = "destaque";
 
 $tdataimagens_produtos[".addFields"] = array();
 $tdataimagens_produtos[".addFields"][] = "id_produto";
@@ -237,9 +229,6 @@ $tdataimagens_produtos[".addFields"][] = "imagem";
 $tdataimagens_produtos[".addFields"][] = "destaque";
 
 $tdataimagens_produtos[".inlineAddFields"] = array();
-$tdataimagens_produtos[".inlineAddFields"][] = "id_produto";
-$tdataimagens_produtos[".inlineAddFields"][] = "imagem";
-$tdataimagens_produtos[".inlineAddFields"][] = "destaque";
 
 $tdataimagens_produtos[".editFields"] = array();
 $tdataimagens_produtos[".editFields"][] = "id_produto";
@@ -247,27 +236,12 @@ $tdataimagens_produtos[".editFields"][] = "imagem";
 $tdataimagens_produtos[".editFields"][] = "destaque";
 
 $tdataimagens_produtos[".inlineEditFields"] = array();
-$tdataimagens_produtos[".inlineEditFields"][] = "id_produto";
-$tdataimagens_produtos[".inlineEditFields"][] = "imagem";
-$tdataimagens_produtos[".inlineEditFields"][] = "destaque";
 
 $tdataimagens_produtos[".exportFields"] = array();
-$tdataimagens_produtos[".exportFields"][] = "id";
-$tdataimagens_produtos[".exportFields"][] = "id_produto";
-$tdataimagens_produtos[".exportFields"][] = "imagem";
-$tdataimagens_produtos[".exportFields"][] = "destaque";
 
 $tdataimagens_produtos[".importFields"] = array();
-$tdataimagens_produtos[".importFields"][] = "id";
-$tdataimagens_produtos[".importFields"][] = "id_produto";
-$tdataimagens_produtos[".importFields"][] = "imagem";
-$tdataimagens_produtos[".importFields"][] = "destaque";
 
 $tdataimagens_produtos[".printFields"] = array();
-$tdataimagens_produtos[".printFields"][] = "id";
-$tdataimagens_produtos[".printFields"][] = "id_produto";
-$tdataimagens_produtos[".printFields"][] = "imagem";
-$tdataimagens_produtos[".printFields"][] = "destaque";
 
 //	id
 //	Custom field settings
@@ -290,14 +264,11 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 		
 		
 		
-		$fdata["bViewPage"] = true; 
-	
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -411,20 +382,15 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id_produto"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -476,12 +442,13 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 			
 	$edata["LinkField"] = "id";
 	$edata["LinkFieldType"] = 3;
-	$edata["DisplayField"] = "id";
+	$edata["DisplayField"] = "nome_por";
 	
 		
-	$edata["LookupOrderBy"] = "";
+	$edata["LookupOrderBy"] = "id";
 	
-		
+		$edata["LookupDesc"] = true;
+	
 			
 		
 				
@@ -493,7 +460,8 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 // End Lookup Settings
 
 
-		
+		$edata["IsRequired"] = true; 
+	
 		
 		
 		
@@ -513,7 +481,8 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-								
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			
 		
 	//	End validation
 	
@@ -549,7 +518,7 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 	$fdata["GoodName"] = "imagem";
 	$fdata["ownerTable"] = "imagens_produtos";
 	$fdata["Label"] = GetFieldLabel("imagens_produtos","imagem"); 
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 	
 		
 		
@@ -559,35 +528,40 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "imagem"; 
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "imagem";
 	
-		
-		
+		$fdata["DeleteAssociatedFile"] = true;
+	
+		$fdata["CompatibilityMode"] = true; 
+	
 				$fdata["FieldPermissions"] = true;
 	
-				$fdata["UploadFolder"] = "files";
+				$fdata["UploadFolder"] = "../uploads/";
 		
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "File-based Image");
+	
+		
+		
+				$vdata["ShowThumbnail"] = true;
+	$vdata["ThumbWidth"] = 72;
+	$vdata["ThumbHeight"] = 72;	
+			$vdata["ImageWidth"] = 0;
+	$vdata["ImageHeight"] = 0;
 	
 		
 		
@@ -598,24 +572,21 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 		
 		
 		
-		
-		
-		$vdata["NeedEncode"] = true;
-	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 	
 			
 	
 	
 
 
-		
+		$edata["IsRequired"] = true; 
+	
 		
 		
 		
@@ -627,22 +598,23 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 		
 		
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-		
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			
 		
 	//	End validation
 	
-		
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+	
 				
 		
 	
@@ -654,6 +626,7 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 	$fdata["isSeparate"] = false;
 	
 	
+	$fdata["Absolute"] = true;
 	
 	
 // the field's search options settings
@@ -684,20 +657,15 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
-		$fdata["bViewPage"] = true; 
-	
+		
+		
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "destaque"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -712,7 +680,7 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Checkbox");
 	
 		
 		
@@ -725,15 +693,14 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 		
 		
 		
-		$vdata["NeedEncode"] = true;
-	
+		
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Checkbox");
 	
 			
 	
@@ -752,17 +719,14 @@ $tdataimagens_produtos[".printFields"][] = "destaque";
 		
 		
 		
-			$edata["HTML5InuptType"] = "number";
-	
-		$edata["EditParams"] = "";
-			
+		
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
 								
 		
 	//	End validation
@@ -991,7 +955,8 @@ $queryData_imagens_produtos = createSqlQuery_imagens_produtos();
 	
 $tdataimagens_produtos[".sqlquery"] = $queryData_imagens_produtos;
 
-$tableEvents["imagens_produtos"] = new eventsBase;
-$tdataimagens_produtos[".hasEvents"] = false;
+include_once(getabspath("include/imagens_produtos_events.php"));
+$tableEvents["imagens_produtos"] = new eventclass_imagens_produtos;
+$tdataimagens_produtos[".hasEvents"] = true;
 
 ?>

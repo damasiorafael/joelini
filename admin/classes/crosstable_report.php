@@ -1280,8 +1280,6 @@ class CrossTableReport
 			$isDB = true;
 		if("contato" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("usuarios" == $this->xml_array['tables'][0])
-			$isDB = true;
 		return $isDB;
 	}
 	

@@ -47,6 +47,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelsvendas[""] = array();
 	$fieldToolTipsvendas[""] = array();
 	$pageTitlesvendas[""] = array();
+	$fieldLabelsvendas[""]["id"] = "Id";
+	$fieldToolTipsvendas[""]["id"] = "";
 	if (count($fieldToolTipsvendas[""]))
 		$tdatavendas[".isUseToolTips"] = true;
 }
@@ -87,21 +89,15 @@ $tdatavendas[".listAjax"] = false;
 
 	$tdatavendas[".locking"] = false;
 
-$tdatavendas[".edit"] = true;
 
 $tdatavendas[".list"] = true;
 
-$tdatavendas[".inlineEdit"] = true;
-$tdatavendas[".inlineAdd"] = true;
 $tdatavendas[".view"] = true;
 
-$tdatavendas[".import"] = true;
 
 $tdatavendas[".exportTo"] = true;
 
-$tdatavendas[".printFriendly"] = true;
 
-$tdatavendas[".delete"] = true;
 
 $tdatavendas[".showSimpleSearchOptions"] = false;
 
@@ -267,44 +263,12 @@ $tdatavendas[".viewFields"][] = "mensagem";
 $tdatavendas[".viewFields"][] = "data_contato";
 
 $tdatavendas[".addFields"] = array();
-$tdatavendas[".addFields"][] = "nome";
-$tdatavendas[".addFields"][] = "email";
-$tdatavendas[".addFields"][] = "telefone";
-$tdatavendas[".addFields"][] = "cidade";
-$tdatavendas[".addFields"][] = "estado";
-$tdatavendas[".addFields"][] = "cep";
-$tdatavendas[".addFields"][] = "mensagem";
-$tdatavendas[".addFields"][] = "data_contato";
 
 $tdatavendas[".inlineAddFields"] = array();
-$tdatavendas[".inlineAddFields"][] = "nome";
-$tdatavendas[".inlineAddFields"][] = "email";
-$tdatavendas[".inlineAddFields"][] = "telefone";
-$tdatavendas[".inlineAddFields"][] = "cidade";
-$tdatavendas[".inlineAddFields"][] = "estado";
-$tdatavendas[".inlineAddFields"][] = "cep";
-$tdatavendas[".inlineAddFields"][] = "mensagem";
-$tdatavendas[".inlineAddFields"][] = "data_contato";
 
 $tdatavendas[".editFields"] = array();
-$tdatavendas[".editFields"][] = "nome";
-$tdatavendas[".editFields"][] = "email";
-$tdatavendas[".editFields"][] = "telefone";
-$tdatavendas[".editFields"][] = "cidade";
-$tdatavendas[".editFields"][] = "estado";
-$tdatavendas[".editFields"][] = "cep";
-$tdatavendas[".editFields"][] = "mensagem";
-$tdatavendas[".editFields"][] = "data_contato";
 
 $tdatavendas[".inlineEditFields"] = array();
-$tdatavendas[".inlineEditFields"][] = "nome";
-$tdatavendas[".inlineEditFields"][] = "email";
-$tdatavendas[".inlineEditFields"][] = "telefone";
-$tdatavendas[".inlineEditFields"][] = "cidade";
-$tdatavendas[".inlineEditFields"][] = "estado";
-$tdatavendas[".inlineEditFields"][] = "cep";
-$tdatavendas[".inlineEditFields"][] = "mensagem";
-$tdatavendas[".inlineEditFields"][] = "data_contato";
 
 $tdatavendas[".exportFields"] = array();
 $tdatavendas[".exportFields"][] = "id";
@@ -318,26 +282,8 @@ $tdatavendas[".exportFields"][] = "mensagem";
 $tdatavendas[".exportFields"][] = "data_contato";
 
 $tdatavendas[".importFields"] = array();
-$tdatavendas[".importFields"][] = "id";
-$tdatavendas[".importFields"][] = "nome";
-$tdatavendas[".importFields"][] = "email";
-$tdatavendas[".importFields"][] = "telefone";
-$tdatavendas[".importFields"][] = "cidade";
-$tdatavendas[".importFields"][] = "estado";
-$tdatavendas[".importFields"][] = "cep";
-$tdatavendas[".importFields"][] = "mensagem";
-$tdatavendas[".importFields"][] = "data_contato";
 
 $tdatavendas[".printFields"] = array();
-$tdatavendas[".printFields"][] = "id";
-$tdatavendas[".printFields"][] = "nome";
-$tdatavendas[".printFields"][] = "email";
-$tdatavendas[".printFields"][] = "telefone";
-$tdatavendas[".printFields"][] = "cidade";
-$tdatavendas[".printFields"][] = "estado";
-$tdatavendas[".printFields"][] = "cep";
-$tdatavendas[".printFields"][] = "mensagem";
-$tdatavendas[".printFields"][] = "data_contato";
 
 //	id
 //	Custom field settings
@@ -364,8 +310,7 @@ $tdatavendas[".printFields"][] = "data_contato";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "id"; 
@@ -479,20 +424,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "nome"; 
@@ -604,20 +544,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "email"; 
@@ -729,20 +664,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "telefone"; 
@@ -854,20 +784,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "cidade"; 
@@ -979,20 +904,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "estado"; 
@@ -1104,20 +1024,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "cep"; 
@@ -1229,20 +1144,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "mensagem"; 
@@ -1353,20 +1263,15 @@ $tdatavendas[".printFields"][] = "data_contato";
 				
 		$fdata["bListPage"] = true; 
 	
-		$fdata["bAddPage"] = true; 
-	
-		$fdata["bInlineAdd"] = true; 
-	
-		$fdata["bEditPage"] = true; 
-	
-		$fdata["bInlineEdit"] = true; 
-	
+		
+		
+		
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
+		
 		$fdata["bExportPage"] = true; 
 	
 		$fdata["strField"] = "data_contato"; 

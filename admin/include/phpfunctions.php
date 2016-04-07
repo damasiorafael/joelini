@@ -763,6 +763,10 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="imagens_produtos" && $field=="destaque") 
+	{
+		return 0;
+	}
 	return "";
 }
 

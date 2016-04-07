@@ -291,7 +291,7 @@ class RunnerCipherer
 	 */
 	public static function getForLogin( $loginSet = null )
 	{	
-		return new RunnerCipherer( "usuarios", $loginSet);
+		return new RunnerCipherer( NOT_TABLE_BASED_TNAME, null);
 	}	
 }
 ?>

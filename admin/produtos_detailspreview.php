@@ -29,7 +29,7 @@ $xt = new Xtempl();
 
 
 
-$layout = new TLayout("detailspreview", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("detailspreview", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["bare"] = array();
 $layout->containers["dcount"] = array();
@@ -119,7 +119,7 @@ if($rowcount)
 {
 	$xt->assign("details_data",true);
 
-	$display_count = 5;
+	$display_count = 10;
 	if($mode == "inline")
 		$display_count*=2;
 		
@@ -223,7 +223,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("nome_esp")))
 				$class = ' rnr-field-number';
 			$row["nome_esp_class"] = $class;
-	//	descricao_por - Database Image
+	//	descricao_por - HTML
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("descricao_por", $data, $keylink);
 			$row["descricao_por_value"] = $value;
@@ -238,7 +238,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("descricao_por")))
 				$class = ' rnr-field-number';
 			$row["descricao_por_class"] = $class;
-	//	descricao_eng - Database Image
+	//	descricao_eng - HTML
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("descricao_eng", $data, $keylink);
 			$row["descricao_eng_value"] = $value;
@@ -253,7 +253,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("descricao_eng")))
 				$class = ' rnr-field-number';
 			$row["descricao_eng_class"] = $class;
-	//	descricao_esp - Database Image
+	//	descricao_esp - HTML
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("descricao_esp", $data, $keylink);
 			$row["descricao_esp_value"] = $value;

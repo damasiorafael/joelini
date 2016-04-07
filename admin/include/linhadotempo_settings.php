@@ -25,11 +25,11 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipslinhadotempo["Portuguese(Brazil)"]["id"] = "";
 	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["ano"] = "Ano";
 	$fieldToolTipslinhadotempo["Portuguese(Brazil)"]["ano"] = "";
-	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["texto_por"] = "Texto Por";
+	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["texto_por"] = "Texto Português";
 	$fieldToolTipslinhadotempo["Portuguese(Brazil)"]["texto_por"] = "";
-	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["texto_eng"] = "Texto Eng";
+	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["texto_eng"] = "Texto Inglês";
 	$fieldToolTipslinhadotempo["Portuguese(Brazil)"]["texto_eng"] = "";
-	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["texto_esp"] = "Texto Esp";
+	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["texto_esp"] = "Texto Espanhol";
 	$fieldToolTipslinhadotempo["Portuguese(Brazil)"]["texto_esp"] = "";
 	$fieldLabelslinhadotempo["Portuguese(Brazil)"]["imagem_destaque"] = "Imagem Destaque";
 	$fieldToolTipslinhadotempo["Portuguese(Brazil)"]["imagem_destaque"] = "";
@@ -43,6 +43,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelslinhadotempo[""] = array();
 	$fieldToolTipslinhadotempo[""] = array();
 	$pageTitleslinhadotempo[""] = array();
+	$fieldLabelslinhadotempo[""]["id"] = "Id";
+	$fieldToolTipslinhadotempo[""]["id"] = "";
 	if (count($fieldToolTipslinhadotempo[""]))
 		$tdatalinhadotempo[".isUseToolTips"] = true;
 }
@@ -87,15 +89,10 @@ $tdatalinhadotempo[".edit"] = true;
 
 $tdatalinhadotempo[".list"] = true;
 
-$tdatalinhadotempo[".inlineEdit"] = true;
-$tdatalinhadotempo[".inlineAdd"] = true;
 $tdatalinhadotempo[".view"] = true;
 
-$tdatalinhadotempo[".import"] = true;
 
-$tdatalinhadotempo[".exportTo"] = true;
 
-$tdatalinhadotempo[".printFriendly"] = true;
 
 $tdatalinhadotempo[".delete"] = true;
 
@@ -261,12 +258,6 @@ $tdatalinhadotempo[".addFields"][] = "imagem_destaque";
 $tdatalinhadotempo[".addFields"][] = "imagem_principal";
 
 $tdatalinhadotempo[".inlineAddFields"] = array();
-$tdatalinhadotempo[".inlineAddFields"][] = "ano";
-$tdatalinhadotempo[".inlineAddFields"][] = "texto_por";
-$tdatalinhadotempo[".inlineAddFields"][] = "texto_eng";
-$tdatalinhadotempo[".inlineAddFields"][] = "texto_esp";
-$tdatalinhadotempo[".inlineAddFields"][] = "imagem_destaque";
-$tdatalinhadotempo[".inlineAddFields"][] = "imagem_principal";
 
 $tdatalinhadotempo[".editFields"] = array();
 $tdatalinhadotempo[".editFields"][] = "ano";
@@ -277,39 +268,12 @@ $tdatalinhadotempo[".editFields"][] = "imagem_destaque";
 $tdatalinhadotempo[".editFields"][] = "imagem_principal";
 
 $tdatalinhadotempo[".inlineEditFields"] = array();
-$tdatalinhadotempo[".inlineEditFields"][] = "ano";
-$tdatalinhadotempo[".inlineEditFields"][] = "texto_por";
-$tdatalinhadotempo[".inlineEditFields"][] = "texto_eng";
-$tdatalinhadotempo[".inlineEditFields"][] = "texto_esp";
-$tdatalinhadotempo[".inlineEditFields"][] = "imagem_destaque";
-$tdatalinhadotempo[".inlineEditFields"][] = "imagem_principal";
 
 $tdatalinhadotempo[".exportFields"] = array();
-$tdatalinhadotempo[".exportFields"][] = "id";
-$tdatalinhadotempo[".exportFields"][] = "ano";
-$tdatalinhadotempo[".exportFields"][] = "texto_por";
-$tdatalinhadotempo[".exportFields"][] = "texto_eng";
-$tdatalinhadotempo[".exportFields"][] = "texto_esp";
-$tdatalinhadotempo[".exportFields"][] = "imagem_destaque";
-$tdatalinhadotempo[".exportFields"][] = "imagem_principal";
 
 $tdatalinhadotempo[".importFields"] = array();
-$tdatalinhadotempo[".importFields"][] = "id";
-$tdatalinhadotempo[".importFields"][] = "ano";
-$tdatalinhadotempo[".importFields"][] = "texto_por";
-$tdatalinhadotempo[".importFields"][] = "texto_eng";
-$tdatalinhadotempo[".importFields"][] = "texto_esp";
-$tdatalinhadotempo[".importFields"][] = "imagem_destaque";
-$tdatalinhadotempo[".importFields"][] = "imagem_principal";
 
 $tdatalinhadotempo[".printFields"] = array();
-$tdatalinhadotempo[".printFields"][] = "id";
-$tdatalinhadotempo[".printFields"][] = "ano";
-$tdatalinhadotempo[".printFields"][] = "texto_por";
-$tdatalinhadotempo[".printFields"][] = "texto_eng";
-$tdatalinhadotempo[".printFields"][] = "texto_esp";
-$tdatalinhadotempo[".printFields"][] = "imagem_destaque";
-$tdatalinhadotempo[".printFields"][] = "imagem_principal";
 
 //	id
 //	Custom field settings
@@ -336,10 +300,8 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -382,8 +344,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 
 
-		$edata["IsRequired"] = true; 
-	
+		
 		
 		
 		
@@ -405,9 +366,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-			
+		
 		
 	//	End validation
 	
@@ -453,20 +412,16 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "ano"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -578,20 +533,16 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "texto_por"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -627,7 +578,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 	
 			
 	
@@ -645,12 +596,11 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
+				$edata["nRows"] = 300;
+			$edata["nCols"] = 300;
+	
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -703,20 +653,16 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "texto_eng"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -752,7 +698,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 	
 			
 	
@@ -770,12 +716,11 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
+				$edata["nRows"] = 300;
+			$edata["nCols"] = 300;
+	
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -828,20 +773,16 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "texto_esp"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -877,7 +818,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 	
 			
 	
@@ -895,12 +836,11 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
+				$edata["nRows"] = 300;
+			$edata["nCols"] = 300;
+	
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -943,7 +883,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	$fdata["GoodName"] = "imagem_destaque";
 	$fdata["ownerTable"] = "linhadotempo";
 	$fdata["Label"] = GetFieldLabel("linhadotempo","imagem_destaque"); 
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 	
 		
 		
@@ -953,35 +893,41 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "imagem_destaque"; 
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "imagem_destaque";
 	
-		
-		
+		$fdata["DeleteAssociatedFile"] = true;
+	
+		$fdata["CompatibilityMode"] = true; 
+	
 				$fdata["FieldPermissions"] = true;
 	
-				$fdata["UploadFolder"] = "files";
+				$fdata["UploadFolder"] = "../uploads/";
 		
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "File-based Image");
+	
+		
+		
+				$vdata["ShowThumbnail"] = true;
+	$vdata["ThumbWidth"] = 72;
+	$vdata["ThumbHeight"] = 72;	
+			$vdata["ImageWidth"] = 0;
+	$vdata["ImageHeight"] = 0;
 	
 		
 		
@@ -992,17 +938,13 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
-		
-		
-		$vdata["NeedEncode"] = true;
-	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 	
 			
 	
@@ -1021,11 +963,8 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -1036,7 +975,10 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 	//	End validation
 	
-		
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+	
 				
 		
 	
@@ -1048,6 +990,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	$fdata["isSeparate"] = false;
 	
 	
+	$fdata["Absolute"] = true;
 	
 	
 // the field's search options settings
@@ -1068,7 +1011,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	$fdata["GoodName"] = "imagem_principal";
 	$fdata["ownerTable"] = "linhadotempo";
 	$fdata["Label"] = GetFieldLabel("linhadotempo","imagem_principal"); 
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 201;
 	
 		
 		
@@ -1078,35 +1021,41 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "imagem_principal"; 
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "imagem_principal";
 	
-		
-		
+		$fdata["DeleteAssociatedFile"] = true;
+	
+		$fdata["CompatibilityMode"] = true; 
+	
 				$fdata["FieldPermissions"] = true;
 	
-				$fdata["UploadFolder"] = "files";
+				$fdata["UploadFolder"] = "../uploads/";
 		
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "File-based Image");
+	
+		
+		
+				$vdata["ShowThumbnail"] = true;
+	$vdata["ThumbWidth"] = 72;
+	$vdata["ThumbHeight"] = 72;	
+			$vdata["ImageWidth"] = 0;
+	$vdata["ImageHeight"] = 0;
 	
 		
 		
@@ -1117,17 +1066,13 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
-		
-		
-		$vdata["NeedEncode"] = true;
-	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 	
 			
 	
@@ -1146,11 +1091,8 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 		
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -1161,7 +1103,10 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 		
 	//	End validation
 	
-		
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+	
 				
 		
 	
@@ -1173,6 +1118,7 @@ $tdatalinhadotempo[".printFields"][] = "imagem_principal";
 	$fdata["isSeparate"] = false;
 	
 	
+	$fdata["Absolute"] = true;
 	
 	
 // the field's search options settings
@@ -1408,7 +1354,8 @@ $queryData_linhadotempo = createSqlQuery_linhadotempo();
 	
 $tdatalinhadotempo[".sqlquery"] = $queryData_linhadotempo;
 
-$tableEvents["linhadotempo"] = new eventsBase;
-$tdatalinhadotempo[".hasEvents"] = false;
+include_once(getabspath("include/linhadotempo_events.php"));
+$tableEvents["linhadotempo"] = new eventclass_linhadotempo;
+$tdatalinhadotempo[".hasEvents"] = true;
 
 ?>

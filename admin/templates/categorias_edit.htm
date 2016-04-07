@@ -50,6 +50,16 @@
 
 
 <div  class="rnr-brickcontents style1 rnr-b-editfields {$brickclass_editfields}"><table class="fieldGrid">
+	{BEGIN id_fieldblock}
+<tr class="{$fielddispclass_id}" data-fieldname="id">
+	<td class="rnr-label">
+		{BEGIN id_label}{$label categorias id}{END id_label}
+	</td>
+	<td class="rnr-control style3">
+		{$id_editcontrol}&nbsp;
+	</td>
+</tr>
+{END id_fieldblock}
 	{BEGIN nome_por_fieldblock}
 <tr class="{$fielddispclass_nome_por}" data-fieldname="nome_por">
 	<td class="rnr-label">
@@ -115,9 +125,6 @@
 {BEGIN close_button}
 <a href="#" class="rnr-button" {$closebutton_attrs}>Fechar Janela</a>
 {END close_button}
-{BEGIN view_page_button}
-<a href="#" class="rnr-button" {$view_page_button_attrs}>Exibir</a>
-{END view_page_button}
 </div>
 </div>{END editbuttons}
 

@@ -290,7 +290,6 @@ $data["connInfo"][4] = $sys_dbname;
 		$connectionsIds["empresa"] = "joelini_at_localhost";
 		$connectionsIds["vendas"] = "joelini_at_localhost";
 		$connectionsIds["contato"] = "joelini_at_localhost";
-		$connectionsIds["usuarios"] = "joelini_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

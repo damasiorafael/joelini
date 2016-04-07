@@ -18,7 +18,7 @@ if( !Security::processPageSecurity( $strTableName, "S", $pageMode != VIEW_SIMPLE
 
 
 
-$layout = new TLayout("view2", "CityAvenue", "MobileAvenue");
+$layout = new TLayout("view2", "CoralOrange", "MobileOrange");
 $layout->version = 2;
 $layout->blocks["top"] = array();
 $layout->containers["all"] = array();
