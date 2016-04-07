@@ -1638,3 +1638,8 @@ span.departamento.form-control {
 .ui-loader {
     display: none;
 }
+
+/* AJUSTES */
+.display-none {
+    display: none;
+}

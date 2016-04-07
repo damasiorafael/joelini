@@ -9,7 +9,7 @@
                         </div>
                     </div>
                     <div class="nav-topo pull-right">
-                        <ul class="secondary-menu pull-right">
+                        <ul class="secondary-menu pull-right display-none">
                             <li>
                                 <a href="#" title="Webmail" class="link link-webmail">
                                     <span>Webmail</span>
