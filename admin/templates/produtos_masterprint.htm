@@ -1,0 +1,58 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel produtos masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$id_class}">{$label produtos id}</th>
+			<th class="{$id_subcategoria_class}">{$label produtos id_subcategoria}</th>
+			<th class="{$nome_por_class}">{$label produtos nome_por}</th>
+			<th class="{$nome_eng_class}">{$label produtos nome_eng}</th>
+			<th class="{$nome_esp_class}">{$label produtos nome_esp}</th>
+			<th class="{$descricao_por_class}">{$label produtos descricao_por}</th>
+			<th class="{$descricao_eng_class}">{$label produtos descricao_eng}</th>
+			<th class="{$descricao_esp_class}">{$label produtos descricao_esp}</th>
+			<th class="{$video_class}">{$label produtos video}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$id_class}">{$id_mastervalue}</td>
+			<td class="{$id_subcategoria_class}">{$id_subcategoria_mastervalue}</td>
+			<td class="{$nome_por_class}">{$nome_por_mastervalue}</td>
+			<td class="{$nome_eng_class}">{$nome_eng_mastervalue}</td>
+			<td class="{$nome_esp_class}">{$nome_esp_mastervalue}</td>
+			<td class="{$descricao_por_class}">{$descricao_por_mastervalue}</td>
+			<td class="{$descricao_eng_class}">{$descricao_eng_mastervalue}</td>
+			<td class="{$descricao_esp_class}">{$descricao_esp_mastervalue}</td>
+			<td class="{$video_class}">{$video_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

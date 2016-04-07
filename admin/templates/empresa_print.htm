@@ -1,0 +1,212 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel empresa print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Página <span class="rp-pageno">{$pageno}</span> de <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN id_fieldheadercolumn}
+<th class="runner-cc {$id_class}" {$id_style}>
+	{BEGIN id_fieldheader}
+	<b>{$label empresa id}</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN titulo_por_fieldheadercolumn}
+<th class="runner-cc {$titulo_por_class}" {$titulo_por_style}>
+	{BEGIN titulo_por_fieldheader}
+	<b>{$label empresa titulo_por}</b>
+	{END titulo_por_fieldheader}
+</th>
+{END titulo_por_fieldheadercolumn}
+	{BEGIN titulo_eng_fieldheadercolumn}
+<th class="runner-cc {$titulo_eng_class}" {$titulo_eng_style}>
+	{BEGIN titulo_eng_fieldheader}
+	<b>{$label empresa titulo_eng}</b>
+	{END titulo_eng_fieldheader}
+</th>
+{END titulo_eng_fieldheadercolumn}
+	{BEGIN titulo_esp_fieldheadercolumn}
+<th class="runner-cc {$titulo_esp_class}" {$titulo_esp_style}>
+	{BEGIN titulo_esp_fieldheader}
+	<b>{$label empresa titulo_esp}</b>
+	{END titulo_esp_fieldheader}
+</th>
+{END titulo_esp_fieldheadercolumn}
+	{BEGIN texto_por_fieldheadercolumn}
+<th class="runner-cc {$texto_por_class}" {$texto_por_style}>
+	{BEGIN texto_por_fieldheader}
+	<b>{$label empresa texto_por}</b>
+	{END texto_por_fieldheader}
+</th>
+{END texto_por_fieldheadercolumn}
+	{BEGIN texto_eng_fieldheadercolumn}
+<th class="runner-cc {$texto_eng_class}" {$texto_eng_style}>
+	{BEGIN texto_eng_fieldheader}
+	<b>{$label empresa texto_eng}</b>
+	{END texto_eng_fieldheader}
+</th>
+{END texto_eng_fieldheadercolumn}
+	{BEGIN texto_esp_fieldheadercolumn}
+<th class="runner-cc {$texto_esp_class}" {$texto_esp_style}>
+	{BEGIN texto_esp_fieldheader}
+	<b>{$label empresa texto_esp}</b>
+	{END texto_esp_fieldheader}
+</th>
+{END texto_esp_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style} {$recordattrs}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN titulo_por_fieldcolumn}
+<td  class="runner-cc {$titulo_por_class}" {$titulo_por_style} {$recordattrs}>
+	{$titulo_por_value}
+</td>
+{END titulo_por_fieldcolumn}
+	{BEGIN titulo_eng_fieldcolumn}
+<td  class="runner-cc {$titulo_eng_class}" {$titulo_eng_style} {$recordattrs}>
+	{$titulo_eng_value}
+</td>
+{END titulo_eng_fieldcolumn}
+	{BEGIN titulo_esp_fieldcolumn}
+<td  class="runner-cc {$titulo_esp_class}" {$titulo_esp_style} {$recordattrs}>
+	{$titulo_esp_value}
+</td>
+{END titulo_esp_fieldcolumn}
+	{BEGIN texto_por_fieldcolumn}
+<td  class="runner-cc {$texto_por_class}" {$texto_por_style} {$recordattrs}>
+	{$texto_por_value}
+</td>
+{END texto_por_fieldcolumn}
+	{BEGIN texto_eng_fieldcolumn}
+<td  class="runner-cc {$texto_eng_class}" {$texto_eng_style} {$recordattrs}>
+	{$texto_eng_value}
+</td>
+{END texto_eng_fieldcolumn}
+	{BEGIN texto_esp_fieldcolumn}
+<td  class="runner-cc {$texto_esp_class}" {$texto_esp_style} {$recordattrs}>
+	{$texto_esp_value}
+</td>
+{END texto_esp_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

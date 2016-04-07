@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}
+<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}
+<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	<h1>{$pagetitlelabel produtos edit}</h1>
+</span></div>{END editheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields {$brickclass_editfields}"><table class="fieldGrid">
+	{BEGIN id_subcategoria_fieldblock}
+<tr class="{$fielddispclass_id_subcategoria}" data-fieldname="id_subcategoria">
+	<td class="rnr-label">
+		{BEGIN id_subcategoria_label}{$label produtos id_subcategoria}{END id_subcategoria_label}
+	</td>
+	<td class="rnr-control style3">
+		{$id_subcategoria_editcontrol}&nbsp;
+	</td>
+</tr>
+{END id_subcategoria_fieldblock}
+	{BEGIN nome_por_fieldblock}
+<tr class="{$fielddispclass_nome_por}" data-fieldname="nome_por">
+	<td class="rnr-label">
+		{BEGIN nome_por_label}{$label produtos nome_por}{END nome_por_label}
+	</td>
+	<td class="rnr-control style3">
+		{$nome_por_editcontrol}&nbsp;
+	</td>
+</tr>
+{END nome_por_fieldblock}
+	{BEGIN nome_eng_fieldblock}
+<tr class="{$fielddispclass_nome_eng}" data-fieldname="nome_eng">
+	<td class="rnr-label">
+		{BEGIN nome_eng_label}{$label produtos nome_eng}{END nome_eng_label}
+	</td>
+	<td class="rnr-control style3">
+		{$nome_eng_editcontrol}&nbsp;
+	</td>
+</tr>
+{END nome_eng_fieldblock}
+	{BEGIN nome_esp_fieldblock}
+<tr class="{$fielddispclass_nome_esp}" data-fieldname="nome_esp">
+	<td class="rnr-label">
+		{BEGIN nome_esp_label}{$label produtos nome_esp}{END nome_esp_label}
+	</td>
+	<td class="rnr-control style3">
+		{$nome_esp_editcontrol}&nbsp;
+	</td>
+</tr>
+{END nome_esp_fieldblock}
+	{BEGIN descricao_por_fieldblock}
+<tr class="{$fielddispclass_descricao_por}" data-fieldname="descricao_por">
+	<td class="rnr-label">
+		{BEGIN descricao_por_label}{$label produtos descricao_por}{END descricao_por_label}
+	</td>
+	<td class="rnr-control style3">
+		{$descricao_por_editcontrol}&nbsp;
+	</td>
+</tr>
+{END descricao_por_fieldblock}
+	{BEGIN descricao_eng_fieldblock}
+<tr class="{$fielddispclass_descricao_eng}" data-fieldname="descricao_eng">
+	<td class="rnr-label">
+		{BEGIN descricao_eng_label}{$label produtos descricao_eng}{END descricao_eng_label}
+	</td>
+	<td class="rnr-control style3">
+		{$descricao_eng_editcontrol}&nbsp;
+	</td>
+</tr>
+{END descricao_eng_fieldblock}
+	{BEGIN descricao_esp_fieldblock}
+<tr class="{$fielddispclass_descricao_esp}" data-fieldname="descricao_esp">
+	<td class="rnr-label">
+		{BEGIN descricao_esp_label}{$label produtos descricao_esp}{END descricao_esp_label}
+	</td>
+	<td class="rnr-control style3">
+		{$descricao_esp_editcontrol}&nbsp;
+	</td>
+</tr>
+{END descricao_esp_fieldblock}
+	{BEGIN video_fieldblock}
+<tr class="{$fielddispclass_video}" data-fieldname="video">
+	<td class="rnr-label">
+		{BEGIN video_label}{$label produtos video}{END video_label}
+	</td>
+	<td class="rnr-control style3">
+		{$video_editcontrol}&nbsp;
+	</td>
+</tr>
+{END video_fieldblock}
+</table></div>
+
+
+{BEGIN editbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button  {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Salvar</a>
+{END save_button}
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Limpar</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Voltar à Lista</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Fechar Janela</a>
+{END close_button}
+{BEGIN view_page_button}
+<a href="#" class="rnr-button" {$view_page_button_attrs}>Exibir</a>
+{END view_page_button}
+</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_edit}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

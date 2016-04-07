@@ -1,0 +1,50 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel categorias masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$id_class}">{$label categorias id}</th>
+			<th class="{$nome_por_class}">{$label categorias nome_por}</th>
+			<th class="{$nome_eng_class}">{$label categorias nome_eng}</th>
+			<th class="{$nome_esp_class}">{$label categorias nome_esp}</th>
+			<th class="{$imagem_class}">{$label categorias imagem}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$id_class}">{$id_mastervalue}</td>
+			<td class="{$nome_por_class}">{$nome_por_mastervalue}</td>
+			<td class="{$nome_eng_class}">{$nome_eng_mastervalue}</td>
+			<td class="{$nome_esp_class}">{$nome_esp_mastervalue}</td>
+			<td class="{$imagem_class}">{$imagem_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}
+<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}
+<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	<h1>{$pagetitlelabel empresa edit}</h1>
+</span></div>{END editheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields {$brickclass_editfields}"><table class="fieldGrid">
+	{BEGIN titulo_por_fieldblock}
+<tr class="{$fielddispclass_titulo_por}" data-fieldname="titulo_por">
+	<td class="rnr-label">
+		{BEGIN titulo_por_label}{$label empresa titulo_por}{END titulo_por_label}
+	</td>
+	<td class="rnr-control style3">
+		{$titulo_por_editcontrol}&nbsp;
+	</td>
+</tr>
+{END titulo_por_fieldblock}
+	{BEGIN titulo_eng_fieldblock}
+<tr class="{$fielddispclass_titulo_eng}" data-fieldname="titulo_eng">
+	<td class="rnr-label">
+		{BEGIN titulo_eng_label}{$label empresa titulo_eng}{END titulo_eng_label}
+	</td>
+	<td class="rnr-control style3">
+		{$titulo_eng_editcontrol}&nbsp;
+	</td>
+</tr>
+{END titulo_eng_fieldblock}
+	{BEGIN titulo_esp_fieldblock}
+<tr class="{$fielddispclass_titulo_esp}" data-fieldname="titulo_esp">
+	<td class="rnr-label">
+		{BEGIN titulo_esp_label}{$label empresa titulo_esp}{END titulo_esp_label}
+	</td>
+	<td class="rnr-control style3">
+		{$titulo_esp_editcontrol}&nbsp;
+	</td>
+</tr>
+{END titulo_esp_fieldblock}
+	{BEGIN texto_por_fieldblock}
+<tr class="{$fielddispclass_texto_por}" data-fieldname="texto_por">
+	<td class="rnr-label">
+		{BEGIN texto_por_label}{$label empresa texto_por}{END texto_por_label}
+	</td>
+	<td class="rnr-control style3">
+		{$texto_por_editcontrol}&nbsp;
+	</td>
+</tr>
+{END texto_por_fieldblock}
+	{BEGIN texto_eng_fieldblock}
+<tr class="{$fielddispclass_texto_eng}" data-fieldname="texto_eng">
+	<td class="rnr-label">
+		{BEGIN texto_eng_label}{$label empresa texto_eng}{END texto_eng_label}
+	</td>
+	<td class="rnr-control style3">
+		{$texto_eng_editcontrol}&nbsp;
+	</td>
+</tr>
+{END texto_eng_fieldblock}
+	{BEGIN texto_esp_fieldblock}
+<tr class="{$fielddispclass_texto_esp}" data-fieldname="texto_esp">
+	<td class="rnr-label">
+		{BEGIN texto_esp_label}{$label empresa texto_esp}{END texto_esp_label}
+	</td>
+	<td class="rnr-control style3">
+		{$texto_esp_editcontrol}&nbsp;
+	</td>
+</tr>
+{END texto_esp_fieldblock}
+</table></div>
+
+
+{BEGIN editbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button  {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN save_button}
+<a href="#" class="rnr-button main" {$savebutton_attrs}>Salvar</a>
+{END save_button}
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Limpar</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Voltar à Lista</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Fechar Janela</a>
+{END close_button}
+{BEGIN view_page_button}
+<a href="#" class="rnr-button" {$view_page_button_attrs}>Exibir</a>
+{END view_page_button}
+</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_edit}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
