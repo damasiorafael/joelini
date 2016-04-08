@@ -262,13 +262,9 @@ function checkTableName($shortTName, $type=false)
 	
 	if ("categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
-	if ("menus" == $shortTName && ($type===false || ($type!==false && $type == 0)))
-		return true;
 	if ("subcategorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("produtos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
-		return true;
-	if ("imagens_produtos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("linhadotempo" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
@@ -277,6 +273,30 @@ function checkTableName($shortTName, $type=false)
 	if ("vendas" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("contato" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("downloads" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("area_restrita" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("idiomas" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("subcategorias1" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("subcategorias11" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("subcategorias2" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("categorias1" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("categorias2" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("categorias21" == $shortTName && ($type===false || ($type!==false && $type == 1)))
+		return true;
+	if ("catalogo" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("banners" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("facebook" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	return false;
 }
@@ -332,11 +352,6 @@ function GetTablesList($pdfMode = false)
 	{
 		$arr[]="categorias";
 	}
-	$strPerm = GetUserPermissions("menus");
-	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
-	{
-		$arr[]="menus";
-	}
 	$strPerm = GetUserPermissions("subcategorias");
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
@@ -346,11 +361,6 @@ function GetTablesList($pdfMode = false)
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
 		$arr[]="produtos";
-	}
-	$strPerm = GetUserPermissions("imagens_produtos");
-	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
-	{
-		$arr[]="imagens_produtos";
 	}
 	$strPerm = GetUserPermissions("linhadotempo");
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
@@ -371,6 +381,66 @@ function GetTablesList($pdfMode = false)
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
 		$arr[]="contato";
+	}
+	$strPerm = GetUserPermissions("downloads");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="downloads";
+	}
+	$strPerm = GetUserPermissions("area_restrita");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="area_restrita";
+	}
+	$strPerm = GetUserPermissions("idiomas");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="idiomas";
+	}
+	$strPerm = GetUserPermissions("subcategorias1");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="subcategorias1";
+	}
+	$strPerm = GetUserPermissions("subcategorias11");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="subcategorias11";
+	}
+	$strPerm = GetUserPermissions("subcategorias2");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="subcategorias2";
+	}
+	$strPerm = GetUserPermissions("categorias1");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="categorias1";
+	}
+	$strPerm = GetUserPermissions("categorias2");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="categorias2";
+	}
+	$strPerm = GetUserPermissions("categorias21");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="categorias21";
+	}
+	$strPerm = GetUserPermissions("catalogo");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="catalogo";
+	}
+	$strPerm = GetUserPermissions("banners");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="banners";
+	}
+	$strPerm = GetUserPermissions("facebook");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="facebook";
 	}
 	return $arr;
 }
@@ -979,22 +1049,12 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
-	if($table=="menus")
-	{
-		return "ADESPI".$extraPerm;
-	}
-//	default permissions	
 	if($table=="subcategorias")
 	{
 		return "ADESPI".$extraPerm;
 	}
 //	default permissions	
 	if($table=="produtos")
-	{
-		return "ADESPI".$extraPerm;
-	}
-//	default permissions	
-	if($table=="imagens_produtos")
 	{
 		return "ADESPI".$extraPerm;
 	}
@@ -1015,6 +1075,66 @@ function GetUserPermissionsStatic( $table )
 	}
 //	default permissions	
 	if($table=="contato")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="downloads")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="area_restrita")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="idiomas")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="subcategorias1")
+	{
+		return "".$extraPerm;
+	}
+//	default permissions	
+	if($table=="subcategorias11")
+	{
+		return "".$extraPerm;
+	}
+//	default permissions	
+	if($table=="subcategorias2")
+	{
+		return "".$extraPerm;
+	}
+//	default permissions	
+	if($table=="categorias1")
+	{
+		return "".$extraPerm;
+	}
+//	default permissions	
+	if($table=="categorias2")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="categorias21")
+	{
+		return "".$extraPerm;
+	}
+//	default permissions	
+	if($table=="catalogo")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="banners")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="facebook")
 	{
 		return "ADESPI".$extraPerm;
 	}

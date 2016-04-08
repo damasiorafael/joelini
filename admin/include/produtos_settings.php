@@ -39,6 +39,12 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["descricao_esp"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["video"] = "Vídeo";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["video"] = "";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["imagens"] = "Imagens";
+	$fieldToolTipsprodutos["Portuguese(Brazil)"]["imagens"] = "";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["arearestrita"] = "Area Restrita";
+	$fieldToolTipsprodutos["Portuguese(Brazil)"]["arearestrita"] = "";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["ocultar"] = "Ocultar";
+	$fieldToolTipsprodutos["Portuguese(Brazil)"]["ocultar"] = "";
 	if (count($fieldToolTipsprodutos["Portuguese(Brazil)"]))
 		$tdataprodutos[".isUseToolTips"] = true;
 }
@@ -49,6 +55,12 @@ if(mlang_getcurrentlang()=="")
 	$pageTitlesprodutos[""] = array();
 	$fieldLabelsprodutos[""]["id"] = "Id";
 	$fieldToolTipsprodutos[""]["id"] = "";
+	$fieldLabelsprodutos[""]["imagens"] = "Imagens";
+	$fieldToolTipsprodutos[""]["imagens"] = "";
+	$fieldLabelsprodutos[""]["arearestrita"] = "Arearestrita";
+	$fieldToolTipsprodutos[""]["arearestrita"] = "";
+	$fieldLabelsprodutos[""]["ocultar"] = "Ocultar";
+	$fieldToolTipsprodutos[""]["ocultar"] = "";
 	if (count($fieldToolTipsprodutos[""]))
 		$tdataprodutos[".isUseToolTips"] = true;
 }
@@ -93,13 +105,12 @@ $tdataprodutos[".edit"] = true;
 
 $tdataprodutos[".list"] = true;
 
+$tdataprodutos[".inlineEdit"] = true;
 $tdataprodutos[".view"] = true;
 
 
-$tdataprodutos[".exportTo"] = true;
 
 
-$tdataprodutos[".delete"] = true;
 
 $tdataprodutos[".showSimpleSearchOptions"] = false;
 
@@ -126,15 +137,15 @@ $tdataprodutos[".isUseTimeForSearch"] = false;
 
 
 
-$tdataprodutos[".useDetailsPreview"] = true;
 
 
 $tdataprodutos[".allSearchFields"] = array();
 $tdataprodutos[".filterFields"] = array();
 $tdataprodutos[".requiredSearchFields"] = array();
 
-$tdataprodutos[".allSearchFields"][] = "id";
-	$tdataprodutos[".allSearchFields"][] = "id_subcategoria";
+$tdataprodutos[".allSearchFields"][] = "id_subcategoria";
+	$tdataprodutos[".allSearchFields"][] = "arearestrita";
+	$tdataprodutos[".allSearchFields"][] = "id";
 	$tdataprodutos[".allSearchFields"][] = "nome_por";
 	$tdataprodutos[".allSearchFields"][] = "nome_eng";
 	$tdataprodutos[".allSearchFields"][] = "nome_esp";
@@ -142,6 +153,7 @@ $tdataprodutos[".allSearchFields"][] = "id";
 	$tdataprodutos[".allSearchFields"][] = "descricao_eng";
 	$tdataprodutos[".allSearchFields"][] = "descricao_esp";
 	$tdataprodutos[".allSearchFields"][] = "video";
+	$tdataprodutos[".allSearchFields"][] = "imagens";
 	
 
 $tdataprodutos[".googleLikeFields"] = array();
@@ -154,11 +166,15 @@ $tdataprodutos[".googleLikeFields"][] = "descricao_por";
 $tdataprodutos[".googleLikeFields"][] = "descricao_eng";
 $tdataprodutos[".googleLikeFields"][] = "descricao_esp";
 $tdataprodutos[".googleLikeFields"][] = "video";
+$tdataprodutos[".googleLikeFields"][] = "arearestrita";
+$tdataprodutos[".googleLikeFields"][] = "imagens";
+$tdataprodutos[".googleLikeFields"][] = "ocultar";
 
 
 $tdataprodutos[".advSearchFields"] = array();
-$tdataprodutos[".advSearchFields"][] = "id";
 $tdataprodutos[".advSearchFields"][] = "id_subcategoria";
+$tdataprodutos[".advSearchFields"][] = "arearestrita";
+$tdataprodutos[".advSearchFields"][] = "id";
 $tdataprodutos[".advSearchFields"][] = "nome_por";
 $tdataprodutos[".advSearchFields"][] = "nome_eng";
 $tdataprodutos[".advSearchFields"][] = "nome_esp";
@@ -166,6 +182,7 @@ $tdataprodutos[".advSearchFields"][] = "descricao_por";
 $tdataprodutos[".advSearchFields"][] = "descricao_eng";
 $tdataprodutos[".advSearchFields"][] = "descricao_esp";
 $tdataprodutos[".advSearchFields"][] = "video";
+$tdataprodutos[".advSearchFields"][] = "imagens";
 
 $tdataprodutos[".tableType"] = "list";
 
@@ -204,7 +221,7 @@ $tdataprodutos[".strOrderBy"] = $tstrOrderBy;
 
 $tdataprodutos[".orderindexes"] = array();
 
-$tdataprodutos[".sqlHead"] = "SELECT id,  	id_subcategoria,  	nome_por,  	nome_eng,  	nome_esp,  	descricao_por,  	descricao_eng,  	descricao_esp,  	video";
+$tdataprodutos[".sqlHead"] = "SELECT id,  	id_subcategoria,  	nome_por,  	nome_eng,  	nome_esp,  	descricao_por,  	descricao_eng,  	descricao_esp,  	video,  	arearestrita,  	imagens,  	ocultar";
 $tdataprodutos[".sqlFrom"] = "FROM produtos";
 $tdataprodutos[".sqlWhereExpr"] = "";
 $tdataprodutos[".sqlTail"] = "";
@@ -242,6 +259,7 @@ $tdataprodutos[".Keys"] = $tableKeysprodutos;
 
 $tdataprodutos[".listFields"] = array();
 $tdataprodutos[".listFields"][] = "id";
+$tdataprodutos[".listFields"][] = "arearestrita";
 $tdataprodutos[".listFields"][] = "id_subcategoria";
 $tdataprodutos[".listFields"][] = "nome_por";
 $tdataprodutos[".listFields"][] = "nome_eng";
@@ -250,6 +268,8 @@ $tdataprodutos[".listFields"][] = "descricao_por";
 $tdataprodutos[".listFields"][] = "descricao_eng";
 $tdataprodutos[".listFields"][] = "descricao_esp";
 $tdataprodutos[".listFields"][] = "video";
+$tdataprodutos[".listFields"][] = "imagens";
+$tdataprodutos[".listFields"][] = "ocultar";
 
 $tdataprodutos[".hideMobileList"] = array();
 
@@ -264,8 +284,11 @@ $tdataprodutos[".viewFields"][] = "descricao_por";
 $tdataprodutos[".viewFields"][] = "descricao_eng";
 $tdataprodutos[".viewFields"][] = "descricao_esp";
 $tdataprodutos[".viewFields"][] = "video";
+$tdataprodutos[".viewFields"][] = "arearestrita";
+$tdataprodutos[".viewFields"][] = "imagens";
 
 $tdataprodutos[".addFields"] = array();
+$tdataprodutos[".addFields"][] = "arearestrita";
 $tdataprodutos[".addFields"][] = "id_subcategoria";
 $tdataprodutos[".addFields"][] = "nome_por";
 $tdataprodutos[".addFields"][] = "nome_eng";
@@ -274,10 +297,12 @@ $tdataprodutos[".addFields"][] = "descricao_por";
 $tdataprodutos[".addFields"][] = "descricao_eng";
 $tdataprodutos[".addFields"][] = "descricao_esp";
 $tdataprodutos[".addFields"][] = "video";
+$tdataprodutos[".addFields"][] = "imagens";
 
 $tdataprodutos[".inlineAddFields"] = array();
 
 $tdataprodutos[".editFields"] = array();
+$tdataprodutos[".editFields"][] = "arearestrita";
 $tdataprodutos[".editFields"][] = "id_subcategoria";
 $tdataprodutos[".editFields"][] = "nome_por";
 $tdataprodutos[".editFields"][] = "nome_eng";
@@ -286,16 +311,13 @@ $tdataprodutos[".editFields"][] = "descricao_por";
 $tdataprodutos[".editFields"][] = "descricao_eng";
 $tdataprodutos[".editFields"][] = "descricao_esp";
 $tdataprodutos[".editFields"][] = "video";
+$tdataprodutos[".editFields"][] = "imagens";
 
 $tdataprodutos[".inlineEditFields"] = array();
+$tdataprodutos[".inlineEditFields"][] = "arearestrita";
+$tdataprodutos[".inlineEditFields"][] = "ocultar";
 
 $tdataprodutos[".exportFields"] = array();
-$tdataprodutos[".exportFields"][] = "id";
-$tdataprodutos[".exportFields"][] = "id_subcategoria";
-$tdataprodutos[".exportFields"][] = "nome_por";
-$tdataprodutos[".exportFields"][] = "nome_eng";
-$tdataprodutos[".exportFields"][] = "nome_esp";
-$tdataprodutos[".exportFields"][] = "video";
 
 $tdataprodutos[".importFields"] = array();
 
@@ -327,8 +349,7 @@ $tdataprodutos[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -451,8 +472,7 @@ $tdataprodutos[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "id_subcategoria"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -503,14 +523,13 @@ $tdataprodutos[".printFields"] = array();
 		
 			
 	$edata["LinkField"] = "id";
-	$edata["LinkFieldType"] = 3;
+	$edata["LinkFieldType"] = 0;
 	$edata["DisplayField"] = "nome_por";
 	
 		
 	$edata["LookupOrderBy"] = "id";
 	
-		$edata["LookupDesc"] = true;
-	
+		
 			
 		
 				
@@ -597,8 +616,7 @@ $tdataprodutos[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "nome_por"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -719,8 +737,7 @@ $tdataprodutos[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "nome_eng"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -841,8 +858,7 @@ $tdataprodutos[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "nome_esp"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1326,8 +1342,7 @@ $tdataprodutos[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "video"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1421,6 +1436,366 @@ $tdataprodutos[".printFields"] = array();
 
 	
 	$tdataprodutos["video"] = $fdata;
+//	arearestrita
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "arearestrita";
+	$fdata["GoodName"] = "arearestrita";
+	$fdata["ownerTable"] = "produtos";
+	$fdata["Label"] = GetFieldLabel("produtos","arearestrita"); 
+	$fdata["FieldType"] = 3;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		$fdata["bAddPage"] = true; 
+	
+		
+		$fdata["bEditPage"] = true; 
+	
+		$fdata["bInlineEdit"] = true; 
+	
+		$fdata["bViewPage"] = true; 
+	
+		$fdata["bAdvancedSearch"] = true; 
+	
+		
+		
+		$fdata["strField"] = "arearestrita"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "arearestrita";
+	
+		
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "files";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "Checkbox");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Checkbox");
+	
+			
+	
+	
+
+
+		
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+		
+		
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+								
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between");
+// the end of search options settings	
+
+	
+
+	
+	$tdataprodutos["arearestrita"] = $fdata;
+//	imagens
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "imagens";
+	$fdata["GoodName"] = "imagens";
+	$fdata["ownerTable"] = "produtos";
+	$fdata["Label"] = GetFieldLabel("produtos","imagens"); 
+	$fdata["FieldType"] = 201;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		$fdata["bAddPage"] = true; 
+	
+		
+		$fdata["bEditPage"] = true; 
+	
+		
+		$fdata["bViewPage"] = true; 
+	
+		$fdata["bAdvancedSearch"] = true; 
+	
+		
+		
+		$fdata["strField"] = "imagens"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "imagens";
+	
+		$fdata["DeleteAssociatedFile"] = true;
+	
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "../uploads/";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "File-based Image");
+	
+		
+		
+				$vdata["ShowThumbnail"] = true;
+	$vdata["ThumbWidth"] = 72;
+	$vdata["ThumbHeight"] = 72;	
+			$vdata["ImageWidth"] = 0;
+	$vdata["ImageHeight"] = 0;
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Document upload");
+	
+			
+	
+	
+
+
+		$edata["IsRequired"] = true; 
+	
+		
+		
+		
+							$edata["acceptFileTypes"] = "bmp";
+						$edata["acceptFileTypes"] .= "|gif";
+						$edata["acceptFileTypes"] .= "|jpg";
+						$edata["acceptFileTypes"] .= "|png";
+		$edata["acceptFileTypes"] = "(".$edata["acceptFileTypes"].")$";
+	
+		$edata["maxNumberOfFiles"] = 0;
+	
+		
+		
+		
+		
+		
+		
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			
+		
+	//	End validation
+	
+		$edata["CreateThumbnail"] = true;
+	$edata["StrThumbnail"] = "th";
+			$edata["ThumbnailSize"] = 150;
+	
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	$fdata["Absolute"] = true;
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Empty");
+// the end of search options settings	
+
+	
+
+	
+	$tdataprodutos["imagens"] = $fdata;
+//	ocultar
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 12;
+	$fdata["strName"] = "ocultar";
+	$fdata["GoodName"] = "ocultar";
+	$fdata["ownerTable"] = "produtos";
+	$fdata["Label"] = GetFieldLabel("produtos","ocultar"); 
+	$fdata["FieldType"] = 3;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		
+		
+		
+		$fdata["bInlineEdit"] = true; 
+	
+		
+		
+		
+		
+		$fdata["strField"] = "ocultar"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "ocultar";
+	
+		
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "files";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "Checkbox");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Checkbox");
+	
+			
+	
+	
+
+
+		
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+		
+		
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+								
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	
+	
+
+	
+
+	
+	$tdataprodutos["ocultar"] = $fdata;
 
 	
 $tables_data["produtos"]=&$tdataprodutos;
@@ -1431,36 +1806,6 @@ $page_titles["produtos"] = &$pageTitlesprodutos;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["produtos"] = array();
-//	imagens_produtos
-	
-	
-
-		$dIndex = 0;
-	$detailsParam = array();
-	$detailsParam["dDataSourceTable"]="imagens_produtos";
-		$detailsParam["dOriginalTable"] = "imagens_produtos";
-				$detailsParam["dType"]=PAGE_LIST;
-	$detailsParam["dShortTable"] = "imagens_produtos";
-	$detailsParam["dCaptionTable"] = GetTableCaption("imagens_produtos");
-	$detailsParam["masterKeys"] =array();
-	$detailsParam["detailKeys"] =array();
-	$detailsParam["dispChildCount"] = "1";
-		$detailsParam["hideChild"] = false;
-	$detailsParam["previewOnList"] = 1;
-	$detailsParam["previewOnAdd"] = 0;
-	$detailsParam["previewOnEdit"] = 0;
-	$detailsParam["previewOnView"] = 0;
-			
-	$detailsTablesData["produtos"][$dIndex] = $detailsParam;
-	
-		
-		$detailsTablesData["produtos"][$dIndex]["masterKeys"] = array();
-
-	$detailsTablesData["produtos"][$dIndex]["masterKeys"][]="id";
-
-				$detailsTablesData["produtos"][$dIndex]["detailKeys"] = array();
-
-	$detailsTablesData["produtos"][$dIndex]["detailKeys"][]="id_produto";
 	
 // tables which are master tables for current table (detail)
 $masterTablesData["produtos"] = array();
@@ -1505,7 +1850,7 @@ function createSqlQuery_produtos()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	id_subcategoria,  	nome_por,  	nome_eng,  	nome_esp,  	descricao_por,  	descricao_eng,  	descricao_esp,  	video";
+$proto0["m_strFieldList"] = "id,  	id_subcategoria,  	nome_por,  	nome_eng,  	nome_esp,  	descricao_por,  	descricao_eng,  	descricao_esp,  	video,  	arearestrita,  	imagens,  	ocultar";
 $proto0["m_strFrom"] = "FROM produtos";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1670,45 +2015,90 @@ $proto21["m_alias"] = "";
 $obj = new SQLFieldListItem($proto21);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto23=array();
-$proto23["m_link"] = "SQLL_MAIN";
-			$proto24=array();
-$proto24["m_strName"] = "produtos";
-$proto24["m_srcTableName"] = "produtos";
-$proto24["m_columns"] = array();
-$proto24["m_columns"][] = "id";
-$proto24["m_columns"][] = "id_subcategoria";
-$proto24["m_columns"][] = "nome_por";
-$proto24["m_columns"][] = "nome_eng";
-$proto24["m_columns"][] = "nome_esp";
-$proto24["m_columns"][] = "descricao_por";
-$proto24["m_columns"][] = "descricao_eng";
-$proto24["m_columns"][] = "descricao_esp";
-$proto24["m_columns"][] = "video";
-$obj = new SQLTable($proto24);
+						$proto23=array();
+			$obj = new SQLField(array(
+	"m_strName" => "arearestrita",
+	"m_strTable" => "produtos",
+	"m_srcTableName" => "produtos"
+));
 
-$proto23["m_table"] = $obj;
-$proto23["m_sql"] = "produtos";
-$proto23["m_alias"] = "";
+$proto23["m_sql"] = "arearestrita";
 $proto23["m_srcTableName"] = "produtos";
-$proto25=array();
-$proto25["m_sql"] = "";
-$proto25["m_uniontype"] = "SQLL_UNKNOWN";
+$proto23["m_expr"]=$obj;
+$proto23["m_alias"] = "";
+$obj = new SQLFieldListItem($proto23);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto25=array();
+			$obj = new SQLField(array(
+	"m_strName" => "imagens",
+	"m_strTable" => "produtos",
+	"m_srcTableName" => "produtos"
+));
+
+$proto25["m_sql"] = "imagens";
+$proto25["m_srcTableName"] = "produtos";
+$proto25["m_expr"]=$obj;
+$proto25["m_alias"] = "";
+$obj = new SQLFieldListItem($proto25);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto27=array();
+			$obj = new SQLField(array(
+	"m_strName" => "ocultar",
+	"m_strTable" => "produtos",
+	"m_srcTableName" => "produtos"
+));
+
+$proto27["m_sql"] = "ocultar";
+$proto27["m_srcTableName"] = "produtos";
+$proto27["m_expr"]=$obj;
+$proto27["m_alias"] = "";
+$obj = new SQLFieldListItem($proto27);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto29=array();
+$proto29["m_link"] = "SQLL_MAIN";
+			$proto30=array();
+$proto30["m_strName"] = "produtos";
+$proto30["m_srcTableName"] = "produtos";
+$proto30["m_columns"] = array();
+$proto30["m_columns"][] = "id";
+$proto30["m_columns"][] = "id_subcategoria";
+$proto30["m_columns"][] = "nome_por";
+$proto30["m_columns"][] = "nome_eng";
+$proto30["m_columns"][] = "nome_esp";
+$proto30["m_columns"][] = "descricao_por";
+$proto30["m_columns"][] = "descricao_eng";
+$proto30["m_columns"][] = "descricao_esp";
+$proto30["m_columns"][] = "video";
+$proto30["m_columns"][] = "arearestrita";
+$proto30["m_columns"][] = "imagens";
+$proto30["m_columns"][] = "ocultar";
+$obj = new SQLTable($proto30);
+
+$proto29["m_table"] = $obj;
+$proto29["m_sql"] = "produtos";
+$proto29["m_alias"] = "";
+$proto29["m_srcTableName"] = "produtos";
+$proto31=array();
+$proto31["m_sql"] = "";
+$proto31["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto25["m_column"]=$obj;
-$proto25["m_contained"] = array();
-$proto25["m_strCase"] = "";
-$proto25["m_havingmode"] = false;
-$proto25["m_inBrackets"] = false;
-$proto25["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto25);
+$proto31["m_column"]=$obj;
+$proto31["m_contained"] = array();
+$proto31["m_strCase"] = "";
+$proto31["m_havingmode"] = false;
+$proto31["m_inBrackets"] = false;
+$proto31["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto31);
 
-$proto23["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto23);
+$proto29["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto29);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1722,7 +2112,7 @@ $queryData_produtos = createSqlQuery_produtos();
 
 
 	
-									
+												
 	
 $tdataprodutos[".sqlquery"] = $queryData_produtos;
 

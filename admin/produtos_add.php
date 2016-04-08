@@ -70,8 +70,7 @@ $layout->skinsparams["3"] = array("button"=>"button1");
 
 
 
-	
-	
+
 $pageMode = AddPage::readAddModeFromRequest();
 
 $xt = new Xtempl();

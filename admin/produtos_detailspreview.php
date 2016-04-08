@@ -119,7 +119,7 @@ if($rowcount)
 {
 	$xt->assign("details_data",true);
 
-	$display_count = 10;
+	$display_count = 5;
 	if($mode == "inline")
 		$display_count*=2;
 		
@@ -283,6 +283,51 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("video")))
 				$class = ' rnr-field-number';
 			$row["video_class"] = $class;
+	//	arearestrita - Checkbox
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("arearestrita", $data, $keylink);
+			$row["arearestrita_value"] = $value;
+			$format = $pSet->getViewFormat("arearestrita");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("arearestrita")))
+				$class = ' rnr-field-number';
+			$row["arearestrita_class"] = $class;
+	//	imagens - File-based Image
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("imagens", $data, $keylink);
+			$row["imagens_value"] = $value;
+			$format = $pSet->getViewFormat("imagens");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("imagens")))
+				$class = ' rnr-field-number';
+			$row["imagens_class"] = $class;
+	//	ocultar - Checkbox
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("ocultar", $data, $keylink);
+			$row["ocultar_value"] = $value;
+			$format = $pSet->getViewFormat("ocultar");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("ocultar")))
+				$class = ' rnr-field-number';
+			$row["ocultar_class"] = $class;
 		$rowinfo[] = $row;
 		if ($b) {
 			$rowinfo2[] = $row;

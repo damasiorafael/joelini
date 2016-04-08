@@ -152,6 +152,11 @@ img {
     height: 16px;
     background: url(../images/link_esp.png) no-repeat;
 }
+.secondary-menu li .link-portugues {
+    width: 36px;
+    height: 16px;
+    background: url(../images/link_pt.png) no-repeat;
+}
 
 /* header hide */
 .header-hide {
@@ -722,9 +727,16 @@ img {
 .lista-categorias-home .categorias li {
     display: inline-block;
     margin-right: 91px;
+    float: left;
+    min-height: 410px;
 }
 .lista-categorias-home .categorias li:nth-child(3n) {
     margin-right: 0;
+}
+
+.lista-categorias-home .categorias li a {
+    display: inline-block;
+    min-height: 300px;
 }
 
 .lista-categorias-home .categorias li p {

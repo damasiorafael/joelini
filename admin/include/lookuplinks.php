@@ -42,7 +42,9 @@ function InitLookupLinks()
 
 	$lookupTableLinks["categorias"]["subcategorias.id_categoria"]["edit"] = array("table" => "subcategorias", "field" => "id_categoria", "page" => "edit");
 	$lookupTableLinks["subcategorias"]["produtos.id_subcategoria"]["edit"] = array("table" => "produtos", "field" => "id_subcategoria", "page" => "edit");
-	$lookupTableLinks["produtos"]["imagens_produtos.id_produto"]["edit"] = array("table" => "imagens_produtos", "field" => "id_produto", "page" => "edit");
+	$lookupTableLinks["categorias"]["subcategorias1.id_categoria"]["edit"] = array("table" => "subcategorias1", "field" => "id_categoria", "page" => "edit");
+	$lookupTableLinks["categorias"]["subcategorias11.id_categoria"]["edit"] = array("table" => "subcategorias11", "field" => "id_categoria", "page" => "edit");
+	$lookupTableLinks["categorias"]["subcategorias2.id_categoria"]["edit"] = array("table" => "subcategorias2", "field" => "id_categoria", "page" => "edit");
 }
 
 ?>

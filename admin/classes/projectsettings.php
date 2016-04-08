@@ -2264,14 +2264,10 @@ function GetTableURL($table = "")
 		$table=$strTableName;
 	if("categorias" == $table) 
 		return "categorias";
-	if("menus" == $table) 
-		return "menus";
 	if("subcategorias" == $table) 
 		return "subcategorias";
 	if("produtos" == $table) 
 		return "produtos";
-	if("imagens_produtos" == $table) 
-		return "imagens_produtos";
 	if("linhadotempo" == $table) 
 		return "linhadotempo";
 	if("empresa" == $table) 
@@ -2280,6 +2276,30 @@ function GetTableURL($table = "")
 		return "vendas";
 	if("contato" == $table) 
 		return "contato";
+	if("downloads" == $table) 
+		return "downloads";
+	if("area_restrita" == $table) 
+		return "area_restrita";
+	if("idiomas" == $table) 
+		return "idiomas";
+	if("subcategorias1" == $table) 
+		return "subcategorias1";
+	if("subcategorias11" == $table) 
+		return "subcategorias11";
+	if("subcategorias2" == $table) 
+		return "subcategorias2";
+	if("categorias1" == $table) 
+		return "categorias1";
+	if("categorias2" == $table) 
+		return "categorias2";
+	if("categorias21" == $table) 
+		return "categorias21";
+	if("catalogo" == $table) 
+		return "catalogo";
+	if("banners" == $table) 
+		return "banners";
+	if("facebook" == $table) 
+		return "facebook";
 
 	return "";
 }
@@ -2292,14 +2312,10 @@ function GetTableByShort($shortTName = "")
 		return false;
 	if("categorias" == $shortTName) 
 		return "categorias";
-	if("menus" == $shortTName) 
-		return "menus";
 	if("subcategorias" == $shortTName) 
 		return "subcategorias";
 	if("produtos" == $shortTName) 
 		return "produtos";
-	if("imagens_produtos" == $shortTName) 
-		return "imagens_produtos";
 	if("linhadotempo" == $shortTName) 
 		return "linhadotempo";
 	if("empresa" == $shortTName) 
@@ -2308,6 +2324,30 @@ function GetTableByShort($shortTName = "")
 		return "vendas";
 	if("contato" == $shortTName) 
 		return "contato";
+	if("downloads" == $shortTName) 
+		return "downloads";
+	if("area_restrita" == $shortTName) 
+		return "area_restrita";
+	if("idiomas" == $shortTName) 
+		return "idiomas";
+	if("subcategorias1" == $shortTName) 
+		return "subcategorias1";
+	if("subcategorias11" == $shortTName) 
+		return "subcategorias11";
+	if("subcategorias2" == $shortTName) 
+		return "subcategorias2";
+	if("categorias1" == $shortTName) 
+		return "categorias1";
+	if("categorias2" == $shortTName) 
+		return "categorias2";
+	if("categorias21" == $shortTName) 
+		return "categorias21";
+	if("catalogo" == $shortTName) 
+		return "catalogo";
+	if("banners" == $shortTName) 
+		return "banners";
+	if("facebook" == $shortTName) 
+		return "facebook";
 }
 
 //	A

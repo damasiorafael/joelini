@@ -56,6 +56,32 @@ function DisplayMasterTableInfoForPrint_produtos($params)
 	$keylink = "";
 	$keylink.= "&key1=".runner_htmlspecialchars(rawurlencode(@$data["id"]));
 	
+	$xt->assign("lancamento_mastervalue", $viewControls->showDBValue("lancamento", $data, $keylink));
+	$format = $settings->getViewFormat("lancamento");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("lancamento")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("lancamento_class", $class); // add class for field header as field value
+	$xt->assign("imagens_mastervalue", $viewControls->showDBValue("imagens", $data, $keylink));
+	$format = $settings->getViewFormat("imagens");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("imagens")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("imagens_class", $class); // add class for field header as field value
 
 	$layout = GetPageLayout("produtos", 'masterprint');
 	if( $layout )

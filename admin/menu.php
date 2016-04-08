@@ -53,16 +53,24 @@ require_once(getabspath("classes/cipherer.php"));
 
 include_once(getabspath("include/categorias_events.php"));
 $tableEvents["categorias"] = new eventclass_categorias;
-include_once(getabspath("include/menus_events.php"));
-$tableEvents["menus"] = new eventclass_menus;
 include_once(getabspath("include/produtos_events.php"));
 $tableEvents["produtos"] = new eventclass_produtos;
-include_once(getabspath("include/imagens_produtos_events.php"));
-$tableEvents["imagens_produtos"] = new eventclass_imagens_produtos;
 include_once(getabspath("include/linhadotempo_events.php"));
 $tableEvents["linhadotempo"] = new eventclass_linhadotempo;
 include_once(getabspath("include/empresa_events.php"));
 $tableEvents["empresa"] = new eventclass_empresa;
+include_once(getabspath("include/downloads_events.php"));
+$tableEvents["downloads"] = new eventclass_downloads;
+include_once(getabspath("include/area_restrita_events.php"));
+$tableEvents["area_restrita"] = new eventclass_area_restrita;
+include_once(getabspath("include/idiomas_events.php"));
+$tableEvents["idiomas"] = new eventclass_idiomas;
+include_once(getabspath("include/categorias1_events.php"));
+$tableEvents["categorias1"] = new eventclass_categorias1;
+include_once(getabspath("include/catalogo_events.php"));
+$tableEvents["catalogo"] = new eventclass_catalogo;
+include_once(getabspath("include/banners_events.php"));
+$tableEvents["banners"] = new eventclass_banners;
 
 $xt = new Xtempl();
 

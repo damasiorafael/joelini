@@ -121,6 +121,19 @@ function DisplayMasterTableInfoForPrint_categorias($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("imagem_class", $class); // add class for field header as field value
+	$xt->assign("ocultar_mastervalue", $viewControls->showDBValue("ocultar", $data, $keylink));
+	$format = $settings->getViewFormat("ocultar");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("ocultar")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("ocultar_class", $class); // add class for field header as field value
 
 	$layout = GetPageLayout("categorias", 'masterprint');
 	if( $layout )

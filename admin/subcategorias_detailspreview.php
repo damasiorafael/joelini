@@ -223,6 +223,21 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("nome_esp")))
 				$class = ' rnr-field-number';
 			$row["nome_esp_class"] = $class;
+	//	ocultar - Checkbox
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("ocultar", $data, $keylink);
+			$row["ocultar_value"] = $value;
+			$format = $pSet->getViewFormat("ocultar");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("ocultar")))
+				$class = ' rnr-field-number';
+			$row["ocultar_class"] = $class;
 		$rowinfo[] = $row;
 		if ($b) {
 			$rowinfo2[] = $row;

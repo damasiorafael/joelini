@@ -54,25 +54,6 @@
 		<td>Não</td>
 		<td colspan=3>&nbsp; </td>
 	</tr>
-	<tr class="{$fielddispclass_id}">
-	{BEGIN id_fieldblock}		
-	<td>
-		{$label produtos id}
-	</td>
-	<td>
-		<input type="checkbox" {$id_notbox}>
-	</td>
-	<td>
-		{$searchtype_id}
-	</td>
-	<td>
-		{$id_editcontrol}&nbsp;
-	</td>
-	<td>
-		{$id_editcontrol1}&nbsp;
-	</td>
-{END id_fieldblock}
-	</tr>
 	<tr class="{$fielddispclass_id_subcategoria}">
 	{BEGIN id_subcategoria_fieldblock}		
 	<td>
@@ -91,6 +72,44 @@
 		{$id_subcategoria_editcontrol1}&nbsp;
 	</td>
 {END id_subcategoria_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_arearestrita}">
+	{BEGIN arearestrita_fieldblock}		
+	<td>
+		{$label produtos arearestrita}
+	</td>
+	<td>
+		<input type="checkbox" {$arearestrita_notbox}>
+	</td>
+	<td>
+		{$searchtype_arearestrita}
+	</td>
+	<td>
+		{$arearestrita_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$arearestrita_editcontrol1}&nbsp;
+	</td>
+{END arearestrita_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_id}">
+	{BEGIN id_fieldblock}		
+	<td>
+		{$label produtos id}
+	</td>
+	<td>
+		<input type="checkbox" {$id_notbox}>
+	</td>
+	<td>
+		{$searchtype_id}
+	</td>
+	<td>
+		{$id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$id_editcontrol1}&nbsp;
+	</td>
+{END id_fieldblock}
 	</tr>
 	<tr class="{$fielddispclass_nome_por}">
 	{BEGIN nome_por_fieldblock}		
@@ -224,6 +243,25 @@
 		{$video_editcontrol1}&nbsp;
 	</td>
 {END video_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_imagens}">
+	{BEGIN imagens_fieldblock}		
+	<td>
+		{$label produtos imagens}
+	</td>
+	<td>
+		<input type="checkbox" {$imagens_notbox}>
+	</td>
+	<td>
+		{$searchtype_imagens}
+	</td>
+	<td>
+		{$imagens_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$imagens_editcontrol1}&nbsp;
+	</td>
+{END imagens_fieldblock}
 	</tr>
 
 </table></div>

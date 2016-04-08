@@ -439,13 +439,9 @@ class Chart
 			
 		if("categorias" == $this->chrt_array['tables'][0])
 			return true;
-		if("menus" == $this->chrt_array['tables'][0])
-			return true;
 		if("subcategorias" == $this->chrt_array['tables'][0])
 			return true;
 		if("produtos" == $this->chrt_array['tables'][0])
-			return true;
-		if("imagens_produtos" == $this->chrt_array['tables'][0])
 			return true;
 		if("linhadotempo" == $this->chrt_array['tables'][0])
 			return true;
@@ -454,6 +450,30 @@ class Chart
 		if("vendas" == $this->chrt_array['tables'][0])
 			return true;
 		if("contato" == $this->chrt_array['tables'][0])
+			return true;
+		if("downloads" == $this->chrt_array['tables'][0])
+			return true;
+		if("area_restrita" == $this->chrt_array['tables'][0])
+			return true;
+		if("idiomas" == $this->chrt_array['tables'][0])
+			return true;
+		if("subcategorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("subcategorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("subcategorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("categorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("categorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("categorias" == $this->chrt_array['tables'][0])
+			return true;
+		if("catalogo" == $this->chrt_array['tables'][0])
+			return true;
+		if("banners" == $this->chrt_array['tables'][0])
+			return true;
+		if("facebook" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

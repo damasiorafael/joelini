@@ -47,12 +47,16 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tbljoelini_at_localhost__area_restrita;
+	var $tbljoelini_at_localhost__banners;
+	var $tbljoelini_at_localhost__catalogo;
 	var $tbljoelini_at_localhost__categorias;
 	var $tbljoelini_at_localhost__contato;
+	var $tbljoelini_at_localhost__downloads;
 	var $tbljoelini_at_localhost__empresa;
-	var $tbljoelini_at_localhost__imagens_produtos;
+	var $tbljoelini_at_localhost__facebook;
+	var $tbljoelini_at_localhost__idiomas;
 	var $tbljoelini_at_localhost__linhadotempo;
-	var $tbljoelini_at_localhost__menus;
 	var $tbljoelini_at_localhost__produtos;
 	var $tbljoelini_at_localhost__subcategorias;
 	var $tbljoelini_at_localhost__usuarios;
@@ -64,12 +68,16 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "area_restrita", "varname" => "joelini_at_localhost__area_restrita", "altvarname" => "area_restrita", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
+		$this->lstTables[] = array("name" => "banners", "varname" => "joelini_at_localhost__banners", "altvarname" => "banners", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
+		$this->lstTables[] = array("name" => "catalogo", "varname" => "joelini_at_localhost__catalogo", "altvarname" => "catalogo", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "categorias", "varname" => "joelini_at_localhost__categorias", "altvarname" => "categorias", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "contato", "varname" => "joelini_at_localhost__contato", "altvarname" => "contato", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
+		$this->lstTables[] = array("name" => "downloads", "varname" => "joelini_at_localhost__downloads", "altvarname" => "downloads", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "empresa", "varname" => "joelini_at_localhost__empresa", "altvarname" => "empresa", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
-		$this->lstTables[] = array("name" => "imagens_produtos", "varname" => "joelini_at_localhost__imagens_produtos", "altvarname" => "imagens_produtos", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
+		$this->lstTables[] = array("name" => "facebook", "varname" => "joelini_at_localhost__facebook", "altvarname" => "facebook", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
+		$this->lstTables[] = array("name" => "idiomas", "varname" => "joelini_at_localhost__idiomas", "altvarname" => "idiomas", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "linhadotempo", "varname" => "joelini_at_localhost__linhadotempo", "altvarname" => "linhadotempo", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
-		$this->lstTables[] = array("name" => "menus", "varname" => "joelini_at_localhost__menus", "altvarname" => "menus", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "produtos", "varname" => "joelini_at_localhost__produtos", "altvarname" => "produtos", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "subcategorias", "varname" => "joelini_at_localhost__subcategorias", "altvarname" => "subcategorias", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "usuarios", "varname" => "joelini_at_localhost__usuarios", "altvarname" => "usuarios", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");

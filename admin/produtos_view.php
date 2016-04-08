@@ -72,8 +72,7 @@ $layout->skinsparams["3"] = array("button"=>"button1");
 
 
 
-	
-	
+
 
 
 $xt = new Xtempl();

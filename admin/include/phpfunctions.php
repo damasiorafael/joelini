@@ -740,6 +740,16 @@ function fileCustomExpression($file, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="downloads" && $field=="arquivo")
+	{
+		;
+		return $value;
+	}	
+				if($table=="banners" && $field=="imagem")
+	{
+		;
+		return $value;
+	}	
 	return $value;
 }
 
@@ -763,7 +773,31 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-				if($table=="imagens_produtos" && $field=="destaque") 
+				if($table=="categorias" && $field=="ocultar") 
+	{
+		return 0;
+	}
+				if($table=="subcategorias" && $field=="ocultar") 
+	{
+		return 0;
+	}
+				if($table=="produtos" && $field=="arearestrita") 
+	{
+		return 0;
+	}
+				if($table=="produtos" && $field=="ocultar") 
+	{
+		return 0;
+	}
+				if($table=="idiomas" && $field=="ativo") 
+	{
+		return 0;
+	}
+				if($table=="catalogo" && $field=="ativo") 
+	{
+		return 0;
+	}
+				if($table=="facebook" && $field=="ativo") 
 	{
 		return 0;
 	}

@@ -307,19 +307,11 @@ class AuditTrailTable
 		{
 			return false;
 		}
-		if($table=="menus")
-		{
-			return false;
-		}
 		if($table=="subcategorias")
 		{
 			return false;
 		}
 		if($table=="produtos")
-		{
-			return false;
-		}
-		if($table=="imagens_produtos")
 		{
 			return false;
 		}
@@ -336,6 +328,54 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="contato")
+		{
+			return false;
+		}
+		if($table=="downloads")
+		{
+			return false;
+		}
+		if($table=="area_restrita")
+		{
+			return false;
+		}
+		if($table=="idiomas")
+		{
+			return false;
+		}
+		if($table=="subcategorias1")
+		{
+			return false;
+		}
+		if($table=="subcategorias11")
+		{
+			return false;
+		}
+		if($table=="subcategorias2")
+		{
+			return false;
+		}
+		if($table=="categorias1")
+		{
+			return false;
+		}
+		if($table=="categorias2")
+		{
+			return false;
+		}
+		if($table=="categorias21")
+		{
+			return false;
+		}
+		if($table=="catalogo")
+		{
+			return false;
+		}
+		if($table=="banners")
+		{
+			return false;
+		}
+		if($table=="facebook")
 		{
 			return false;
 		}
@@ -667,19 +707,11 @@ class AuditTrailFile
 		{
 			return false;
 		}
-		if($table=="menus")
-		{
-			return false;
-		}
 		if($table=="subcategorias")
 		{
 			return false;
 		}
 		if($table=="produtos")
-		{
-			return false;
-		}
-		if($table=="imagens_produtos")
 		{
 			return false;
 		}
@@ -696,6 +728,54 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="contato")
+		{
+			return false;
+		}
+		if($table=="downloads")
+		{
+			return false;
+		}
+		if($table=="area_restrita")
+		{
+			return false;
+		}
+		if($table=="idiomas")
+		{
+			return false;
+		}
+		if($table=="subcategorias1")
+		{
+			return false;
+		}
+		if($table=="subcategorias11")
+		{
+			return false;
+		}
+		if($table=="subcategorias2")
+		{
+			return false;
+		}
+		if($table=="categorias1")
+		{
+			return false;
+		}
+		if($table=="categorias2")
+		{
+			return false;
+		}
+		if($table=="categorias21")
+		{
+			return false;
+		}
+		if($table=="catalogo")
+		{
+			return false;
+		}
+		if($table=="banners")
+		{
+			return false;
+		}
+		if($table=="facebook")
 		{
 			return false;
 		}

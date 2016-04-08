@@ -1,10 +1,7 @@
 <section class="footer-home" id="footer">
             <div class="container">
                 <div class="footer-infos address">
-                    <p>Joelini - Componentes para Móveis</p>
-                    <span>Rua Arapaçu-Listrado, 260 - Parque Industrial</span>
-                    <span>CEP: 86703-295</span>
-                    <span>Arapongas - PR - Brasil</span>
+                    <?php echo $address_joelini[$_SESSION['lang']]; ?>
                 </div>
 
                 <div class="footer-infos phone">

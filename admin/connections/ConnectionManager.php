@@ -258,11 +258,11 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 	$port="";
 	$sys_dbname="joelini";
 } else {
-	$host="localhost";
-	$user="root";
-	$pwd="";
+	$host="mysql.weblink.com.br";
+	$user="u174683815_zypeq";
+	$pwd="cyPftsca1TIsofXXIq";
 	$port="";
-	$sys_dbname="joelini";
+	$sys_dbname="u174683815_jamem";
 }
 $data["connInfo"][0] = $host;
 $data["connInfo"][1] = $user;
@@ -282,14 +282,24 @@ $data["connInfo"][4] = $sys_dbname;
 	{
 		$connectionsIds = array();
 		$connectionsIds["categorias"] = "joelini_at_localhost";
-		$connectionsIds["menus"] = "joelini_at_localhost";
 		$connectionsIds["subcategorias"] = "joelini_at_localhost";
 		$connectionsIds["produtos"] = "joelini_at_localhost";
-		$connectionsIds["imagens_produtos"] = "joelini_at_localhost";
 		$connectionsIds["linhadotempo"] = "joelini_at_localhost";
 		$connectionsIds["empresa"] = "joelini_at_localhost";
 		$connectionsIds["vendas"] = "joelini_at_localhost";
 		$connectionsIds["contato"] = "joelini_at_localhost";
+		$connectionsIds["downloads"] = "joelini_at_localhost";
+		$connectionsIds["area_restrita"] = "joelini_at_localhost";
+		$connectionsIds["idiomas"] = "joelini_at_localhost";
+		$connectionsIds["subcategorias1"] = "joelini_at_localhost";
+		$connectionsIds["subcategorias11"] = "joelini_at_localhost";
+		$connectionsIds["subcategorias2"] = "joelini_at_localhost";
+		$connectionsIds["categorias1"] = "joelini_at_localhost";
+		$connectionsIds["categorias2"] = "joelini_at_localhost";
+		$connectionsIds["categorias21"] = "joelini_at_localhost";
+		$connectionsIds["catalogo"] = "joelini_at_localhost";
+		$connectionsIds["banners"] = "joelini_at_localhost";
+		$connectionsIds["facebook"] = "joelini_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

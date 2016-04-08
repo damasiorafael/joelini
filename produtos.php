@@ -1,3 +1,7 @@
+<?php
+    include("inc/config.php");
+    include("inc/idiomas.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -159,11 +159,7 @@
 </li>
 	{END editselected_link}
 
-		{BEGIN deleteselected_link}<li>
-		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Eliminar</a>
-</li>
-	{END deleteselected_link}
-
+	
 	
 	</ul>
 </span>
@@ -286,6 +282,14 @@
 									</th>
 									{END imagem_fieldheadercolumn}
 
+																	{BEGIN ocultar_fieldheadercolumn}<th class="rnr-gridfieldlabel {$ocultar_class}">
+									{BEGIN ocultar_fieldheader}<span {$ocultar_orderlinkattrs}>
+											{$label categorias ocultar}
+										</span>
+									{END ocultar_fieldheader}
+									</th>
+									{END ocultar_fieldheadercolumn}
+
 
 									
 									<TH class="rnr-edge" rowspan="1" colspan="1">&nbsp;</th>
@@ -338,6 +342,11 @@
       {$imagem_value}
 	</td>
 {END imagem_fieldcolumn}
+
+	{BEGIN ocultar_fieldcolumn}<td class="{$ocultar_class}" {$ocultar_style} {$recordattrs}>
+		{$ocultar_value}
+	</td>
+{END ocultar_fieldcolumn}
 
 
 									<TD class="rnr-edge" rowspan="1" colspan="1" {$recordattrs}>&nbsp;</td>

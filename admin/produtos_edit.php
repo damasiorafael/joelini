@@ -71,8 +71,7 @@ $layout->skinsparams["3"] = array("button"=>"button1");
 
 
 
-	
-	
+
 // parse control parameters
 $pageMode = EditPage::readEditModeFromRequest();
 

@@ -1264,13 +1264,9 @@ class CrossTableReport
 		$isDB = false;
 		if("categorias" == $this->xml_array['tables'][0])
 			$isDB = true;
-		if("menus" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("subcategorias" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("produtos" == $this->xml_array['tables'][0])
-			$isDB = true;
-		if("imagens_produtos" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("linhadotempo" == $this->xml_array['tables'][0])
 			$isDB = true;
@@ -1279,6 +1275,30 @@ class CrossTableReport
 		if("vendas" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("contato" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("downloads" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("area_restrita" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("idiomas" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("subcategorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("subcategorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("subcategorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("categorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("categorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("categorias" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("catalogo" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("banners" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("facebook" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}
