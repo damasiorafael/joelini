@@ -1142,6 +1142,7 @@ span.departamento.form-control {
     background: #E7E7E7;
     padding-top: 55px;
     padding-bottom: 100px;
+    min-height: 606px;
 }
 .produtos .container {
     
@@ -1202,6 +1203,10 @@ span.departamento.form-control {
     font-family: "RobotoCondensedBold", sans-serif;
 }
 
+.nav-cat .subcategorias li a.active {
+    font-weight: bold;
+}
+
 .produtos-lista .title-produtos {
     position: relative;
     font-family: "RobotoCondensedBoldItalic", sans-serif;
@@ -1228,6 +1233,7 @@ span.departamento.form-control {
     float: left;
     margin-right: 12px;
     margin-bottom: 21px;
+    min-height: 185px;
 }
 .produtos-lista .itens-produtos li:nth-child(4n) {
     margin-right: 0;

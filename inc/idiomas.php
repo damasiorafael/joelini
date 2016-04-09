@@ -137,8 +137,40 @@ $departamento["esp"] 	= "Elija Departamento";
 $arquivo["esp"] 		= "Adjuntar Archivos";
 $selecione["esp"] 		= "Seleccionar";
 
-
 /* CAMPOS FORMULARIO */
 
 
+/* MENSAGENS GERIAS */
+
+/* nenhum registro encontrao */
+/* por */
+$nenhumregistro["por"] = "Nenhum registro encontrado";
+
+/* eng */
+$nenhumregistro["eng"] = "No Records Found";
+
+/* esp */
+$nenhumregistro["esp"] = "No se Encontraron Registros";
+
+/* nenhuma subcategoria encontrao */
+/* por */
+$nenhumasub["por"] = "Nenhuma Subcategoria encontrada";
+
+/* eng */
+$nenhumasub["eng"] = "No Subcategory Found";
+
+/* esp */
+$nenhumasub["esp"] = "No se han Encontrado Subcategoría";
+
+/* voltar */
+/* por */
+$voltar["por"] = "voltar";
+
+/* eng */
+$voltar["eng"] = "voltar";
+
+/* esp */
+$voltar["esp"] = "voltar";
+
+/* MENSAGENS GERIAS */
 ?>
