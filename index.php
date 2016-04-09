@@ -12,6 +12,35 @@
     <?php include("inc/header.php"); ?>
 
     <section class="destaque-home">
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    <?php
+                        $sqlBanners = "SELECT * FROM banners";
+                        $resultBanners = consulta_db($sqlBanners);
+                        echo $numBanners = mysql_num_rows($resultBanners);
+                        while($consultaBanners = mysql_fetch_array($resultBanners)){
+                    ?>
+                            <li>
+                                <img src="banners/<?php echo $consultaBanners["imagem"]; ?>">
+                            </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
+            </div>
+
+            <?php
+                if($numBanners > 1){
+            ?>
+                    <div class="container-setas">
+                        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    </div>
+            <?php
+                }
+            ?>
+        </div>
     	<div class="container">
     		<div class="btn-catalogo pull-right">
     			<a href="#" title="<?php echo $catalogo[$_SESSION['lang']]; ?>"><?php echo $catalogo[$_SESSION['lang']]; ?></a>

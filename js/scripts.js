@@ -151,3 +151,7 @@ if (typeof window.innerWidth != 'undefined'){
 var ua = navigator.userAgent;
 
 //alert(ua);
+
+$('.jcarousel').jcarouselAutoscroll({
+    interval: 2000
+});

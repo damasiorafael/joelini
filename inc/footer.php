@@ -40,6 +40,10 @@
         <!-- Slides -->
         <script src="js/jquery.bxslider.js"></script>
 
+        <!-- jCarousel -->
+        <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript" src="js/jcarousel.responsive.js"></script>
+
         <!-- GOOGLE MAPS -->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDfVpzxaQRLeD6z-r-RaEzNbRfD-c6aWmo&sensor=TRUE"></script>
         <script type="text/javascript">

@@ -34,6 +34,9 @@
         <!-- slides -->
         <link href="css/jquery.bxslider.css" rel="stylesheet">
 
+        <!-- jCarousel -->
+        <link href="css/jcarousel.responsive.css" rel="stylesheet">
+
         <!-- style -->
         <link href="css/style.css" rel="stylesheet">
 
