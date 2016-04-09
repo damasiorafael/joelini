@@ -2,6 +2,16 @@
     include("inc/config.php");
     include("inc/idiomas.php");
 
+    if($_REQUEST["categoria"] == "lancamentos"){
+        if(!isset($_SESSION["arearestrita"])){
+            header('Location: login-area-restrita.php');
+        } else {
+            if($_SESSION["arearestrita"] != 1){
+                header('Location: login-area-restrita.php');
+            }
+        }
+    }
+
     $categoria = $_REQUEST["categoria"];
     $subcategoria = $_REQUEST["subcategoria"];
 ?>
@@ -17,7 +27,15 @@
     <section class="produtos">
         <div class="container">
             <aside class="nav-cat pull-left">
-                <h3 class="title-produtos"><?php echo $produtos[$_SESSION['lang']]; ?></h3>
+                <?php
+                    if($categoria == "lancamentos"){
+                ?>
+                        <h3 class="title-produtos"><?php echo $todosprodutos[$_SESSION["lang"]]; ?></h3>
+                <?php
+                    } else {
+                ?>
+                    <h3 class="title-produtos"><?php echo $produtos[$_SESSION['lang']]; ?></h3>
+                <?php } ?>
                 <ul class="categorias">
                     <?php
                         $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
@@ -75,15 +93,23 @@
                         $resultTitSubs = consulta_db($sqlTitSubs);
                         $consultaTitSubs = mysql_fetch_array($resultTitSubs);
                     }
+                    if($categoria == "lancamentos"){
                 ?>
-                <h3 class="title-produtos"><?php echo $consultaTitCats["nome_".$_SESSION["lang"]]; if($subcategoria != ""){ echo " | "; } ?>  <strong> <?php echo $consultaTitSubs["nome_".$_SESSION["lang"]]; ?></strong></h3>
+                        <h3 class="title-produtos"><?php echo $lancamentos[$_SESSION["lang"]]; ?></h3>
+                <?php
+                    } else {
+                ?>
+                        <h3 class="title-produtos"><?php echo $consultaTitCats["nome_".$_SESSION["lang"]]; if($subcategoria != ""){ echo " | "; } ?>  <strong> <?php echo $consultaTitSubs["nome_".$_SESSION["lang"]]; ?></strong></h3>
+                <?php } ?>
                 <ul class="itens-produtos">
                     <?php
                         $sqlProdutos = "";
-                        if($subcategoria == ""){
-                            $sqlProdutos = "SELECT produtos.id, produtos.nome_por, produtos.nome_eng, produtos.nome_esp, produtos.imagens FROM joelini.produtos LEFT JOIN subcategorias ON subcategorias.id = produtos.id_subcategoria WHERE subcategorias.id_categoria = $categoria";
+                        if($categoria == "lancamentos"){
+                            $sqlProdutos = "SELECT * FROM produtos WHERE arearestrita = 1";
+                        } else if($subcategoria == ""){
+                            $sqlProdutos = "SELECT produtos.id, produtos.nome_por, produtos.nome_eng, produtos.nome_esp, produtos.imagens FROM joelini.produtos LEFT JOIN subcategorias ON subcategorias.id = produtos.id_subcategoria WHERE subcategorias.id_categoria = $categoria AND produtos.ocultar <> 1 AND arearestrita = 0";
                         } else {
-                            $sqlProdutos = "SELECT * FROM produtos WHERE id_subcategoria = $subcategoria";
+                            $sqlProdutos = "SELECT * FROM produtos WHERE id_subcategoria = $subcategoria AND ocultar <> 1 AND arearestrita = 0";
                         }
 
                         $resultProdutos = consulta_db($sqlProdutos);

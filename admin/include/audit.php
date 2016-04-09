@@ -379,6 +379,14 @@ class AuditTrailTable
 		{
 			return false;
 		}
+		if($table=="usuarios")
+		{
+			return false;
+		}
+		if($table=="emailsformularios")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -776,6 +784,14 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="facebook")
+		{
+			return false;
+		}
+		if($table=="usuarios")
+		{
+			return false;
+		}
+		if($table=="emailsformularios")
 		{
 			return false;
 		}

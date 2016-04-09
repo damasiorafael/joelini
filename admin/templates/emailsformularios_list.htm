@@ -162,16 +162,6 @@
 {BEGIN container_recordcontrols}
 <div class="rnr-c rnr-ch rnr-c-recordcontrols">
 
-{BEGIN newrecord_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">	
-		{BEGIN inlineadd_link}
-		<a href="#" class="rnr-button" {$inlineaddlink_attrs}>Adicionar Novo</a>
-	{END inlineadd_link}
-
-
-</div>
-{END newrecord_controls_block}
-
 
 {BEGIN record_controls_block}
 <div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}
@@ -185,12 +175,7 @@
 </li>
 	{END editselected_link}
 
-		{BEGIN deleteselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Eliminar</a>
-</li>
-	{END deleteselected_link}
-
+	
 	
 	</ul>
 </span>
@@ -213,7 +198,7 @@
 
 {BEGIN asearch_link}
 <li>
-	<a href="downloads_search.php" class="rnr-button link" {$advsearchlink_attrs}>Busca Avancada</a>
+	<a href="emailsformularios_search.php" class="rnr-button link" {$advsearchlink_attrs}>Busca Avancada</a>
 </li>
 {END asearch_link}
 
@@ -303,51 +288,31 @@
 									<th class="rnr-gridfieldlabel {$id_class}">
 									{BEGIN id_fieldheader}
 																				<span {$id_orderlinkattrs}>
-											{$label downloads id}
+											{$label emailsformularios id}
 										</span>
 									{END id_fieldheader}
 									</th>
 									{END id_fieldheadercolumn}
 
-																	{BEGIN nome_por_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$nome_por_class}">
-									{BEGIN nome_por_fieldheader}
-																				<span {$nome_por_orderlinkattrs}>
-											{$label downloads nome_por}
+																	{BEGIN nome_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$nome_class}">
+									{BEGIN nome_fieldheader}
+																				<span {$nome_orderlinkattrs}>
+											{$label emailsformularios nome}
 										</span>
-									{END nome_por_fieldheader}
+									{END nome_fieldheader}
 									</th>
-									{END nome_por_fieldheadercolumn}
+									{END nome_fieldheadercolumn}
 
-																	{BEGIN nome_eng_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$nome_eng_class}">
-									{BEGIN nome_eng_fieldheader}
-																				<span {$nome_eng_orderlinkattrs}>
-											{$label downloads nome_eng}
+																	{BEGIN email_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$email_class}">
+									{BEGIN email_fieldheader}
+																				<span {$email_orderlinkattrs}>
+											{$label emailsformularios email}
 										</span>
-									{END nome_eng_fieldheader}
+									{END email_fieldheader}
 									</th>
-									{END nome_eng_fieldheadercolumn}
-
-																	{BEGIN nome_esp_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$nome_esp_class}">
-									{BEGIN nome_esp_fieldheader}
-																				<span {$nome_esp_orderlinkattrs}>
-											{$label downloads nome_esp}
-										</span>
-									{END nome_esp_fieldheader}
-									</th>
-									{END nome_esp_fieldheadercolumn}
-
-																	{BEGIN arquivo_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$arquivo_class}">
-									{BEGIN arquivo_fieldheader}
-																				<span {$arquivo_orderlinkattrs}>
-											{$label downloads arquivo}
-										</span>
-									{END arquivo_fieldheader}
-									</th>
-									{END arquivo_fieldheadercolumn}
+									{END email_fieldheadercolumn}
 
 
 									
@@ -395,29 +360,17 @@
 	</td>
 {END id_fieldcolumn}
 
-	{BEGIN nome_por_fieldcolumn}
-	<td class="{$nome_por_class}" {$nome_por_style} {$recordattrs}>
-		{$nome_por_value}
+	{BEGIN nome_fieldcolumn}
+	<td class="{$nome_class}" {$nome_style} {$recordattrs}>
+		{$nome_value}
 	</td>
-{END nome_por_fieldcolumn}
+{END nome_fieldcolumn}
 
-	{BEGIN nome_eng_fieldcolumn}
-	<td class="{$nome_eng_class}" {$nome_eng_style} {$recordattrs}>
-		{$nome_eng_value}
+	{BEGIN email_fieldcolumn}
+	<td class="{$email_class}" {$email_style} {$recordattrs}>
+		{$email_value}
 	</td>
-{END nome_eng_fieldcolumn}
-
-	{BEGIN nome_esp_fieldcolumn}
-	<td class="{$nome_esp_class}" {$nome_esp_style} {$recordattrs}>
-		{$nome_esp_value}
-	</td>
-{END nome_esp_fieldcolumn}
-
-	{BEGIN arquivo_fieldcolumn}
-	<td class="{$arquivo_class}" {$arquivo_style} {$recordattrs}>
-		{$arquivo_value}
-	</td>
-{END arquivo_fieldcolumn}
+{END email_fieldcolumn}
 
 
 									<td class="rnr-edge" {$recordattrs}>&nbsp;</td>

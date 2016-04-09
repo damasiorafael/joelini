@@ -16,18 +16,31 @@
             <aside class="nav-cat nav-downloads pull-left">
                 <h3 class="title-produtos">Downloads</h3>
                 <ul class="categorias downlaods-itens-lista">
-                    <li>
-                        <a href="produtos.php?categoria=1" tittle="Sitema para Porta de Correr">
-                            <span class="nome-download">Download 1</span>
-                            <span class="glyphicons glyphicons-download-alt btn-baixar"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="produtos.php?categoria=1" tittle="Sitema para Porta de Correr">
-                            <span class="nome-download">Download 2</span>
-                            <span class="glyphicons glyphicons-download-alt btn-baixar"></span>
-                        </a>
-                    </li>
+                    <?php
+                        $sql = "SELECT * FROM downloads";
+                        $result = consulta_db($sql);
+                        $numRows = mysql_num_rows($result);
+                        if($numRows > 0){
+                            while($consulta = mysql_fetch_array($result)){
+                    ?>
+                                <li>
+                                    <a href="downloads/<?php echo $consulta["arquivo"]; ?>" target="_blank" tittle="<?php echo $consulta["nome_".$_SESSION['lang']]; ?>">
+                                        <span class="nome-download"><?php echo $consulta["nome_".$_SESSION['lang']]; ?></span>
+                                        <span class="glyphicons glyphicons-download-alt btn-baixar"></span>
+                                    </a>
+                                </li>
+                    <?php
+                            }
+                        } else {
+                    ?>
+                            <li>
+                                <a tittle="<?php echo $nenhumregistro[$_SESSION['lang']]; ?>">
+                                    <span class="nome-download"><?php echo $nenhumregistro[$_SESSION['lang']]; ?></span>
+                                </a>
+                            </li>
+                    <?php
+                        }
+                    ?>
                 </ul>
             </aside>
         </div>

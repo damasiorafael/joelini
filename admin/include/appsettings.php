@@ -452,6 +452,8 @@ $tableCaptions["Portuguese(Brazil)"]["subcategorias2"] = "Subcategorias2";
 $tableCaptions["Portuguese(Brazil)"]["catalogo"] = "Catalogo";
 $tableCaptions["Portuguese(Brazil)"]["banners"] = "Banners";
 $tableCaptions["Portuguese(Brazil)"]["facebook"] = "Facebook";
+$tableCaptions["Portuguese(Brazil)"]["usuarios"] = "Usuarios";
+$tableCaptions["Portuguese(Brazil)"]["emailsformularios"] = "Emailsformularios";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
 $tableCaptions[""]["categorias"] = "Categorias";
@@ -468,6 +470,8 @@ $tableCaptions[""]["subcategorias2"] = "Subcategorias2";
 $tableCaptions[""]["catalogo"] = "Catalogo";
 $tableCaptions[""]["banners"] = "Banners";
 $tableCaptions[""]["facebook"] = "Facebook";
+$tableCaptions[""]["usuarios"] = "Usuarios";
+$tableCaptions[""]["emailsformularios"] = "Emailsformularios";
 
 
 $globalEvents = new class_GlobalEvents;

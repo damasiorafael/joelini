@@ -28,7 +28,7 @@
 <div class="rnr-c rnr-cv rnr-c-search">
 
 {BEGIN searchheader}
-<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel downloads search}</h1>
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel emailsformularios search}</h1>
 </span></div>{END searchheader}
 
 
@@ -57,7 +57,7 @@
 	<tr class="{$fielddispclass_id}">
 	{BEGIN id_fieldblock}		
 	<td>
-		{$label downloads id}
+		{$label emailsformularios id}
 	</td>
 	<td>
 		<input type="checkbox" {$id_notbox}>
@@ -73,81 +73,43 @@
 	</td>
 {END id_fieldblock}
 	</tr>
-	<tr class="{$fielddispclass_nome_por}">
-	{BEGIN nome_por_fieldblock}		
+	<tr class="{$fielddispclass_nome}">
+	{BEGIN nome_fieldblock}		
 	<td>
-		{$label downloads nome_por}
+		{$label emailsformularios nome}
 	</td>
 	<td>
-		<input type="checkbox" {$nome_por_notbox}>
+		<input type="checkbox" {$nome_notbox}>
 	</td>
 	<td>
-		{$searchtype_nome_por}
+		{$searchtype_nome}
 	</td>
 	<td>
-		{$nome_por_editcontrol}&nbsp;
+		{$nome_editcontrol}&nbsp;
 	</td>
 	<td>
-		{$nome_por_editcontrol1}&nbsp;
+		{$nome_editcontrol1}&nbsp;
 	</td>
-{END nome_por_fieldblock}
+{END nome_fieldblock}
 	</tr>
-	<tr class="{$fielddispclass_nome_eng}">
-	{BEGIN nome_eng_fieldblock}		
+	<tr class="{$fielddispclass_email}">
+	{BEGIN email_fieldblock}		
 	<td>
-		{$label downloads nome_eng}
+		{$label emailsformularios email}
 	</td>
 	<td>
-		<input type="checkbox" {$nome_eng_notbox}>
+		<input type="checkbox" {$email_notbox}>
 	</td>
 	<td>
-		{$searchtype_nome_eng}
+		{$searchtype_email}
 	</td>
 	<td>
-		{$nome_eng_editcontrol}&nbsp;
+		{$email_editcontrol}&nbsp;
 	</td>
 	<td>
-		{$nome_eng_editcontrol1}&nbsp;
+		{$email_editcontrol1}&nbsp;
 	</td>
-{END nome_eng_fieldblock}
-	</tr>
-	<tr class="{$fielddispclass_nome_esp}">
-	{BEGIN nome_esp_fieldblock}		
-	<td>
-		{$label downloads nome_esp}
-	</td>
-	<td>
-		<input type="checkbox" {$nome_esp_notbox}>
-	</td>
-	<td>
-		{$searchtype_nome_esp}
-	</td>
-	<td>
-		{$nome_esp_editcontrol}&nbsp;
-	</td>
-	<td>
-		{$nome_esp_editcontrol1}&nbsp;
-	</td>
-{END nome_esp_fieldblock}
-	</tr>
-	<tr class="{$fielddispclass_arquivo}">
-	{BEGIN arquivo_fieldblock}		
-	<td>
-		{$label downloads arquivo}
-	</td>
-	<td>
-		<input type="checkbox" {$arquivo_notbox}>
-	</td>
-	<td>
-		{$searchtype_arquivo}
-	</td>
-	<td>
-		{$arquivo_editcontrol}&nbsp;
-	</td>
-	<td>
-		{$arquivo_editcontrol1}&nbsp;
-	</td>
-{END arquivo_fieldblock}
+{END email_fieldblock}
 	</tr>
 
 </table></div>

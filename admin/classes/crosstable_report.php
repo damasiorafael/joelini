@@ -1300,6 +1300,10 @@ class CrossTableReport
 			$isDB = true;
 		if("facebook" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("usuarios" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("emailsformularios" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

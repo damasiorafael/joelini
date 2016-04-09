@@ -8,7 +8,7 @@ $tdatacategorias = array();
 	$tdatacategorias[".truncateText"] = true;
 	$tdatacategorias[".NumberOfChars"] = 80; 
 	$tdatacategorias[".ShortName"] = "categorias";
-	$tdatacategorias[".OwnerID"] = "";
+	$tdatacategorias[".OwnerID"] = "id";
 	$tdatacategorias[".OriginalTable"] = "categorias";
 
 //	field labels
@@ -55,9 +55,9 @@ if(mlang_getcurrentlang()=="")
 
 
 $tdatacategorias[".shortTableName"] = "categorias";
-$tdatacategorias[".nSecOptions"] = 0;
+$tdatacategorias[".nSecOptions"] = 1;
 $tdatacategorias[".recsPerRowList"] = 1;
-$tdatacategorias[".mainTableOwnerID"] = "";
+$tdatacategorias[".mainTableOwnerID"] = "id";
 $tdatacategorias[".moveNext"] = 1;
 $tdatacategorias[".nType"] = 0;
 

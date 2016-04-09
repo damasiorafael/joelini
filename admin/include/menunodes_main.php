@@ -157,7 +157,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "11";
-	$menuNode["name"] = "";
+	$menuNode["name"] = "Área Restrita";
 	$menuNode["href"] = "mypage.htm";
 	$menuNode["type"] = "Leaf";
 	$menuNode["table"] = "area_restrita";
@@ -168,7 +168,7 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["linkType"] = "Internal";
 	$menuNode["pageType"] = "List";//
 	$menuNode["openType"] = "None";
-	$menuNode["title"] = "Area Restrita";
+	$menuNode["title"] = "Área Restrita";
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 	$menuNode = array();
 	$menuNode["id"] = "12";
@@ -214,6 +214,36 @@ function getMenuNodes_main($menuNodesObject)
 	$menuNode["pageType"] = "List";//
 	$menuNode["openType"] = "None";
 	$menuNode["title"] = "Facebook";
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "15";
+	$menuNode["name"] = "E-mails Formulários";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "emailsformularios";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	$menuNode["title"] = "E-mails Formulários";
+	$menuNodesObject->menuNodes["main"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "16";
+	$menuNode["name"] = "Usuário";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "usuarios";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "0";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	$menuNode["title"] = "Usuário";
 	$menuNodesObject->menuNodes["main"][] = $menuNode;
 }
 ?>

@@ -2205,7 +2205,7 @@ class ProjectSettings
 	 */
 	public static function getForLogin()
 	{
-		return null;	
+		return new ProjectSettings("usuarios", PAGE_LIST);
 	}
 	
 	/** 
@@ -2300,6 +2300,10 @@ function GetTableURL($table = "")
 		return "banners";
 	if("facebook" == $table) 
 		return "facebook";
+	if("usuarios" == $table) 
+		return "usuarios";
+	if("emailsformularios" == $table) 
+		return "emailsformularios";
 
 	return "";
 }
@@ -2348,6 +2352,10 @@ function GetTableByShort($shortTName = "")
 		return "banners";
 	if("facebook" == $shortTName) 
 		return "facebook";
+	if("usuarios" == $shortTName) 
+		return "usuarios";
+	if("emailsformularios" == $shortTName) 
+		return "emailsformularios";
 }
 
 //	A

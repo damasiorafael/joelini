@@ -475,6 +475,10 @@ class Chart
 			return true;
 		if("facebook" == $this->chrt_array['tables'][0])
 			return true;
+		if("usuarios" == $this->chrt_array['tables'][0])
+			return true;
+		if("emailsformularios" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

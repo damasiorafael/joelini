@@ -106,12 +106,14 @@ $nome["por"] 			= "Nome";
 $email["por"] 			= "E-mail";
 $telefone["por"]		= "Telefone";
 $cidade["por"]			= "Cidade";
-$estado["por"] 			= "Estado";
+$estado["por"] 		= "Estado";
 $cep["por"] 			= "CEP";
 $mensagem["por"] 		= "Mensagem";
 $departamento["por"] 	= "Escolha o Departamento";
 $arquivo["por"] 		= "Anexar Arquivo";
 $selecione["por"] 		= "Selecione";
+$usernamelabel["por"]    = "Usuário";
+$senhalabel["por"]       = "Senha";
 
 /* eng */
 $nome["eng"] 			= "Name";
@@ -124,6 +126,8 @@ $mensagem["eng"] 		= "Message";
 $departamento["eng"] 	= "Choose Department";
 $arquivo["eng"] 		= "Attach File";
 $selecione["eng"] 		= "Select";
+$usernamelabel["eng"]         = "User";
+$senhalabel["eng"]            = "Password";
 
 /* esp */
 $nome["esp"] 			= "Nombre";
@@ -136,6 +140,8 @@ $mensagem["esp"] 		= "Mensaje";
 $departamento["esp"] 	= "Elija Departamento";
 $arquivo["esp"] 		= "Adjuntar Archivos";
 $selecione["esp"] 		= "Seleccionar";
+$usernamelabel["esp"]         = "Usuario";
+$senhalabel["esp"]            = "Contraseña";
 
 /* CAMPOS FORMULARIO */
 
@@ -172,5 +178,55 @@ $voltar["eng"] = "voltar";
 /* esp */
 $voltar["esp"] = "voltar";
 
-/* MENSAGENS GERIAS */
+/* erro login */
+/* por */
+$erroLogin["por"] = "Login ou senha incorretos";
+
+/* eng */
+$erroLogin["eng"] = "Login or password incorrect";
+
+/* esp */
+$erroLogin["esp"] = "Usuario o contraseña incorrecto";
+
+/* mensagem form de login */
+/* por */
+$msgformlogin["por"] = "Efetue login para acessar a área restrita";
+
+/* eng */
+$msgformlogin["eng"] = "Log in to access the restricted area";
+
+/* esp */
+$msgformlogin["esp"] = "Inicia sesión para acceder a la zona restringida";
+
+/* lancamentos */
+/* por */
+$lancamentos["por"] = "Lançamentos";
+
+/* eng */
+$lancamentos["eng"] = "Releases";
+
+/* esp */
+$lancamentos["esp"] = "Lanzamiento";
+
+/* todos os produtos */
+/* por */
+$todosprodutos["por"] = "Todos os Produtos";
+
+/* eng */
+$todosprodutos["eng"] = "All Products";
+
+/* esp */
+$todosprodutos["esp"] = "Todos los Productos";
+
+/* catalogo online */
+/* por */
+$catalogo["por"] = "Catálogo Online";
+
+/* eng */
+$catalogo["eng"] = "Online Catalog";
+
+/* esp */
+$catalogo["esp"] = "Catálogo Virtual";
+
+/* MENSAGENS GERAIS */
 ?>

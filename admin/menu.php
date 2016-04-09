@@ -71,6 +71,10 @@ include_once(getabspath("include/catalogo_events.php"));
 $tableEvents["catalogo"] = new eventclass_catalogo;
 include_once(getabspath("include/banners_events.php"));
 $tableEvents["banners"] = new eventclass_banners;
+include_once(getabspath("include/usuarios_events.php"));
+$tableEvents["usuarios"] = new eventclass_usuarios;
+include_once(getabspath("include/emailsformularios_events.php"));
+$tableEvents["emailsformularios"] = new eventclass_emailsformularios;
 
 $xt = new Xtempl();
 

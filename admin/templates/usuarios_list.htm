@@ -163,11 +163,11 @@
 <div class="rnr-c rnr-ch rnr-c-recordcontrols">
 
 {BEGIN newrecord_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">		{BEGIN add_link}
-		<a href="usuarios_add.php" class="rnr-button" {$addlink_attrs}>Adicionar Novo</a>
-	{END add_link}
+<div  class="style1 rnr-bl rnr-b-recordcontrols_new {$brickclass_recordcontrols_new}">	
+		{BEGIN inlineadd_link}
+		<a href="#" class="rnr-button" {$inlineaddlink_attrs}>Adicionar Novo</a>
+	{END inlineadd_link}
 
-	
 
 </div>
 {END newrecord_controls_block}
@@ -179,23 +179,24 @@
 <a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">Com os selecionados</a>
 <ul class="rnr-list" id="selectButtonsGroup{$id}">
 
+		{BEGIN editselected_link}
+<li>
+		<a href="#" class="rnr-button link" {$editselectedlink_attrs} {$editselectedlink_span}>Editar</a>
+</li>
+	{END editselected_link}
+
 	
-		{BEGIN deleteselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Eliminar</a>
-</li>
-	{END deleteselected_link}
-
-		{BEGIN exportselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$exportselectedlink_attrs} {$exportselectedlink_span}>Exportar</a>
-</li>
-	{END exportselected_link}
-
+	
 	</ul>
 </span>
 {END widhtSelected}
-	</div>
+		{BEGIN saveall_link}
+		<a href="#" class="rnr-button" {$savealllink_attrs} {$savealllink_span}>Salvar todos</a>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<a href="#" class="rnr-button" {$cancelalllink_attrs} {$cancelalllink_span}>Cancelar Edição</a>
+	{END cancelall_link}
+</div>
 {END record_controls_block}
 
 
@@ -211,11 +212,6 @@
 </li>
 {END asearch_link}
 
-{BEGIN export_link}
-<li>
-	<a target="_blank" href="usuarios_export.php" class="rnr-button link" {$exportlink_attrs}>Exportar os Resultados</a>
-</li>
-{END export_link}
 
 </ul>
 {END moreButtons}
@@ -358,13 +354,13 @@
 									{BEGIN grid_record}
 									{BEGIN listIcons_column}
 									<td class="rnr-cc rnr-bc rnr-icons" iEditCont="all" {$rowstyle} {$recordattrs}>
-																		{BEGIN edit_column}
-									{BEGIN edit_link}
-																			<a class="rnr-button-img" {$editlink_attrs} data-icon="edit" title="Editar"></a>
-									{END edit_link}
-									{END edit_column}
-
 									
+																		{BEGIN inlineedit_column}
+									{BEGIN inlineedit_link}
+																			<a class="rnr-button-img" {$inlineeditlink_attrs} data-icon="inlineedit" title="Editar"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}
+
 									
 																		</td>	
 									{END listIcons_column}	

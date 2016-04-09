@@ -4,7 +4,7 @@
 @ini_set("display_startup_errors","1");
 
 require_once("include/dbcommon.php");
-require_once("include/usuarios_variables.php");
+require_once("include/emailsformularios_variables.php");
 require_once('include/xtempl.php');
 require_once('classes/editpage.php');
 require_once("classes/searchclause.php");

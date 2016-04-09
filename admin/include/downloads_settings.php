@@ -23,10 +23,14 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$pageTitlesdownloads["Portuguese(Brazil)"] = array();
 	$fieldLabelsdownloads["Portuguese(Brazil)"]["id"] = "Id";
 	$fieldToolTipsdownloads["Portuguese(Brazil)"]["id"] = "";
-	$fieldLabelsdownloads["Portuguese(Brazil)"]["nome"] = "Nome";
-	$fieldToolTipsdownloads["Portuguese(Brazil)"]["nome"] = "";
 	$fieldLabelsdownloads["Portuguese(Brazil)"]["arquivo"] = "Arquivo";
 	$fieldToolTipsdownloads["Portuguese(Brazil)"]["arquivo"] = "";
+	$fieldLabelsdownloads["Portuguese(Brazil)"]["nome_por"] = "Nome Português";
+	$fieldToolTipsdownloads["Portuguese(Brazil)"]["nome_por"] = "";
+	$fieldLabelsdownloads["Portuguese(Brazil)"]["nome_eng"] = "Nome Inglês";
+	$fieldToolTipsdownloads["Portuguese(Brazil)"]["nome_eng"] = "";
+	$fieldLabelsdownloads["Portuguese(Brazil)"]["nome_esp"] = "Nome Espanhol";
+	$fieldToolTipsdownloads["Portuguese(Brazil)"]["nome_esp"] = "";
 	if (count($fieldToolTipsdownloads["Portuguese(Brazil)"]))
 		$tdatadownloads[".isUseToolTips"] = true;
 }
@@ -37,10 +41,14 @@ if(mlang_getcurrentlang()=="")
 	$pageTitlesdownloads[""] = array();
 	$fieldLabelsdownloads[""]["id"] = "Id";
 	$fieldToolTipsdownloads[""]["id"] = "";
-	$fieldLabelsdownloads[""]["nome"] = "Nome";
-	$fieldToolTipsdownloads[""]["nome"] = "";
 	$fieldLabelsdownloads[""]["arquivo"] = "Arquivo";
 	$fieldToolTipsdownloads[""]["arquivo"] = "";
+	$fieldLabelsdownloads[""]["nome_por"] = "Nome Por";
+	$fieldToolTipsdownloads[""]["nome_por"] = "";
+	$fieldLabelsdownloads[""]["nome_eng"] = "Nome Eng";
+	$fieldToolTipsdownloads[""]["nome_eng"] = "";
+	$fieldLabelsdownloads[""]["nome_esp"] = "Nome Esp";
+	$fieldToolTipsdownloads[""]["nome_esp"] = "";
 	if (count($fieldToolTipsdownloads[""]))
 		$tdatadownloads[".isUseToolTips"] = true;
 }
@@ -124,19 +132,25 @@ $tdatadownloads[".filterFields"] = array();
 $tdatadownloads[".requiredSearchFields"] = array();
 
 $tdatadownloads[".allSearchFields"][] = "id";
-	$tdatadownloads[".allSearchFields"][] = "nome";
+	$tdatadownloads[".allSearchFields"][] = "nome_por";
+	$tdatadownloads[".allSearchFields"][] = "nome_eng";
+	$tdatadownloads[".allSearchFields"][] = "nome_esp";
 	$tdatadownloads[".allSearchFields"][] = "arquivo";
 	
 
 $tdatadownloads[".googleLikeFields"] = array();
 $tdatadownloads[".googleLikeFields"][] = "id";
-$tdatadownloads[".googleLikeFields"][] = "nome";
+$tdatadownloads[".googleLikeFields"][] = "nome_por";
+$tdatadownloads[".googleLikeFields"][] = "nome_eng";
+$tdatadownloads[".googleLikeFields"][] = "nome_esp";
 $tdatadownloads[".googleLikeFields"][] = "arquivo";
 
 
 $tdatadownloads[".advSearchFields"] = array();
 $tdatadownloads[".advSearchFields"][] = "id";
-$tdatadownloads[".advSearchFields"][] = "nome";
+$tdatadownloads[".advSearchFields"][] = "nome_por";
+$tdatadownloads[".advSearchFields"][] = "nome_eng";
+$tdatadownloads[".advSearchFields"][] = "nome_esp";
 $tdatadownloads[".advSearchFields"][] = "arquivo";
 
 $tdatadownloads[".tableType"] = "list";
@@ -176,7 +190,7 @@ $tdatadownloads[".strOrderBy"] = $tstrOrderBy;
 
 $tdatadownloads[".orderindexes"] = array();
 
-$tdatadownloads[".sqlHead"] = "SELECT id,  	nome,  	arquivo";
+$tdatadownloads[".sqlHead"] = "SELECT id,  	nome_por,  	nome_eng,  	nome_esp,  	arquivo";
 $tdatadownloads[".sqlFrom"] = "FROM downloads";
 $tdatadownloads[".sqlWhereExpr"] = "";
 $tdatadownloads[".sqlTail"] = "";
@@ -214,7 +228,9 @@ $tdatadownloads[".Keys"] = $tableKeysdownloads;
 
 $tdatadownloads[".listFields"] = array();
 $tdatadownloads[".listFields"][] = "id";
-$tdatadownloads[".listFields"][] = "nome";
+$tdatadownloads[".listFields"][] = "nome_por";
+$tdatadownloads[".listFields"][] = "nome_eng";
+$tdatadownloads[".listFields"][] = "nome_esp";
 $tdatadownloads[".listFields"][] = "arquivo";
 
 $tdatadownloads[".hideMobileList"] = array();
@@ -225,13 +241,17 @@ $tdatadownloads[".viewFields"] = array();
 $tdatadownloads[".addFields"] = array();
 
 $tdatadownloads[".inlineAddFields"] = array();
-$tdatadownloads[".inlineAddFields"][] = "nome";
+$tdatadownloads[".inlineAddFields"][] = "nome_por";
+$tdatadownloads[".inlineAddFields"][] = "nome_eng";
+$tdatadownloads[".inlineAddFields"][] = "nome_esp";
 $tdatadownloads[".inlineAddFields"][] = "arquivo";
 
 $tdatadownloads[".editFields"] = array();
 
 $tdatadownloads[".inlineEditFields"] = array();
-$tdatadownloads[".inlineEditFields"][] = "nome";
+$tdatadownloads[".inlineEditFields"][] = "nome_por";
+$tdatadownloads[".inlineEditFields"][] = "nome_eng";
+$tdatadownloads[".inlineEditFields"][] = "nome_esp";
 $tdatadownloads[".inlineEditFields"][] = "arquivo";
 
 $tdatadownloads[".exportFields"] = array();
@@ -360,14 +380,14 @@ $tdatadownloads[".printFields"] = array();
 
 	
 	$tdatadownloads["id"] = $fdata;
-//	nome
+//	nome_por
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 2;
-	$fdata["strName"] = "nome";
-	$fdata["GoodName"] = "nome";
+	$fdata["strName"] = "nome_por";
+	$fdata["GoodName"] = "nome_por";
 	$fdata["ownerTable"] = "downloads";
-	$fdata["Label"] = GetFieldLabel("downloads","nome"); 
+	$fdata["Label"] = GetFieldLabel("downloads","nome_por"); 
 	$fdata["FieldType"] = 200;
 	
 		
@@ -387,10 +407,10 @@ $tdatadownloads[".printFields"] = array();
 	
 		
 		
-		$fdata["strField"] = "nome"; 
+		$fdata["strField"] = "nome_por"; 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "nome";
+	$fdata["FullName"] = "nome_por";
 	
 		
 		
@@ -479,11 +499,251 @@ $tdatadownloads[".printFields"] = array();
 	
 
 	
-	$tdatadownloads["nome"] = $fdata;
-//	arquivo
+	$tdatadownloads["nome_por"] = $fdata;
+//	nome_eng
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
+	$fdata["strName"] = "nome_eng";
+	$fdata["GoodName"] = "nome_eng";
+	$fdata["ownerTable"] = "downloads";
+	$fdata["Label"] = GetFieldLabel("downloads","nome_eng"); 
+	$fdata["FieldType"] = 200;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		
+		$fdata["bInlineAdd"] = true; 
+	
+		
+		$fdata["bInlineEdit"] = true; 
+	
+		
+		$fdata["bAdvancedSearch"] = true; 
+	
+		
+		
+		$fdata["strField"] = "nome_eng"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "nome_eng";
+	
+		
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "files";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$vdata["NeedEncode"] = true;
+	
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Text field");
+	
+			
+	
+	
+
+
+		
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+			$edata["HTML5InuptType"] = "text";
+	
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+	
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+		
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Empty");
+// the end of search options settings	
+
+	
+
+	
+	$tdatadownloads["nome_eng"] = $fdata;
+//	nome_esp
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "nome_esp";
+	$fdata["GoodName"] = "nome_esp";
+	$fdata["ownerTable"] = "downloads";
+	$fdata["Label"] = GetFieldLabel("downloads","nome_esp"); 
+	$fdata["FieldType"] = 200;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		
+		$fdata["bInlineAdd"] = true; 
+	
+		
+		$fdata["bInlineEdit"] = true; 
+	
+		
+		$fdata["bAdvancedSearch"] = true; 
+	
+		
+		
+		$fdata["strField"] = "nome_esp"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "nome_esp";
+	
+		
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "files";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$vdata["NeedEncode"] = true;
+	
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Text field");
+	
+			
+	
+	
+
+
+		
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+			$edata["HTML5InuptType"] = "text";
+	
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+	
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+		
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Empty");
+// the end of search options settings	
+
+	
+
+	
+	$tdatadownloads["nome_esp"] = $fdata;
+//	arquivo
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
 	$fdata["strName"] = "arquivo";
 	$fdata["GoodName"] = "arquivo";
 	$fdata["ownerTable"] = "downloads";
@@ -634,7 +894,7 @@ function createSqlQuery_downloads()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	nome,  	arquivo";
+$proto0["m_strFieldList"] = "id,  	nome_por,  	nome_eng,  	nome_esp,  	arquivo";
 $proto0["m_strFrom"] = "FROM downloads";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -689,12 +949,12 @@ $obj = new SQLFieldListItem($proto5);
 $proto0["m_fieldlist"][]=$obj;
 						$proto7=array();
 			$obj = new SQLField(array(
-	"m_strName" => "nome",
+	"m_strName" => "nome_por",
 	"m_strTable" => "downloads",
 	"m_srcTableName" => "downloads"
 ));
 
-$proto7["m_sql"] = "nome";
+$proto7["m_sql"] = "nome_por";
 $proto7["m_srcTableName"] = "downloads";
 $proto7["m_expr"]=$obj;
 $proto7["m_alias"] = "";
@@ -703,51 +963,81 @@ $obj = new SQLFieldListItem($proto7);
 $proto0["m_fieldlist"][]=$obj;
 						$proto9=array();
 			$obj = new SQLField(array(
-	"m_strName" => "arquivo",
+	"m_strName" => "nome_eng",
 	"m_strTable" => "downloads",
 	"m_srcTableName" => "downloads"
 ));
 
-$proto9["m_sql"] = "arquivo";
+$proto9["m_sql"] = "nome_eng";
 $proto9["m_srcTableName"] = "downloads";
 $proto9["m_expr"]=$obj;
 $proto9["m_alias"] = "";
 $obj = new SQLFieldListItem($proto9);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto11=array();
-$proto11["m_link"] = "SQLL_MAIN";
-			$proto12=array();
-$proto12["m_strName"] = "downloads";
-$proto12["m_srcTableName"] = "downloads";
-$proto12["m_columns"] = array();
-$proto12["m_columns"][] = "id";
-$proto12["m_columns"][] = "nome";
-$proto12["m_columns"][] = "arquivo";
-$obj = new SQLTable($proto12);
+						$proto11=array();
+			$obj = new SQLField(array(
+	"m_strName" => "nome_esp",
+	"m_strTable" => "downloads",
+	"m_srcTableName" => "downloads"
+));
 
-$proto11["m_table"] = $obj;
-$proto11["m_sql"] = "downloads";
-$proto11["m_alias"] = "";
+$proto11["m_sql"] = "nome_esp";
 $proto11["m_srcTableName"] = "downloads";
-$proto13=array();
-$proto13["m_sql"] = "";
-$proto13["m_uniontype"] = "SQLL_UNKNOWN";
+$proto11["m_expr"]=$obj;
+$proto11["m_alias"] = "";
+$obj = new SQLFieldListItem($proto11);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto13=array();
+			$obj = new SQLField(array(
+	"m_strName" => "arquivo",
+	"m_strTable" => "downloads",
+	"m_srcTableName" => "downloads"
+));
+
+$proto13["m_sql"] = "arquivo";
+$proto13["m_srcTableName"] = "downloads";
+$proto13["m_expr"]=$obj;
+$proto13["m_alias"] = "";
+$obj = new SQLFieldListItem($proto13);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto15=array();
+$proto15["m_link"] = "SQLL_MAIN";
+			$proto16=array();
+$proto16["m_strName"] = "downloads";
+$proto16["m_srcTableName"] = "downloads";
+$proto16["m_columns"] = array();
+$proto16["m_columns"][] = "id";
+$proto16["m_columns"][] = "nome_por";
+$proto16["m_columns"][] = "nome_eng";
+$proto16["m_columns"][] = "nome_esp";
+$proto16["m_columns"][] = "arquivo";
+$obj = new SQLTable($proto16);
+
+$proto15["m_table"] = $obj;
+$proto15["m_sql"] = "downloads";
+$proto15["m_alias"] = "";
+$proto15["m_srcTableName"] = "downloads";
+$proto17=array();
+$proto17["m_sql"] = "";
+$proto17["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto13["m_column"]=$obj;
-$proto13["m_contained"] = array();
-$proto13["m_strCase"] = "";
-$proto13["m_havingmode"] = false;
-$proto13["m_inBrackets"] = false;
-$proto13["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto13);
+$proto17["m_column"]=$obj;
+$proto17["m_contained"] = array();
+$proto17["m_strCase"] = "";
+$proto17["m_havingmode"] = false;
+$proto17["m_inBrackets"] = false;
+$proto17["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto17);
 
-$proto11["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto11);
+$proto15["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto15);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -761,7 +1051,7 @@ $queryData_downloads = createSqlQuery_downloads();
 
 
 	
-			
+					
 	
 $tdatadownloads[".sqlquery"] = $queryData_downloads;
 

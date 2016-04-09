@@ -53,6 +53,7 @@ class tDAL
 	var $tbljoelini_at_localhost__categorias;
 	var $tbljoelini_at_localhost__contato;
 	var $tbljoelini_at_localhost__downloads;
+	var $tbljoelini_at_localhost__emailsformularios;
 	var $tbljoelini_at_localhost__empresa;
 	var $tbljoelini_at_localhost__facebook;
 	var $tbljoelini_at_localhost__idiomas;
@@ -74,6 +75,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "categorias", "varname" => "joelini_at_localhost__categorias", "altvarname" => "categorias", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "contato", "varname" => "joelini_at_localhost__contato", "altvarname" => "contato", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "downloads", "varname" => "joelini_at_localhost__downloads", "altvarname" => "downloads", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
+		$this->lstTables[] = array("name" => "emailsformularios", "varname" => "joelini_at_localhost__emailsformularios", "altvarname" => "emailsformularios", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "empresa", "varname" => "joelini_at_localhost__empresa", "altvarname" => "empresa", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "facebook", "varname" => "joelini_at_localhost__facebook", "altvarname" => "facebook", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");
 		$this->lstTables[] = array("name" => "idiomas", "varname" => "joelini_at_localhost__idiomas", "altvarname" => "idiomas", "connId" => "joelini_at_localhost", "schema" => "", "connName" => "joelini at localhost");

@@ -298,6 +298,10 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("facebook" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
+	if ("usuarios" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("emailsformularios" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
 	return false;
 }
 
@@ -441,6 +445,16 @@ function GetTablesList($pdfMode = false)
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
 		$arr[]="facebook";
+	}
+	$strPerm = GetUserPermissions("usuarios");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="usuarios";
+	}
+	$strPerm = GetUserPermissions("emailsformularios");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="emailsformularios";
 	}
 	return $arr;
 }
@@ -1138,6 +1152,16 @@ function GetUserPermissionsStatic( $table )
 	{
 		return "ADESPI".$extraPerm;
 	}
+//	default permissions	
+	if($table=="usuarios")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="emailsformularios")
+	{
+		return "ADESPI".$extraPerm;
+	}
 	// grant nothing by default
 	return "";
 }
@@ -1241,6 +1265,9 @@ function SetAuthSessionData($pUsername, &$data, $fromFacebook, $password, &$page
 	$_SESSION["GroupID"] = $data["email"];
 
 
+		$_SESSION["OwnerID"] = $data["id"];
+	$_SESSION["_categorias_OwnerID"] = $data["id"];
+		$_SESSION["_usuarios_OwnerID"] = $data["email"];
 	if($globalEvents->exists("AfterSuccessfulLogin"))
 	{
 		$globalEvents->AfterSuccessfulLogin($pUsername != "Guest" ? $pUsername : "", $password, $data, $pageObject);
@@ -1291,6 +1318,18 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	$strPerm = GetUserPermissions();
 	if( strpos($strPerm, "M") === false )
 	{
+		if($table=="categorias")
+		{
+			
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
+		if($table=="usuarios")
+		{
+			
+				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
+				return false;
+		}
 	}
 	//	 check user group permissions
 	$localAction = strtolower($strAction);
@@ -1361,6 +1400,14 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 
 	if( strpos($strPerm, "M") === false )
 	{
+		if($table=="categorias")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
+		if($table=="usuarios")
+		{
+				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
+		}
 	}
 	
 	if($strAction=="Edit" && !(strpos($strPerm, "E")===false) ||

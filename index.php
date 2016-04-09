@@ -14,7 +14,7 @@
     <section class="destaque-home">
     	<div class="container">
     		<div class="btn-catalogo pull-right">
-    			<a href="#" title="Catálogo"></a>
+    			<a href="#" title="<?php echo $catalogo[$_SESSION['lang']]; ?>"><?php echo $catalogo[$_SESSION['lang']]; ?></a>
     		</div>
     	</div>
     </section>

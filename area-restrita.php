@@ -1,6 +1,12 @@
 <?php
     include("inc/config.php");
     include("inc/idiomas.php");
+
+    if(!isset($_SESSION["arearestrita"])){
+        header('Location: login-area-restrita.php');
+    } else if($_SESSION["arearestrita"] !== 1){
+        header('Location: login-area-restrita.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +24,7 @@
                     <span>Downloads</span>
                 </a>
 
-                <a href="produtos.php?categoria=lancamentos" class="btn-lancamentos">
+                <a href="produtos.php?categoria=lancamentos" class="btn-lancamentos-<?php echo $_SESSION['lang']; ?>">
                     <span>Lançamentos</span>
                 </a>
             </div>

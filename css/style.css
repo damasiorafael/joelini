@@ -303,12 +303,25 @@ img {
     display: inline-block;
     margin-top: 350px;
     margin-right: 63px;
+    border-radius: 9px;
+    background: #1C214F;
 }
 .btn-catalogo a {
     display: inline-block;
     width: 236px;
     height: 108px;
-    background: url(../images/btn-catalogo.png) no-repeat 0 0;
+    border-radius: 9px;
+    padding-top: 25px;
+    padding-left: 97px;
+    text-transform: uppercase;
+    line-height: 30px;
+    font-size: 25px;
+    color: #FFF;
+    font-family: "RobotoCondensedBoldItalic", sans-serif;
+    background: url(../images/btn-catalogo.png) no-repeat 25px center;
+}
+.btn-catalogo a:hover {
+    background-color: #fdca02!important;
 }
 
 /* section empresa home */
@@ -807,7 +820,7 @@ img {
 .vendas-home .form-vendas-home {
     width: 920px;
 }
-.vendas-home .form-vendas-home form {
+.vendas-home .form-vendas-home form, .form-login {
     display: block;
     float: left;
     width: 920px;
@@ -823,17 +836,17 @@ img {
     font-size: 17px;
     font-family: "RobotoItalic", sans-serif;
 }
-.form-vendas-home form {
+.form-vendas-home form, .form-login {
     margin-top: 33px;
 }
-.form-vendas-home form label {
+.form-vendas-home form label, .form-login label {
     color: #7a7a7a;
     font-size: 17px;
     font-family: "RobotoItalic", sans-serif;
     font-weight: normal;
     line-height: 18px;
 }
-.form-vendas-home form .form-control {
+.form-vendas-home form .form-control, .form-login .form-control {
     background: transparent;
     border-radius: 0!important;
     border: 1px solid #C9C9C9;
@@ -843,7 +856,7 @@ img {
     font-family: "RobotoLight", sans-serif;
     margin-bottom: 18px;
 }
-.form-vendas-home form .form-control:focus {
+.form-vendas-home form .form-control:focus, .form-login .form-control:focus {
     border-color: #1d234e;
     box-shadow: 0 1px 1px #1d234e inset, 0 0 8px #3f456f;
     outline: 0 none;
@@ -851,7 +864,7 @@ img {
 .form-vendas-home form textarea {
     height: 325px!important;
 }
-.form-vendas-home form .btn-envia {
+.form-vendas-home form .btn-envia, .form-login .btn-envia {
     width: 101px!important;
     height: 47px!important;
     margin-top: 13px!important;
@@ -864,7 +877,7 @@ img {
     position: relative;
     z-index: 9997;
 }
-.form-vendas-home form .btn-envia:hover {
+.form-vendas-home form .btn-envia:hover, .form-login .btn-envia:hover {
     background: #fdca02!important;
     box-shadow: 0 0 8px #3f456f!important;
     color: #1C214F!important;
@@ -1546,6 +1559,37 @@ span.departamento.form-control {
     float: right;
 }
 
+/* btn area restrita idiomas */
+/* por */
+.content-btns-area-restrita a.btn-lancamentos-por {
+    background: url(../images/btn-lancamentos-por.png) no-repeat 0 0;
+    float: right;
+}
+.content-btns-area-restrita a.btn-lancamentos-por:hover {
+    background: url(../images/btn-lancamentos-por-hover.png) no-repeat 0 0;
+    float: right;
+}
+
+/* eng */
+.content-btns-area-restrita a.btn-lancamentos-eng {
+    background: url(../images/btn-lancamentos-eng.png) no-repeat 0 0;
+    float: right;
+}
+.content-btns-area-restrita a.btn-lancamentos-eng:hover {
+    background: url(../images/btn-lancamentos-eng-hover.png) no-repeat 0 0;
+    float: right;
+}
+
+/* esp */
+.content-btns-area-restrita a.btn-lancamentos-esp {
+    background: url(../images/btn-lancamentos-esp.png) no-repeat 0 0;
+    float: right;
+}
+.content-btns-area-restrita a.btn-lancamentos-esp:hover {
+    background: url(../images/btn-lancamentos-esp-hover.png) no-repeat 0 0;
+    float: right;
+}
+
 @media (max-width: 916px){
     .content-btns-area-restrita {
         width: 100%;
@@ -1614,6 +1658,29 @@ span.departamento.form-control {
     }
 }
 /* DOWNLOADS */
+
+
+/* LOGIN AREA RESTRITA */
+.erro-login {
+    color: red!important;
+    font-weight: bold;
+    font-size: 18px;
+}
+.form-login {
+    float: none;
+    margin: auto;
+    margin-top: 120px;
+    width: 300px;
+}
+.form-login h3 {
+    color: #7a7a7a;
+    font-family: "RobotoCondensedBold", sans-serif!important;
+    font-size: 19px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* LOGIN AREA RESTRITA */
 
 /* OVERLOAD LIGHTBOX */
 .overview {
