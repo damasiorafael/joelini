@@ -51,8 +51,6 @@ $layout->skinsparams["3"] = array("button"=>"button1");
 require_once('include/xtempl.php');
 require_once(getabspath("classes/cipherer.php"));
 
-include_once(getabspath("include/categorias_events.php"));
-$tableEvents["categorias"] = new eventclass_categorias;
 include_once(getabspath("include/produtos_events.php"));
 $tableEvents["produtos"] = new eventclass_produtos;
 include_once(getabspath("include/linhadotempo_events.php"));
@@ -75,6 +73,8 @@ include_once(getabspath("include/usuarios_events.php"));
 $tableEvents["usuarios"] = new eventclass_usuarios;
 include_once(getabspath("include/emailsformularios_events.php"));
 $tableEvents["emailsformularios"] = new eventclass_emailsformularios;
+include_once(getabspath("include/categorias_events.php"));
+$tableEvents["categorias"] = new eventclass_categorias;
 
 $xt = new Xtempl();
 

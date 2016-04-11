@@ -2262,8 +2262,6 @@ function GetTableURL($table = "")
 	global $strTableName, $projectTables;
 	if(!$table)
 		$table=$strTableName;
-	if("categorias" == $table) 
-		return "categorias";
 	if("subcategorias" == $table) 
 		return "subcategorias";
 	if("produtos" == $table) 
@@ -2304,6 +2302,8 @@ function GetTableURL($table = "")
 		return "usuarios";
 	if("emailsformularios" == $table) 
 		return "emailsformularios";
+	if("categorias" == $table) 
+		return "categorias";
 
 	return "";
 }
@@ -2314,8 +2314,6 @@ function GetTableByShort($shortTName = "")
 	global $projectTables;
 	if(!$shortTName)
 		return false;
-	if("categorias" == $shortTName) 
-		return "categorias";
 	if("subcategorias" == $shortTName) 
 		return "subcategorias";
 	if("produtos" == $shortTName) 
@@ -2356,6 +2354,8 @@ function GetTableByShort($shortTName = "")
 		return "usuarios";
 	if("emailsformularios" == $shortTName) 
 		return "emailsformularios";
+	if("categorias" == $shortTName) 
+		return "categorias";
 }
 
 //	A

@@ -107,9 +107,9 @@
                         if($categoria == "lancamentos"){
                             $sqlProdutos = "SELECT * FROM produtos WHERE arearestrita = 1";
                         } else if($subcategoria == ""){
-                            $sqlProdutos = "SELECT produtos.id, produtos.nome_por, produtos.nome_eng, produtos.nome_esp, produtos.imagens FROM joelini.produtos LEFT JOIN subcategorias ON subcategorias.id = produtos.id_subcategoria WHERE subcategorias.id_categoria = $categoria AND produtos.ocultar <> 1 AND arearestrita = 0";
+                            $sqlProdutos = "SELECT produtos.id, produtos.nome_por, produtos.nome_eng, produtos.nome_esp, produtos.imagens FROM produtos LEFT JOIN subcategorias ON subcategorias.id = produtos.id_subcategoria WHERE subcategorias.id_categoria = $categoria AND produtos.ocultar = 0 AND arearestrita = 0";
                         } else {
-                            $sqlProdutos = "SELECT * FROM produtos WHERE id_subcategoria = $subcategoria AND ocultar <> 1 AND arearestrita = 0";
+                            $sqlProdutos = "SELECT * FROM produtos WHERE id_subcategoria = $subcategoria AND ocultar = 0 AND arearestrita = 0";
                         }
 
                         $resultProdutos = consulta_db($sqlProdutos);

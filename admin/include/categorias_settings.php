@@ -8,7 +8,7 @@ $tdatacategorias = array();
 	$tdatacategorias[".truncateText"] = true;
 	$tdatacategorias[".NumberOfChars"] = 80; 
 	$tdatacategorias[".ShortName"] = "categorias";
-	$tdatacategorias[".OwnerID"] = "id";
+	$tdatacategorias[".OwnerID"] = "";
 	$tdatacategorias[".OriginalTable"] = "categorias";
 
 //	field labels
@@ -43,6 +43,14 @@ if(mlang_getcurrentlang()=="")
 	$pageTitlescategorias[""] = array();
 	$fieldLabelscategorias[""]["id"] = "Id";
 	$fieldToolTipscategorias[""]["id"] = "";
+	$fieldLabelscategorias[""]["nome_por"] = "Nome Por";
+	$fieldToolTipscategorias[""]["nome_por"] = "";
+	$fieldLabelscategorias[""]["nome_eng"] = "Nome Eng";
+	$fieldToolTipscategorias[""]["nome_eng"] = "";
+	$fieldLabelscategorias[""]["nome_esp"] = "Nome Esp";
+	$fieldToolTipscategorias[""]["nome_esp"] = "";
+	$fieldLabelscategorias[""]["imagem"] = "Imagem";
+	$fieldToolTipscategorias[""]["imagem"] = "";
 	$fieldLabelscategorias[""]["ocultar"] = "Ocultar";
 	$fieldToolTipscategorias[""]["ocultar"] = "";
 	if (count($fieldToolTipscategorias[""]))
@@ -55,9 +63,9 @@ if(mlang_getcurrentlang()=="")
 
 
 $tdatacategorias[".shortTableName"] = "categorias";
-$tdatacategorias[".nSecOptions"] = 1;
+$tdatacategorias[".nSecOptions"] = 0;
 $tdatacategorias[".recsPerRowList"] = 1;
-$tdatacategorias[".mainTableOwnerID"] = "id";
+$tdatacategorias[".mainTableOwnerID"] = "";
 $tdatacategorias[".moveNext"] = 1;
 $tdatacategorias[".nType"] = 0;
 
@@ -330,7 +338,8 @@ $tdatacategorias[".printFields"] = array();
 	
 
 
-		
+		$edata["IsRequired"] = true; 
+	
 		
 		
 		
@@ -352,7 +361,9 @@ $tdatacategorias[".printFields"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-		
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			
 		
 	//	End validation
 	
@@ -772,8 +783,7 @@ $tdatacategorias[".printFields"] = array();
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "imagem";
 	
-		$fdata["DeleteAssociatedFile"] = true;
-	
+		
 		$fdata["CompatibilityMode"] = true; 
 	
 				$fdata["FieldPermissions"] = true;
@@ -783,17 +793,13 @@ $tdatacategorias[".printFields"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "File-based Image");
+	$vdata = array("ViewFormat" => "Document Download");
 	
 		
 		
-				$vdata["ShowThumbnail"] = true;
-	$vdata["ThumbWidth"] = 72;
-	$vdata["ThumbHeight"] = 72;	
-			$vdata["ImageWidth"] = 0;
-	$vdata["ImageHeight"] = 0;
-	
 		
+								$vdata["ShowIcon"] = true; 
+			
 		
 		
 		
@@ -815,7 +821,8 @@ $tdatacategorias[".printFields"] = array();
 	
 
 
-		
+		$edata["IsRequired"] = true; 
+	
 		
 		
 		
@@ -835,14 +842,12 @@ $tdatacategorias[".printFields"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-		
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+			
 		
 	//	End validation
 	
-		$edata["CreateThumbnail"] = true;
-	$edata["StrThumbnail"] = "th";
-			$edata["ThumbnailSize"] = 150;
-	
+		
 				
 		
 	

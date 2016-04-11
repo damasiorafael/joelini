@@ -108,7 +108,7 @@ function DisplayMasterTableInfo_categorias($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("nome_esp_class", $class); // add class for field header as field value
-	$xt->assign("imagem_mastervalue", $viewControls->showDBValue("imagem", $data, $keylink));
+	$xt->assign("imagem_mastervalue", "<span class='rnr-field-file'>".$viewControls->showDBValue("imagem", $data, $keylink)."</span>");
 	$format = $settings->getViewFormat("imagem");
 	$class = " rnr-field-text";
 	if($format == FORMAT_FILE) 

@@ -2,6 +2,23 @@
     include("inc/config.php");
     include("inc/idiomas.php");
     $id = $_REQUEST["id"];
+
+    function checaProdutoRestrito($id){
+        $sqlCheca = "SELECT produtos.arearestrita FROM produtos WHERE id = $id";
+        $resultCheca = consulta_db($sqlCheca);
+        $consultaCheca = mysql_fetch_object($resultCheca);
+        if($consultaCheca->arearestrita == 1){
+            if(!isset($_SESSION["arearestrita"])){
+                header('Location: login-area-restrita.php');
+            } else if($_SESSION["arearestrita"] !== 1){
+                header('Location: login-area-restrita.php');
+            }
+        } else {
+            return true;
+        }
+    }
+
+    checaProdutoRestrito($id);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +33,7 @@
         <div class="container">
             <div class="content-fotos">
                 <div class="topo-pag-produto">
-                    <a href="" class="link-voltar"> &lt;&lt;<?php echo $voltar[$_SESSION["lang"]]; ?></a>
+                    <a href="#" class="link-voltar" onclick="history.back();"> &lt;&lt;<?php echo $voltar[$_SESSION["lang"]]; ?></a>
 
                     <?php
                         $sql = "SELECT
@@ -34,8 +51,6 @@
                                     subcategorias.id = produtos.id_subcategoria
                                 WHERE 
                                     produtos.id = $id
-                                AND 
-                                    produtos.arearestrita = 0
                                 AND
                                     produtos.ocultar = 0";
                         $result = consulta_db($sql);
@@ -48,7 +63,7 @@
                     var imagens = <?php echo $consulta["imagens"]; ?>;
                     var imagemDestaque = imagens[0]['name'].replace("..\/", "");
                     var divImgDestaque = "<div class='img-principal'>";
-                    divImgDestaque += "<a href='"+imagemDestaque+"' class='myLightBox'>";
+                    divImgDestaque += "<a href='"+imagemDestaque+"' data-lightbox='produto'>";
                     divImgDestaque += "<img src='"+imagemDestaque+"' width='534'>";
                     divImgDestaque += "</a></div>";
                     document.write(divImgDestaque);
@@ -56,11 +71,12 @@
                     var divImagensSlide = "<div class='galeria0img-produtos'>";
                     divImagensSlide += "<div class='sliderProdutos'>";
                     var imagemThumb = "";
+                    console.log(imagens.length);
                     for(var i = 1; i < imagens.length; i++){
                         imagemThumb = imagens[i]['name'];
                         imagemThumb = imagemThumb.replace("..\/", "");
                         divImagensSlide += "<div class='slide'>";
-                        divImagensSlide += "<a href='"+imagemThumb+"' class='myLightBox'>";
+                        divImagensSlide += "<a href='"+imagemThumb+"' data-lightbox='produto'>";
                         divImagensSlide += "<img src='"+imagemThumb+"' width='145'></a></div>";
                     };
                     divImagensSlide += "</div></div>";

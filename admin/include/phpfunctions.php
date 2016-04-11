@@ -740,12 +740,22 @@ function fileCustomExpression($file, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="contato" && $field=="arquivo")
+	{
+		;
+		return $value;
+	}	
 				if($table=="downloads" && $field=="arquivo")
 	{
 		;
 		return $value;
 	}	
 				if($table=="banners" && $field=="imagem")
+	{
+		;
+		return $value;
+	}	
+				if($table=="categorias" && $field=="imagem")
 	{
 		;
 		return $value;
@@ -773,10 +783,6 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-				if($table=="categorias" && $field=="ocultar") 
-	{
-		return 0;
-	}
 				if($table=="subcategorias" && $field=="ocultar") 
 	{
 		return 0;
@@ -798,6 +804,10 @@ function GetDefaultValue($field, $ptype, $table="")
 		return 0;
 	}
 				if($table=="facebook" && $field=="ativo") 
+	{
+		return 0;
+	}
+				if($table=="categorias" && $field=="ocultar") 
 	{
 		return 0;
 	}

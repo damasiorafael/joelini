@@ -1262,8 +1262,6 @@ class CrossTableReport
 			return true;
 			
 		$isDB = false;
-		if("categorias" == $this->xml_array['tables'][0])
-			$isDB = true;
 		if("subcategorias" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("produtos" == $this->xml_array['tables'][0])
@@ -1303,6 +1301,8 @@ class CrossTableReport
 		if("usuarios" == $this->xml_array['tables'][0])
 			$isDB = true;
 		if("emailsformularios" == $this->xml_array['tables'][0])
+			$isDB = true;
+		if("categorias" == $this->xml_array['tables'][0])
 			$isDB = true;
 		return $isDB;
 	}

@@ -437,8 +437,6 @@ class Chart
 		if( !$this->webchart )
 			return true;
 			
-		if("categorias" == $this->chrt_array['tables'][0])
-			return true;
 		if("subcategorias" == $this->chrt_array['tables'][0])
 			return true;
 		if("produtos" == $this->chrt_array['tables'][0])
@@ -478,6 +476,8 @@ class Chart
 		if("usuarios" == $this->chrt_array['tables'][0])
 			return true;
 		if("emailsformularios" == $this->chrt_array['tables'][0])
+			return true;
+		if("categorias" == $this->chrt_array['tables'][0])
 			return true;
 		return false;
 	}

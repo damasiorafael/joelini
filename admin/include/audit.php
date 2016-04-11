@@ -303,10 +303,6 @@ class AuditTrailTable
 	
 	function logValueEnable($table)
 	{
-		if($table=="categorias")
-		{
-			return false;
-		}
 		if($table=="subcategorias")
 		{
 			return false;
@@ -384,6 +380,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="emailsformularios")
+		{
+			return false;
+		}
+		if($table=="categorias")
 		{
 			return false;
 		}
@@ -711,10 +711,6 @@ class AuditTrailFile
 	
 	function logValueEnable($table)
 	{
-		if($table=="categorias")
-		{
-			return false;
-		}
 		if($table=="subcategorias")
 		{
 			return false;
@@ -792,6 +788,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="emailsformularios")
+		{
+			return false;
+		}
+		if($table=="categorias")
 		{
 			return false;
 		}

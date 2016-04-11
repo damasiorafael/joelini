@@ -31,17 +31,17 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["nome_eng"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["nome_esp"] = "Nome Espanhol";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["nome_esp"] = "";
-	$fieldLabelsprodutos["Portuguese(Brazil)"]["descricao_por"] = "Descricao Português";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["descricao_por"] = "Descrição Português";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["descricao_por"] = "";
-	$fieldLabelsprodutos["Portuguese(Brazil)"]["descricao_eng"] = "Descricao Inglês";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["descricao_eng"] = "Descrição Inglês";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["descricao_eng"] = "";
-	$fieldLabelsprodutos["Portuguese(Brazil)"]["descricao_esp"] = "Descricao Espanhol";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["descricao_esp"] = "Descrição Espanhol";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["descricao_esp"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["video"] = "Vídeo";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["video"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["imagens"] = "Imagens";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["imagens"] = "";
-	$fieldLabelsprodutos["Portuguese(Brazil)"]["arearestrita"] = "Area Restrita";
+	$fieldLabelsprodutos["Portuguese(Brazil)"]["arearestrita"] = "Área Restrita";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["arearestrita"] = "";
 	$fieldLabelsprodutos["Portuguese(Brazil)"]["ocultar"] = "Ocultar";
 	$fieldToolTipsprodutos["Portuguese(Brazil)"]["ocultar"] = "";
@@ -1604,7 +1604,8 @@ $tdataprodutos[".printFields"] = array();
 				$vdata["ShowThumbnail"] = true;
 	$vdata["ThumbWidth"] = 72;
 	$vdata["ThumbHeight"] = 72;	
-			$vdata["ImageWidth"] = 0;
+			$vdata["ShowListOfThumbnails"] = true;		
+	$vdata["ImageWidth"] = 0;
 	$vdata["ImageHeight"] = 0;
 	
 		

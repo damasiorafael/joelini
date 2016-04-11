@@ -97,7 +97,6 @@ $tdatacontato[".list"] = true;
 $tdatacontato[".view"] = true;
 
 
-$tdatacontato[".exportTo"] = true;
 
 
 
@@ -278,16 +277,6 @@ $tdatacontato[".editFields"] = array();
 $tdatacontato[".inlineEditFields"] = array();
 
 $tdatacontato[".exportFields"] = array();
-$tdatacontato[".exportFields"][] = "id";
-$tdatacontato[".exportFields"][] = "nome";
-$tdatacontato[".exportFields"][] = "email";
-$tdatacontato[".exportFields"][] = "cidade";
-$tdatacontato[".exportFields"][] = "estado";
-$tdatacontato[".exportFields"][] = "telefone";
-$tdatacontato[".exportFields"][] = "departamento";
-$tdatacontato[".exportFields"][] = "mensagem";
-$tdatacontato[".exportFields"][] = "arquivo";
-$tdatacontato[".exportFields"][] = "data_contato";
 
 $tdatacontato[".importFields"] = array();
 
@@ -319,8 +308,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -441,8 +429,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "nome"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -561,8 +548,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "email"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -681,8 +667,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "cidade"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -801,8 +786,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "estado"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -921,8 +905,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "telefone"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1041,8 +1024,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "departamento"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1161,8 +1143,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "mensagem"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1280,27 +1261,29 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "arquivo"; 
 	
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "arquivo";
 	
 		
-		
+		$fdata["CompatibilityMode"] = true; 
+	
 				$fdata["FieldPermissions"] = true;
 	
-				$fdata["UploadFolder"] = "files";
+				$fdata["UploadFolder"] = "../contato/";
 		
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 	
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Document Download");
 	
 		
 		
 		
+								$vdata["ShowIcon"] = true; 
+			
 		
 		
 		
@@ -1309,15 +1292,13 @@ $tdatacontato[".printFields"] = array();
 		
 		
 		
-		$vdata["NeedEncode"] = true;
-	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats 	
 	$fdata["EditFormats"] = array();
 	
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 	
 			
 	
@@ -1336,11 +1317,8 @@ $tdatacontato[".printFields"] = array();
 		
 		
 		
-			$edata["HTML5InuptType"] = "text";
-	
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-	
+		
+		
 		$edata["controlWidth"] = 200;
 	
 //	Begin validation
@@ -1363,6 +1341,7 @@ $tdatacontato[".printFields"] = array();
 	$fdata["isSeparate"] = false;
 	
 	
+	$fdata["Absolute"] = true;
 	
 	
 // the field's search options settings
@@ -1400,8 +1379,7 @@ $tdatacontato[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "data_contato"; 
 	
 		$fdata["isSQLExpression"] = true;

@@ -163,26 +163,6 @@
 <div class="rnr-c rnr-ch rnr-c-recordcontrols">
 
 
-{BEGIN record_controls_block}
-<div  class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}
-<span class="rnr-buttons-group">
-<a class="rnr-button {$withSelectedClass}" href="#" id="selectButtonsToggler{$id}">Com os selecionados</a>
-<ul class="rnr-list" id="selectButtonsGroup{$id}">
-
-	
-	
-		{BEGIN exportselected_link}
-<li>
-		<a href="#" class="rnr-button link" {$exportselectedlink_attrs} {$exportselectedlink_span}>Exportar</a>
-</li>
-	{END exportselected_link}
-
-	</ul>
-</span>
-{END widhtSelected}
-	</div>
-{END record_controls_block}
-
 
 {BEGIN more_list}
 <div  class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}"><span class="rnr-buttons-group">
@@ -196,11 +176,6 @@
 </li>
 {END asearch_link}
 
-{BEGIN export_link}
-<li>
-	<a target="_blank" href="contato_export.php" class="rnr-button link" {$exportlink_attrs}>Exportar os Resultados</a>
-</li>
-{END export_link}
 
 </ul>
 {END moreButtons}
@@ -277,12 +252,7 @@
 									<th iEditCont="all">&nbsp;</th>
 									{END listIcons_column}	
 
-																		{BEGIN checkbox_column}
-									<th class="rnr-bc">
-										<input type="checkbox" {$checkboxheader_attrs}>
-									</th>
-									{END checkbox_column}
-
+									
 																																			{BEGIN id_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$id_class}">
 									{BEGIN id_fieldheader}
@@ -414,14 +384,7 @@
 									</td>	
 									{END listIcons_column}	
 
-																		{BEGIN checkbox_column}
-									<td class="rnr-bc" iEditCont="checkBox" {$rowstyle} {$recordattrs}>
-									{BEGIN checkbox}
-									<input type="checkbox" {$checkbox_attrs}>
-									{END checkbox}
-									</td>
-									{END checkbox_column}
-
+									
 
 										{BEGIN id_fieldcolumn}
 	<td class="{$id_class}" {$id_style} {$recordattrs}>

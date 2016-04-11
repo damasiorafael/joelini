@@ -29,9 +29,6 @@ $layout->version = 2;
 $layout->blocks["center"] = array();
 $layout->containers["recordcontrols"] = array();
 $layout->container_properties["recordcontrols"] = array(  );
-$layout->containers["recordcontrols"][] = array("name"=>"recordcontrol", 
-	"block"=>"record_controls_block", "substyle"=>1  );
-
 $layout->containers["recordcontrols"][] = array("name"=>"toplinks", 
 	"block"=>"more_list", "substyle"=>1  );
 

@@ -36,7 +36,8 @@ $('.slider4').bxSlider({
 	minSlides: 3,
 	maxSlides: 3,
 	moveSlides: 1,
-	slideMargin: 48
+	slideMargin: 48,
+	infiniteLoop: false
 });
 
 $('.sliderProdutos').bxSlider({
@@ -44,7 +45,8 @@ $('.sliderProdutos').bxSlider({
 	minSlides: 3,
 	maxSlides: 3,
 	moveSlides: 1,
-	slideMargin: 18
+	slideMargin: 18,
+	infiniteLoop: false
 });
 
 var btnClose = function(){
@@ -152,6 +154,41 @@ var ua = navigator.userAgent;
 
 //alert(ua);
 
+//AJUSTA ALTURA DO DOM DE ACORDO COM O CONTEUDO PRA DEIXAR CORRETO O LOADING DE AJAX
+var regulaAltura = function(){
+	alturaBody = $("body").height();
+	larguraBody = $("body").width();
+
+	alturaHtml = $("html").height();
+	larguraHtml = $("html").width();
+}
+
+//CHAMA LOADING NA TELA
+chamaLoading = function(){
+	$(".loading-overlay").css({
+		"width" : larguraBody,
+		"height" : alturaHtml
+	});
+	$(".loading-overlay").fadeIn();
+	$(".loading").fadeIn();
+}
+
+//FECHA LOADING NA TELA
+fechaLoading = function(){
+	$(".loading-overlay").fadeOut();
+	$(".loading").fadeOut();
+}
+
 $('.jcarousel').jcarouselAutoscroll({
     interval: 2000
+});
+
+$(".form-contato").on("submit", function(){
+
+	alert("oi");
+	
+	regulaAltura();
+
+	chamaLoading();
+
 });

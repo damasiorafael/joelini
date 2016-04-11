@@ -260,8 +260,6 @@ function checkTableName($shortTName, $type=false)
 	if (!$shortTName)
 		return false;
 	
-	if ("categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
-		return true;
 	if ("subcategorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("produtos" == $shortTName && ($type===false || ($type!==false && $type == 0)))
@@ -301,6 +299,8 @@ function checkTableName($shortTName, $type=false)
 	if ("usuarios" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("emailsformularios" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("categorias" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	return false;
 }
@@ -351,11 +351,6 @@ function GetEmailField($table = "")
 function GetTablesList($pdfMode = false)
 {
 	$arr = array();
-	$strPerm = GetUserPermissions("categorias");
-	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
-	{
-		$arr[]="categorias";
-	}
 	$strPerm = GetUserPermissions("subcategorias");
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
@@ -455,6 +450,11 @@ function GetTablesList($pdfMode = false)
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
 		$arr[]="emailsformularios";
+	}
+	$strPerm = GetUserPermissions("categorias");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="categorias";
 	}
 	return $arr;
 }
@@ -1058,11 +1058,6 @@ function GetUserPermissionsStatic( $table )
 	$extraPerm = $_SESSION["AccessLevel"] == ACCESS_LEVEL_ADMINGROUP ? 'M' : '';
 	$sUserGroup=@$_SESSION["GroupID"];
 //	default permissions	
-	if($table=="categorias")
-	{
-		return "ADESPI".$extraPerm;
-	}
-//	default permissions	
 	if($table=="subcategorias")
 	{
 		return "ADESPI".$extraPerm;
@@ -1159,6 +1154,11 @@ function GetUserPermissionsStatic( $table )
 	}
 //	default permissions	
 	if($table=="emailsformularios")
+	{
+		return "ADESPI".$extraPerm;
+	}
+//	default permissions	
+	if($table=="categorias")
 	{
 		return "ADESPI".$extraPerm;
 	}
@@ -1265,9 +1265,8 @@ function SetAuthSessionData($pUsername, &$data, $fromFacebook, $password, &$page
 	$_SESSION["GroupID"] = $data["email"];
 
 
-		$_SESSION["OwnerID"] = $data["id"];
-	$_SESSION["_categorias_OwnerID"] = $data["id"];
-		$_SESSION["_usuarios_OwnerID"] = $data["email"];
+		$_SESSION["OwnerID"] = $data["email"];
+	$_SESSION["_usuarios_OwnerID"] = $data["email"];
 	if($globalEvents->exists("AfterSuccessfulLogin"))
 	{
 		$globalEvents->AfterSuccessfulLogin($pUsername != "Guest" ? $pUsername : "", $password, $data, $pageObject);
@@ -1318,12 +1317,6 @@ function CheckSecurity($strValue, $strAction, $table = "")
 	$strPerm = GetUserPermissions();
 	if( strpos($strPerm, "M") === false )
 	{
-		if($table=="categorias")
-		{
-			
-				if(!($pSet->getCaseSensitiveUsername((string)$_SESSION["_".$table."_OwnerID"])===$pSet->getCaseSensitiveUsername((string)$strValue)))
-				return false;
-		}
 		if($table=="usuarios")
 		{
 			
@@ -1400,10 +1393,6 @@ function SecuritySQL($strAction, $table="", $strPerm="")
 
 	if( strpos($strPerm, "M") === false )
 	{
-		if($table=="categorias")
-		{
-				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);
-		}
 		if($table=="usuarios")
 		{
 				$ret = GetFullFieldName($pSet->getTableOwnerID(), $table, false)."=".make_db_value($pSet->getTableOwnerID(), $ownerid, "", "", $table);

@@ -28,6 +28,9 @@
                 <span class="icon-top glyphicon glyphicon-chevron-up"></span>
             </a>
         </div>
+
+        <div class="loading-overlay"></div>
+        <div class="loading"></div>
             
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
@@ -39,6 +42,9 @@
 
         <!-- Slides -->
         <script src="js/jquery.bxslider.js"></script>
+
+        <!-- Lightbox JavaScript -->
+        <script src="js/lightbox.js"></script>
 
         <!-- jCarousel -->
         <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>

@@ -12,9 +12,9 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 	$bd		= "joelini";
 } else {
 	$host 	= "mysql.weblink.com.br";
-	$user	= "u174683815_zypeq";
-	$pass	= "cyPftsca1TIsofXXIq";
-	$bd		= "u174683815_jamem";
+	$user	= "u174683815_joeli";
+	$pass	= "S05elVVAbq60Q7cJEW";
+	$bd		= "u174683815_joeli";
 }
 
 $con = mysql_connect($host,$user,$pass);

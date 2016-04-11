@@ -18,7 +18,7 @@
                     <?php
                         $sqlBanners = "SELECT * FROM banners";
                         $resultBanners = consulta_db($sqlBanners);
-                        echo $numBanners = mysql_num_rows($resultBanners);
+                        $numBanners = mysql_num_rows($resultBanners);
                         while($consultaBanners = mysql_fetch_array($resultBanners)){
                     ?>
                             <li>
@@ -41,11 +41,22 @@
                 }
             ?>
         </div>
-    	<div class="container">
-    		<div class="btn-catalogo pull-right">
-    			<a href="#" title="<?php echo $catalogo[$_SESSION['lang']]; ?>"><?php echo $catalogo[$_SESSION['lang']]; ?></a>
-    		</div>
-    	</div>
+        <?php
+            $sqlCatalogo = "SELECT * FROM catalogo WHERE ativo = 1";
+            $resultCatalogo = consulta_db($sqlCatalogo);
+            $numCatalogo = mysql_num_rows($resultCatalogo);
+            if($numCatalogo > 0){
+                while($consultaCatalogo = mysql_fetch_array($resultCatalogo)){
+        ?>
+                    <div class="container">
+                        <div class="btn-catalogo pull-right">
+                            <a href="<?php echo $consultaCatalogo["link"]; ?>" target="_blank" title="<?php echo $catalogo[$_SESSION['lang']]; ?>"><?php echo $catalogo[$_SESSION['lang']]; ?></a>
+                        </div>
+                    </div>
+        <?php          
+                }
+            }
+        ?>
     </section>
 
     <section class="empresa-home" id="empresa">
@@ -71,7 +82,7 @@
                         while($consultaLinha = mysql_fetch_array($resultLinha)){
                     ?>
                             <div class="slide">
-                                <a href="uploads/<?php echo $consultaLinha["imagem_principal"]; ?>" class="myLightBox">
+                                <a href="uploads/<?php echo $consultaLinha["imagem_principal"]; ?>" data-lightbox="linhadotempo">
                                     <img src="uploads/<?php echo $consultaLinha["imagem_destaque"]; ?>" width="169">
                                 </a>
                                 <p>
@@ -119,7 +130,7 @@
             <h5 class="title-vendas-home"><?php echo $vendas[$_SESSION['lang']]; ?></h5>
             <div class="form-vendas-home">
                 <p><?php echo $sub_vendas[$_SESSION['lang']]; ?></p>
-                <form id="vendas" role="form" class="span12" accept-charset="UTF-8" action="#" method="POST">
+                <form id="vendas" role="form" class="span12 form-contato" action="vendas-envia.php" method="POST" accept-charset="utf-8">
                     <div class="group-left pull-left">
                         <div class="form-group">
                             <label for="nome"><?php echo $nome[$_SESSION['lang']]; ?></label>
@@ -158,7 +169,7 @@
                             <textarea id="mensagem" rows="10" cols="50" name="mensagem" class="mensagem form-control"></textarea>
                         </div>
 
-                        <button id="submit_vendas" class="btn btn-primary pull-right btn-envia" type="submit"><?php echo $enviar[$_SESSION['lang']]; ?></button>
+                        <button id="submit_vendas" class="btn btn-primary pull-right btn-envia-form" type="submit"><?php echo $enviar[$_SESSION['lang']]; ?></button>
                     </div>
                 </form>
             </div>
@@ -174,12 +185,23 @@
                     <span><?php echo $telefone[$_SESSION['lang']]; ?>: (43) 3172-4359</span>
                     <span>E-mail: joelini@joelini.com.br</span>
                 </div>
-                <div class="social-info">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/distrito704" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" data-width="280" data-height="225" data-css="/css/style.css"></div>
-                </div>
+                <?php
+                    $sqlSocial = "SELECT * FROM facebook WHERE ativo = 1";
+                    $resultSocial = consulta_db($sqlSocial);
+                    $numSocial = mysql_num_rows($resultSocial);
+                    if($numSocial > 0){
+                        while($consultaSocial = mysql_fetch_array($resultSocial)){
+                ?>
+                            <div class="social-info">
+                                <div class="fb-like-box" data-href="<?php echo $consultaSocial["link"]; ?>" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false" data-width="280" data-height="225" data-css="/css/style.css"></div>
+                            </div>
+                <?php
+                        }
+                    }
+                ?>
             </div>
             <div class="form-vendas-home form-contato-home pull-right">
-                <form id="contato" role="form" class="contato span12" accept-charset="UTF-8" action="#" method="POST">
+                <form id="contato" role="form" class="contato span12 form-contato" accept-charset="UTF-8" action="contato-envia.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nome"><?php echo $nome[$_SESSION['lang']]; ?></label>
                         <input type="text" id="nome" name="nome" required="required" class="nome form-control">
@@ -220,7 +242,7 @@
                         <input type="file" id="arquivo" name="arquivo" class="arquivo form-control">
                     </div>
 
-                    <button id="submit_vendas" class="btn btn-primary pull-right btn-envia" type="submit"><?php echo $enviar[$_SESSION['lang']]; ?></button>
+                    <button id="submit_vendas" class="btn btn-primary pull-right btn-envia-form" type="submit"><?php echo $enviar[$_SESSION['lang']]; ?></button>
                 </form>
             </div>
         </div>

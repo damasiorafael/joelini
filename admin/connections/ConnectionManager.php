@@ -259,10 +259,10 @@ if($_SERVER['SERVER_NAME'] == "localhost"){
 	$sys_dbname="joelini";
 } else {
 	$host="mysql.weblink.com.br";
-	$user="u174683815_zypeq";
-	$pwd="cyPftsca1TIsofXXIq";
+	$user="u174683815_joeli";
+	$pwd="S05elVVAbq60Q7cJEW";
 	$port="";
-	$sys_dbname="u174683815_jamem";
+	$sys_dbname="u174683815_joeli";
 }
 $data["connInfo"][0] = $host;
 $data["connInfo"][1] = $user;
@@ -281,7 +281,6 @@ $data["connInfo"][4] = $sys_dbname;
 	protected function _setTablesConnectionIds()
 	{
 		$connectionsIds = array();
-		$connectionsIds["categorias"] = "joelini_at_localhost";
 		$connectionsIds["subcategorias"] = "joelini_at_localhost";
 		$connectionsIds["produtos"] = "joelini_at_localhost";
 		$connectionsIds["linhadotempo"] = "joelini_at_localhost";
@@ -302,6 +301,7 @@ $data["connInfo"][4] = $sys_dbname;
 		$connectionsIds["facebook"] = "joelini_at_localhost";
 		$connectionsIds["usuarios"] = "joelini_at_localhost";
 		$connectionsIds["emailsformularios"] = "joelini_at_localhost";
+		$connectionsIds["categorias"] = "joelini_at_localhost";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

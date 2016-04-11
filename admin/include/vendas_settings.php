@@ -95,7 +95,6 @@ $tdatavendas[".list"] = true;
 $tdatavendas[".view"] = true;
 
 
-$tdatavendas[".exportTo"] = true;
 
 
 
@@ -271,15 +270,6 @@ $tdatavendas[".editFields"] = array();
 $tdatavendas[".inlineEditFields"] = array();
 
 $tdatavendas[".exportFields"] = array();
-$tdatavendas[".exportFields"][] = "id";
-$tdatavendas[".exportFields"][] = "nome";
-$tdatavendas[".exportFields"][] = "email";
-$tdatavendas[".exportFields"][] = "telefone";
-$tdatavendas[".exportFields"][] = "cidade";
-$tdatavendas[".exportFields"][] = "estado";
-$tdatavendas[".exportFields"][] = "cep";
-$tdatavendas[".exportFields"][] = "mensagem";
-$tdatavendas[".exportFields"][] = "data_contato";
 
 $tdatavendas[".importFields"] = array();
 
@@ -311,8 +301,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "id"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -433,8 +422,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "nome"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -553,8 +541,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "email"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -673,8 +660,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "telefone"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -793,8 +779,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "cidade"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -913,8 +898,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "estado"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1033,8 +1017,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "cep"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1153,8 +1136,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "mensagem"; 
 	
 		$fdata["isSQLExpression"] = true;
@@ -1272,8 +1254,7 @@ $tdatavendas[".printFields"] = array();
 		$fdata["bAdvancedSearch"] = true; 
 	
 		
-		$fdata["bExportPage"] = true; 
-	
+		
 		$fdata["strField"] = "data_contato"; 
 	
 		$fdata["isSQLExpression"] = true;

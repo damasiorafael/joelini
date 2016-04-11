@@ -1,3 +1,21 @@
+<?php
+    $inglesAtivo = 0;
+    $espanholAtivo = 0;
+
+    $sqlIngles = "SELECT * FROM idiomas WHERE nome = 'Inglês' AND ativo = 1";
+    $resultIngles = consulta_db($sqlIngles);
+    $numIngles = mysql_num_rows($resultIngles);
+    if($numIngles > 0){
+        $inglesAtivo = 1;
+    }
+
+    $sqlEspanhol = "SELECT * FROM idiomas WHERE nome = 'Espanhol' AND ativo = 1";
+    $resultEspanhol = consulta_db($sqlEspanhol);
+    $numEpanhol = mysql_num_rows($resultEspanhol);
+    if($numEpanhol > 0){
+        $espanholAtivo = 1;
+    }
+?>
 <section class="header" id="topo">
             <div class="container">
                 <nav id="menu-nav" class="nav nav-header nav-menu">
@@ -18,24 +36,43 @@
                             <?php
                                 if($_SESSION["lang"] == "por"){
                             ?>
-                                    <li>
-                                        <a href="index.php?lang=eng" title="Inglês" class="link link-ingles">
-                                            <span>Inglês</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="index.php?lang=esp" title="Espanhol" class="link link-espanhol">
-                                            <span>Espanhol</span>
-                                        </a>
-                                    </li>
+                                    <?php
+                                        if($inglesAtivo == 1){
+                                    ?>
+                                            <li>
+                                                <a href="index.php?lang=eng" title="Inglês" class="link link-ingles">
+                                                    <span>Inglês</span>
+                                                </a>
+                                            </li>
+                                    <?php        
+                                        }
+                                    ?>
+
+                                    <?php
+                                        if($espanholAtivo == 1){
+                                    ?>
+                                            <li>
+                                                <a href="index.php?lang=esp" title="Espanhol" class="link link-espanhol">
+                                                    <span>Espanhol</span>
+                                                </a>
+                                            </li>
+                                    <?php        
+                                        }
+                                    ?>
                             <?php
                                 } else if($_SESSION["lang"] == "eng"){
                             ?>
-                                    <li>
-                                        <a href="index.php?lang=esp" title="Espanhol" class="link link-espanhol" style="margin-right: 9px;">
-                                            <span>Espanhol</span>
-                                        </a>
-                                    </li>
+                                    <?php
+                                        if($espanholAtivo == 1){
+                                    ?>
+                                            <li>
+                                                <a href="index.php?lang=esp" title="Espanhol" class="link link-espanhol">
+                                                    <span>Espanhol</span>
+                                                </a>
+                                            </li>
+                                    <?php        
+                                        }
+                                    ?>
                                     <li>
                                         <a href="index.php?lang=por" title="Português" class="link link-portugues">
                                             <span>Português</span>
@@ -44,11 +81,17 @@
                             <?php
                                 } else if($_SESSION["lang"] == "esp"){
                             ?>
-                                    <li>
-                                        <a href="index.php?lang=eng" title="Inglês" class="link link-ingles">
-                                            <span>Inglês</span>
-                                        </a>
-                                    </li>
+                                    <?php
+                                        if($inglesAtivo == 1){
+                                    ?>
+                                            <li>
+                                                <a href="index.php?lang=eng" title="Inglês" class="link link-ingles">
+                                                    <span>Inglês</span>
+                                                </a>
+                                            </li>
+                                    <?php        
+                                        }
+                                    ?>
                                     <li>
                                         <a href="index.php?lang=por" title="Português" class="link link-portugues">
                                             <span>Português</span>

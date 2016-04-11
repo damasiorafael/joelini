@@ -435,7 +435,6 @@ $menuStyles = array();
 $tableCaptions = array();
 $tableCaptions["Portuguese(Brazil)"] = array();
 $tableCaptions["Portuguese(Brazil)"][""] = "";
-$tableCaptions["Portuguese(Brazil)"]["categorias"] = "Categorias";
 $tableCaptions["Portuguese(Brazil)"]["subcategorias"] = "Subcategorias";
 $tableCaptions["Portuguese(Brazil)"]["produtos"] = "Produtos";
 $tableCaptions["Portuguese(Brazil)"]["linhadotempo"] = "Linhadotempo";
@@ -454,9 +453,9 @@ $tableCaptions["Portuguese(Brazil)"]["banners"] = "Banners";
 $tableCaptions["Portuguese(Brazil)"]["facebook"] = "Facebook";
 $tableCaptions["Portuguese(Brazil)"]["usuarios"] = "Usuarios";
 $tableCaptions["Portuguese(Brazil)"]["emailsformularios"] = "Emailsformularios";
+$tableCaptions["Portuguese(Brazil)"]["categorias"] = "Categorias";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
-$tableCaptions[""]["categorias"] = "Categorias";
 $tableCaptions[""]["empresa"] = "Empresa";
 $tableCaptions[""]["vendas"] = "Vendas";
 $tableCaptions[""]["contato"] = "Contato";
@@ -472,6 +471,7 @@ $tableCaptions[""]["banners"] = "Banners";
 $tableCaptions[""]["facebook"] = "Facebook";
 $tableCaptions[""]["usuarios"] = "Usuarios";
 $tableCaptions[""]["emailsformularios"] = "Emailsformularios";
+$tableCaptions[""]["categorias"] = "Categorias";
 
 
 $globalEvents = new class_GlobalEvents;
