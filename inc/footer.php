@@ -17,6 +17,18 @@
                         <span>Phorma Design</span>
                     </a>
                 </div>
+
+                <div class="socials">
+                    <a href="https://www.facebook.com/Joelini.Ferragens/" class="my-icon-facebook" target="_blank">
+                        <span>facebook</span>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCJSZam4gV2CYfN-a_zFFHdw" class="my-icon-youtube" target="_blank">
+                        <span>youtube</span>
+                    </a>
+                    <a href="https://plus.google.com/103101609062419327811/posts" class="my-icon-google" target="_blank">
+                        <span>google</span>
+                    </a>
+                </div>
             </div>
         </section>
 

@@ -38,23 +38,24 @@
 .jcarousel-control-next {
     position: absolute;
     top: 50%;
-    margin-top: -21px;
-    width: 42px;
-    height: 42px;
+    margin-top: -27.5px;
+    width: 41px;
+    height: 55px;
     text-align: center;
-    background: #ffffff;
+    background: transparent;
     color: #000;
     text-decoration: none;
     font: 40px Arial, sans-serif;
     font-weight: bold;
     line-height: 36px;
-    -webkit-border-radius: 42px;
-    -moz-border-radius: 42px;
-    border-radius: 42px;
-    -webkit-box-shadow: 0 0 15px #000;
-    -moz-box-shadow: 0 0 15px #000;
-    box-shadow: 0 0 15px #000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0;
+    -moz-box-shadow: 0;
+    box-shadow: 0;
     opacity: .50;
+    background: url(../images/setas.png) no-repeat 0 0;
 }
 
 /** Carousel Pagination **/
@@ -120,21 +121,35 @@
 }
 
 .container-setas {
-    width: 50%;
+    width: 100%;
     position: absolute;
-    left: 50%;
-    margin-left: -413px;
+    left: 0;
+    margin-left: 0;
     height: 42px;
     top: 50%;
     margin-top: -21px;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 
 .jcarousel-control-prev {
-    left: 0;
+    width: 41px;
+    height: 55px;
+    text-indent: -3000em;
+    left: 150px;
 }
 
 .jcarousel-control-next {
-    right: 0;
+    right: 150px;
+    text-indent: -3000em;
+    background-position: -54px 0;
+}
+
+.jcarousel-control-prev:hover {
+    background-position: 0 -97px;
+}
+.jcarousel-control-next:hover {
+    background-position: -54px -97px;
 }
 
 /*-----------------------------------------------------*/

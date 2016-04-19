@@ -29,7 +29,7 @@
                     <div class="nav-topo pull-right">
                         <ul class="secondary-menu pull-right">
                             <li>
-                                <a href="" title="Webmail" class="link link-webmail">
+                                <a href="https://mail.joelini.com.br:60443" target="_blank" title="Webmail" class="link link-webmail">
                                     <span>Webmail</span>
                                 </a>
                             </li>

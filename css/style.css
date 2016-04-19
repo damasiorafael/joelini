@@ -553,9 +553,6 @@ img {
     }
 }
 @media (max-width: 1228px){
-    .container-setas {
-        width: 70%;
-    }
     .btn-catalogo {
         margin-top: 210px;
     }
@@ -1273,8 +1270,6 @@ span.departamento.form-control {
     background: #FFF;
     z-index: 9998;
     opacity: .90;
-    box-shadow: 5px 5px 15px #181D44;
-
 }
 
 /* MENU FLUTUANTE */
@@ -1926,6 +1921,49 @@ span.departamento.form-control {
 .display-none {
     display: none;
 }
+
+
+/* icones sociais rodape */
+.socials {
+    clear: both;
+    float: left;
+    margin-left: 412px;
+    margin-top: -30px;
+}
+.socials a {
+    display: inline-block;
+    width: 32px;
+    height: 33px;
+}
+.socials a span {
+    display: none;
+}
+.socials .my-icon-facebook {
+    background: url(../images/facebook.png) no-repeat 0 0;
+}
+.socials .my-icon-google {
+    width: 33px;
+    background: url(../images/google.png) no-repeat 0 0;
+}
+.socials .my-icon-youtube {
+    background: url(../images/youtube.png) no-repeat 0 0;
+}
+.socials a:hover {
+    background-position: -32px 0;
+}
+.socials .my-icon-google:hover {
+    background-position: -33px 0;
+}
+
+/* MEDIA QUERIES ICONS SOCIAIS */
+@media (max-width: 768px){
+    .socials {
+        margin-left: 0;
+        margin-top: 0;
+    }
+/* icones sociais rodape */
+
+
 
 /*-------------------------------------------------------------------------------*/
 /*                                                                               */

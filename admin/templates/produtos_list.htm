@@ -172,7 +172,11 @@
 </li>
 	{END editselected_link}
 
-	
+		{BEGIN deleteselected_link}<li>
+		<a href="#" class="rnr-button link" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Eliminar</a>
+</li>
+	{END deleteselected_link}
+
 	
 	</ul>
 </span>
@@ -278,6 +282,14 @@
 									{END arearestrita_fieldheader}
 									</th>
 									{END arearestrita_fieldheadercolumn}
+
+																	{BEGIN ordem_fieldheadercolumn}<th class="rnr-gridfieldlabel {$ordem_class}">
+									{BEGIN ordem_fieldheader}<span {$ordem_orderlinkattrs}>
+											{$label produtos ordem}
+										</span>
+									{END ordem_fieldheader}
+									</th>
+									{END ordem_fieldheadercolumn}
 
 																	{BEGIN id_subcategoria_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$id_subcategoria_class}" style="width: 123px;" rowspan="1" colspan="1">
                               {BEGIN id_subcategoria_fieldheader}<span {$id_subcategoria_orderlinkattrs}>
@@ -412,6 +424,11 @@ colspan="1">
                               {$arearestrita_value}
 	</td>
 {END arearestrita_fieldcolumn}
+
+	{BEGIN ordem_fieldcolumn}<td class="{$ordem_class}" {$ordem_style} {$recordattrs}>
+		{$ordem_value}
+	</td>
+{END ordem_fieldcolumn}
 
 	{BEGIN id_subcategoria_fieldcolumn}<TD class="{$id_subcategoria_class}" style="width: 115px;" rowspan="1" colspan="1" {$id_subcategoria_style} {$recordattrs}>
                               {$id_subcategoria_value}

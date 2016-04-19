@@ -179,9 +179,16 @@ fechaLoading = function(){
 	$(".loading").fadeOut();
 }
 
-$('.jcarousel').jcarouselAutoscroll({
-    interval: 2000
-});
+$('.jcarousel')
+    .jcarousel({
+        // Core configuration goes here
+    })
+    .jcarouselAutoscroll({
+        interval: 3000,
+        target: '+=1',
+        autostart: true
+    })
+;
 
 $(".form-contato").on("submit", function(){
 

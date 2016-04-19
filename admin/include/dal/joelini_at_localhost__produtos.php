@@ -12,6 +12,7 @@ $dalTableprodutos["video"] = array("type"=>200,"varname"=>"video");
 $dalTableprodutos["arearestrita"] = array("type"=>3,"varname"=>"arearestrita");
 $dalTableprodutos["imagens"] = array("type"=>201,"varname"=>"imagens");
 $dalTableprodutos["ocultar"] = array("type"=>3,"varname"=>"ocultar");
+$dalTableprodutos["ordem"] = array("type"=>3,"varname"=>"ordem");
 	$dalTableprodutos["id"]["key"]=true;
 
 $dal_info["joelini_at_localhost__produtos"] = &$dalTableprodutos;

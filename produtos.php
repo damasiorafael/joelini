@@ -38,7 +38,7 @@
                 <?php } ?>
                 <ul class="categorias">
                     <?php
-                        $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
+                        $sqlCats = "SELECT * FROM categorias WHERE ocultar = 0 ORDER BY id ASC";
                         $resultCats = consulta_db($sqlCats);
                         $numCats = mysql_num_rows($resultCats);
                         if($numCats > 0){
@@ -105,11 +105,11 @@
                     <?php
                         $sqlProdutos = "";
                         if($categoria == "lancamentos"){
-                            $sqlProdutos = "SELECT * FROM produtos WHERE arearestrita = 1";
+                            $sqlProdutos = "SELECT * FROM produtos WHERE arearestrita = 1 ORDER BY ordem ASC";
                         } else if($subcategoria == ""){
-                            $sqlProdutos = "SELECT produtos.id, produtos.nome_por, produtos.nome_eng, produtos.nome_esp, produtos.imagens FROM produtos LEFT JOIN subcategorias ON subcategorias.id = produtos.id_subcategoria WHERE subcategorias.id_categoria = $categoria AND produtos.ocultar = 0 AND arearestrita = 0";
+                            $sqlProdutos = "SELECT produtos.id, produtos.nome_por, produtos.nome_eng, produtos.nome_esp, produtos.imagens, produtos.ordem FROM produtos LEFT JOIN subcategorias ON subcategorias.id = produtos.id_subcategoria WHERE subcategorias.id_categoria = $categoria AND produtos.ocultar = 0 AND arearestrita = 0 ORDER BY produtos.ordem ASC, produtos.nome_por ASC";
                         } else {
-                            $sqlProdutos = "SELECT * FROM produtos WHERE id_subcategoria = $subcategoria AND ocultar = 0 AND arearestrita = 0";
+                            $sqlProdutos = "SELECT * FROM produtos WHERE id_subcategoria = $subcategoria AND ocultar = 0 AND arearestrita = 0 ORDER BY ordem ASC, produtos.nome_por ASC";
                         }
 
                         $resultProdutos = consulta_db($sqlProdutos);

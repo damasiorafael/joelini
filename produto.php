@@ -89,18 +89,24 @@
                 <div class="dados-produto">
                     <?php echo $consulta["descricao_".$_SESSION["lang"]]; ?>
                 </div>
-                <div class="video-produto">
-                    <div class="embed-container">
-                        <script type="text/javascript">
-                            var video = "<?php echo $consulta["video"]; ?>";
-                            video = video.split("?v=")[1];
+                <?php
+                    if($consulta["video"] != ""){
+                ?>
+                        <div class="video-produto">
+                            <div class="embed-container">
+                                <script type="text/javascript">
+                                    var video = "<?php echo $consulta["video"]; ?>";
+                                    video = video.split("?v=")[1];
 
-                            var frame = "<iframe src='http://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
+                                    var frame = "<iframe src='http://www.youtube.com/embed/"+video+"' frameborder='0' allowfullscreen></iframe>";
 
-                            document.write(frame);
-                        </script>
-                    </div>
-                </div>
+                                    document.write(frame);
+                                </script>
+                            </div>
+                        </div>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </section>

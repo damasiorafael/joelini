@@ -106,7 +106,7 @@
     		<div class="lista-categorias-home">
     			<ul class="categorias">
                     <?php
-                        $sqlCats = "SELECT * FROM categorias ORDER BY id ASC";
+                        $sqlCats = "SELECT * FROM categorias WHERE ocultar = 0 ORDER BY id ASC";
                         $resultCats = consulta_db($sqlCats);
                         while($consultaCats = mysql_fetch_array($resultCats)){
                     ?>
@@ -149,24 +149,24 @@
 
                         <div class="form-group">
                             <label for="cidade"><?php echo $cidade[$_SESSION['lang']]; ?></label>
-                            <input type="text" id="cidade" name="cidade" class="cidade form-control">
+                            <input type="text" id="cidade" name="cidade" required="required" class="cidade form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="estado"><?php echo $estado[$_SESSION['lang']]; ?></label>
-                            <input type="text" id="estado" name="estado" class="estado form-control">
+                            <input type="text" id="estado" name="estado" required="required" class="estado form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="cep"><?php echo $cep[$_SESSION['lang']]; ?></label>
-                            <input type="text" id="cep" name="cep" class="cep form-control">
+                            <input type="text" id="cep" name="cep" required="required" class="cep form-control">
                         </div>
                     </div>
 
                     <div class="group-right pull-right">
                         <div class="form-group">
                             <label for="mensagem"><?php echo $mensagem[$_SESSION['lang']]; ?></label>
-                            <textarea id="mensagem" rows="10" cols="50" name="mensagem" class="mensagem form-control"></textarea>
+                            <textarea id="mensagem" rows="10" cols="50" name="mensagem" required="required" class="mensagem form-control"></textarea>
                         </div>
 
                         <button id="submit_vendas" class="btn btn-primary pull-right btn-envia-form" type="submit"><?php echo $enviar[$_SESSION['lang']]; ?></button>
