@@ -102,6 +102,7 @@ $tdatacategorias[".inlineAdd"] = true;
 
 
 
+$tdatacategorias[".delete"] = true;
 
 $tdatacategorias[".showSimpleSearchOptions"] = false;
 
