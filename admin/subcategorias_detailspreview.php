@@ -238,6 +238,21 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("ocultar")))
 				$class = ' rnr-field-number';
 			$row["ocultar_class"] = $class;
+	//	ordem - 
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("ordem", $data, $keylink);
+			$row["ordem_value"] = $value;
+			$format = $pSet->getViewFormat("ordem");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("ordem")))
+				$class = ' rnr-field-number';
+			$row["ordem_class"] = $class;
 		$rowinfo[] = $row;
 		if ($b) {
 			$rowinfo2[] = $row;

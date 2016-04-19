@@ -64,21 +64,21 @@ $enviar["esp"] = "Enviar";
 /* TITLE JOELINI */
 /* por */
 $address_joelini["por"] = "
-					<p>Joelini - Componentes para Móveis</p>
+					<p>Joelini - Ferragens para Móveis</p>
                     <span>Rua Arapaçu-Listrado, 260 - Parque Industrial</span>
                     <span>CEP: 86703-295</span>
                     <span>Arapongas - PR - Brasil</span>";
 
 /* eng */
 $address_joelini["eng"] = "
-					<p>Joelini - Components for Mobile</p>
+					<p>Joelini - Hardware for Mobile</p>
                     <span>Street Arapaçu-Listrado, 260 - Industrial Park</span>
                     <span>ZIP: 86703-295</span>
                     <span>Arapongas - PR - Brasil</span>";
 
 /* esp */
 $address_joelini["esp"] = "
-					<p>Joelini - Componentes para Móviles</p>
+					<p>Joelini - Herrajes para muebles</p>
                     <span>Calle Arapaçu-Listrado, 260 - Parque Industrial</span>
                     <span>Código Postal: 86703-295</span>
                     <span>Arapongas - PR - Brasil</span>";
@@ -227,6 +227,23 @@ $catalogo["eng"] = "Online Catalog";
 
 /* esp */
 $catalogo["esp"] = "Catálogo Virtual";
+
+
+/* Campos de departamento */
+/* por */
+$departamento1["por"] = "Marketing";
+$departamento2["por"] = "Comercial";
+$departamento3["por"] = "RH";
+
+/* eng */
+$departamento1["eng"] = "Marketing";
+$departamento2["eng"] = "Commercial";
+$departamento3["eng"] = "Human Resources";
+
+/* esp */
+$departamento1["esp"] = "Mercadeo";
+$departamento2["esp"] = "Comercial";
+$departamento3["esp"] = "Recursos Humanos";
 
 /* MENSAGENS GERAIS */
 ?>

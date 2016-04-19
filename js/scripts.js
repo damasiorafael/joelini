@@ -184,7 +184,7 @@ $('.jcarousel')
         // Core configuration goes here
     })
     .jcarouselAutoscroll({
-        interval: 3000,
+        interval: 6000,
         target: '+=1',
         autostart: true
     })
@@ -192,7 +192,7 @@ $('.jcarousel')
 
 $(".form-contato").on("submit", function(){
 
-	alert("oi");
+	//alert("oi");
 	
 	regulaAltura();
 

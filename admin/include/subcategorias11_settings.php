@@ -33,6 +33,8 @@ if(mlang_getcurrentlang()=="Portuguese(Brazil)")
 	$fieldToolTipssubcategorias11["Portuguese(Brazil)"]["nome_esp"] = "";
 	$fieldLabelssubcategorias11["Portuguese(Brazil)"]["ocultar"] = "Ocultar";
 	$fieldToolTipssubcategorias11["Portuguese(Brazil)"]["ocultar"] = "";
+	$fieldLabelssubcategorias11["Portuguese(Brazil)"]["ordem"] = "Ordem";
+	$fieldToolTipssubcategorias11["Portuguese(Brazil)"]["ordem"] = "";
 	if (count($fieldToolTipssubcategorias11["Portuguese(Brazil)"]))
 		$tdatasubcategorias11[".isUseToolTips"] = true;
 }
@@ -129,6 +131,7 @@ $tdatasubcategorias11[".allSearchFields"][] = "id";
 	$tdatasubcategorias11[".allSearchFields"][] = "nome_eng";
 	$tdatasubcategorias11[".allSearchFields"][] = "nome_esp";
 	$tdatasubcategorias11[".allSearchFields"][] = "ocultar";
+	$tdatasubcategorias11[".allSearchFields"][] = "ordem";
 	
 
 $tdatasubcategorias11[".googleLikeFields"] = array();
@@ -138,6 +141,7 @@ $tdatasubcategorias11[".googleLikeFields"][] = "nome_por";
 $tdatasubcategorias11[".googleLikeFields"][] = "nome_eng";
 $tdatasubcategorias11[".googleLikeFields"][] = "nome_esp";
 $tdatasubcategorias11[".googleLikeFields"][] = "ocultar";
+$tdatasubcategorias11[".googleLikeFields"][] = "ordem";
 
 
 $tdatasubcategorias11[".advSearchFields"] = array();
@@ -147,6 +151,7 @@ $tdatasubcategorias11[".advSearchFields"][] = "nome_por";
 $tdatasubcategorias11[".advSearchFields"][] = "nome_eng";
 $tdatasubcategorias11[".advSearchFields"][] = "nome_esp";
 $tdatasubcategorias11[".advSearchFields"][] = "ocultar";
+$tdatasubcategorias11[".advSearchFields"][] = "ordem";
 
 $tdatasubcategorias11[".tableType"] = "list";
 
@@ -185,7 +190,7 @@ $tdatasubcategorias11[".strOrderBy"] = $tstrOrderBy;
 
 $tdatasubcategorias11[".orderindexes"] = array();
 
-$tdatasubcategorias11[".sqlHead"] = "SELECT id,  	id_categoria,  	nome_por,  	nome_eng,  	nome_esp,  	ocultar";
+$tdatasubcategorias11[".sqlHead"] = "SELECT id,  	id_categoria,  	nome_por,  	nome_eng,  	nome_esp,  	ocultar,  	ordem";
 $tdatasubcategorias11[".sqlFrom"] = "FROM subcategorias";
 $tdatasubcategorias11[".sqlWhereExpr"] = "";
 $tdatasubcategorias11[".sqlTail"] = "";
@@ -223,6 +228,7 @@ $tdatasubcategorias11[".Keys"] = $tableKeyssubcategorias11;
 
 $tdatasubcategorias11[".listFields"] = array();
 $tdatasubcategorias11[".listFields"][] = "ocultar";
+$tdatasubcategorias11[".listFields"][] = "ordem";
 $tdatasubcategorias11[".listFields"][] = "id";
 $tdatasubcategorias11[".listFields"][] = "id_categoria";
 $tdatasubcategorias11[".listFields"][] = "nome_por";
@@ -234,11 +240,14 @@ $tdatasubcategorias11[".hideMobileList"] = array();
 
 $tdatasubcategorias11[".viewFields"] = array();
 $tdatasubcategorias11[".viewFields"][] = "ocultar";
+$tdatasubcategorias11[".viewFields"][] = "ordem";
 
 $tdatasubcategorias11[".addFields"] = array();
 $tdatasubcategorias11[".addFields"][] = "ocultar";
+$tdatasubcategorias11[".addFields"][] = "ordem";
 
 $tdatasubcategorias11[".inlineAddFields"] = array();
+$tdatasubcategorias11[".inlineAddFields"][] = "ordem";
 $tdatasubcategorias11[".inlineAddFields"][] = "ocultar";
 $tdatasubcategorias11[".inlineAddFields"][] = "id_categoria";
 $tdatasubcategorias11[".inlineAddFields"][] = "nome_por";
@@ -247,8 +256,10 @@ $tdatasubcategorias11[".inlineAddFields"][] = "nome_esp";
 
 $tdatasubcategorias11[".editFields"] = array();
 $tdatasubcategorias11[".editFields"][] = "ocultar";
+$tdatasubcategorias11[".editFields"][] = "ordem";
 
 $tdatasubcategorias11[".inlineEditFields"] = array();
+$tdatasubcategorias11[".inlineEditFields"][] = "ordem";
 $tdatasubcategorias11[".inlineEditFields"][] = "ocultar";
 $tdatasubcategorias11[".inlineEditFields"][] = "id_categoria";
 $tdatasubcategorias11[".inlineEditFields"][] = "nome_por";
@@ -257,12 +268,15 @@ $tdatasubcategorias11[".inlineEditFields"][] = "nome_esp";
 
 $tdatasubcategorias11[".exportFields"] = array();
 $tdatasubcategorias11[".exportFields"][] = "ocultar";
+$tdatasubcategorias11[".exportFields"][] = "ordem";
 
 $tdatasubcategorias11[".importFields"] = array();
 $tdatasubcategorias11[".importFields"][] = "ocultar";
+$tdatasubcategorias11[".importFields"][] = "ordem";
 
 $tdatasubcategorias11[".printFields"] = array();
 $tdatasubcategorias11[".printFields"][] = "ocultar";
+$tdatasubcategorias11[".printFields"][] = "ordem";
 
 //	id
 //	Custom field settings
@@ -1014,6 +1028,131 @@ $tdatasubcategorias11[".printFields"][] = "ocultar";
 
 	
 	$tdatasubcategorias11["ocultar"] = $fdata;
+//	ordem
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "ordem";
+	$fdata["GoodName"] = "ordem";
+	$fdata["ownerTable"] = "subcategorias";
+	$fdata["Label"] = GetFieldLabel("subcategorias11","ordem"); 
+	$fdata["FieldType"] = 3;
+	
+		
+		
+		
+				
+		$fdata["bListPage"] = true; 
+	
+		$fdata["bAddPage"] = true; 
+	
+		$fdata["bInlineAdd"] = true; 
+	
+		$fdata["bEditPage"] = true; 
+	
+		$fdata["bInlineEdit"] = true; 
+	
+		$fdata["bViewPage"] = true; 
+	
+		$fdata["bAdvancedSearch"] = true; 
+	
+		$fdata["bPrinterPage"] = true; 
+	
+		$fdata["bExportPage"] = true; 
+	
+		$fdata["strField"] = "ordem"; 
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "ordem";
+	
+		
+		
+				$fdata["FieldPermissions"] = true;
+	
+				$fdata["UploadFolder"] = "files";
+		
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+	
+	$vdata = array("ViewFormat" => "");
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$vdata["NeedEncode"] = true;
+	
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats 	
+	$fdata["EditFormats"] = array();
+	
+	$edata = array("EditFormat" => "Text field");
+	
+			
+	
+	
+
+
+		
+		
+		
+		
+			$edata["acceptFileTypes"] = ".+$";
+	
+		$edata["maxNumberOfFiles"] = 1;
+	
+		
+		
+		
+		
+			$edata["HTML5InuptType"] = "number";
+	
+		$edata["EditParams"] = "";
+			
+		$edata["controlWidth"] = 200;
+	
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");	
+								
+		
+	//	End validation
+	
+		
+				
+		
+	
+		
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+	
+	
+	$fdata["isSeparate"] = false;
+	
+	
+	
+	
+// the field's search options settings
+		
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between");
+// the end of search options settings	
+
+	
+
+	
+	$tdatasubcategorias11["ordem"] = $fdata;
 
 	
 $tables_data["subcategorias11"]=&$tdatasubcategorias11;
@@ -1046,7 +1185,7 @@ function createSqlQuery_subcategorias11()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id,  	id_categoria,  	nome_por,  	nome_eng,  	nome_esp,  	ocultar";
+$proto0["m_strFieldList"] = "id,  	id_categoria,  	nome_por,  	nome_eng,  	nome_esp,  	ocultar,  	ordem";
 $proto0["m_strFrom"] = "FROM subcategorias";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1169,42 +1308,57 @@ $proto15["m_alias"] = "";
 $obj = new SQLFieldListItem($proto15);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto17=array();
-$proto17["m_link"] = "SQLL_MAIN";
-			$proto18=array();
-$proto18["m_strName"] = "subcategorias";
-$proto18["m_srcTableName"] = "subcategorias11";
-$proto18["m_columns"] = array();
-$proto18["m_columns"][] = "id";
-$proto18["m_columns"][] = "id_categoria";
-$proto18["m_columns"][] = "nome_por";
-$proto18["m_columns"][] = "nome_eng";
-$proto18["m_columns"][] = "nome_esp";
-$proto18["m_columns"][] = "ocultar";
-$obj = new SQLTable($proto18);
+						$proto17=array();
+			$obj = new SQLField(array(
+	"m_strName" => "ordem",
+	"m_strTable" => "subcategorias",
+	"m_srcTableName" => "subcategorias11"
+));
 
-$proto17["m_table"] = $obj;
-$proto17["m_sql"] = "subcategorias";
-$proto17["m_alias"] = "";
+$proto17["m_sql"] = "ordem";
 $proto17["m_srcTableName"] = "subcategorias11";
-$proto19=array();
-$proto19["m_sql"] = "";
-$proto19["m_uniontype"] = "SQLL_UNKNOWN";
+$proto17["m_expr"]=$obj;
+$proto17["m_alias"] = "";
+$obj = new SQLFieldListItem($proto17);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto19=array();
+$proto19["m_link"] = "SQLL_MAIN";
+			$proto20=array();
+$proto20["m_strName"] = "subcategorias";
+$proto20["m_srcTableName"] = "subcategorias11";
+$proto20["m_columns"] = array();
+$proto20["m_columns"][] = "id";
+$proto20["m_columns"][] = "id_categoria";
+$proto20["m_columns"][] = "nome_por";
+$proto20["m_columns"][] = "nome_eng";
+$proto20["m_columns"][] = "nome_esp";
+$proto20["m_columns"][] = "ocultar";
+$proto20["m_columns"][] = "ordem";
+$obj = new SQLTable($proto20);
+
+$proto19["m_table"] = $obj;
+$proto19["m_sql"] = "subcategorias";
+$proto19["m_alias"] = "";
+$proto19["m_srcTableName"] = "subcategorias11";
+$proto21=array();
+$proto21["m_sql"] = "";
+$proto21["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto19["m_column"]=$obj;
-$proto19["m_contained"] = array();
-$proto19["m_strCase"] = "";
-$proto19["m_havingmode"] = false;
-$proto19["m_inBrackets"] = false;
-$proto19["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto19);
+$proto21["m_column"]=$obj;
+$proto21["m_contained"] = array();
+$proto21["m_strCase"] = "";
+$proto21["m_havingmode"] = false;
+$proto21["m_inBrackets"] = false;
+$proto21["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto21);
 
-$proto17["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto17);
+$proto19["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto19);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1218,7 +1372,7 @@ $queryData_subcategorias11 = createSqlQuery_subcategorias11();
 
 
 	
-						
+							
 	
 $tdatasubcategorias11[".sqlquery"] = $queryData_subcategorias11;
 

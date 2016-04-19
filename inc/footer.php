@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="footer-infos email">
-                    <span><i class="my-icon my-icon-email"> </i> joelini@joelini.com.br</span>
+                    <span><i class="my-icon my-icon-email"> </i> sac@joelini.com.br</span>
                 </div>
 
                 <div class="footer-infos logo-phorma">

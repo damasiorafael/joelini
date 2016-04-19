@@ -134,6 +134,19 @@ function DisplayMasterTableInfo_categorias($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("ocultar_class", $class); // add class for field header as field value
+	$xt->assign("ordem_mastervalue", $viewControls->showDBValue("ordem", $data, $keylink));
+	$format = $settings->getViewFormat("ordem");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("ordem")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("ordem_class", $class); // add class for field header as field value
 
 	$layout = GetPageLayout("categorias", 'masterlist');
 	if( $layout )

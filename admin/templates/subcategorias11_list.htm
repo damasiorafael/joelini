@@ -309,6 +309,16 @@
 									</th>
 									{END ocultar_fieldheadercolumn}
 
+																	{BEGIN ordem_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$ordem_class}">
+									{BEGIN ordem_fieldheader}
+																				<span {$ordem_orderlinkattrs}>
+											{$label subcategorias11 ordem}
+										</span>
+									{END ordem_fieldheader}
+									</th>
+									{END ordem_fieldheadercolumn}
+
 																	{BEGIN id_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$id_class}">
 									{BEGIN id_fieldheader}
@@ -404,6 +414,12 @@
 		{$ocultar_value}
 	</td>
 {END ocultar_fieldcolumn}
+
+	{BEGIN ordem_fieldcolumn}
+	<td class="{$ordem_class}" {$ordem_style} {$recordattrs}>
+		{$ordem_value}
+	</td>
+{END ordem_fieldcolumn}
 
 	{BEGIN id_fieldcolumn}
 	<td class="{$id_class}" {$id_style} {$recordattrs}>

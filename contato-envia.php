@@ -15,7 +15,7 @@
     $cidade			= protecao($_REQUEST["cidade"]);
     $estado			= protecao($_REQUEST["estado"]);
     $telefone		= protecao($_REQUEST["telefone"]);
-    $departamento	= protecao($_REQUEST["departamento"]);
+    $departamento	= $_REQUEST["departamento"];
     $mensagem		= protecao($_REQUEST["mensagem"]);
     $arquivo		= $_FILES["arquivo"];
 
@@ -40,37 +40,41 @@
     }
 
     function upload($arquivo){
+    	if($_FILES["arquivo"]["name"] == ""){
+    		return "";
+    	} else {
 
-        $pasta = "contato/";
-        
-        //FAZ O UPLOAD DAS IMAGENS ENQUANTO EXISTIREM
-        $nome_arquivo    = $arquivo['name'];
-        $tamanho_arquivo = $arquivo['size'];
-            
-        /* pega a extensão do arquivo */
-        $ext = strtolower(strrchr($nome_arquivo,"."));
+	        $pasta = "contato/";
+	        
+	        //FAZ O UPLOAD DAS IMAGENS ENQUANTO EXISTIREM
+	        $nome_arquivo    = $arquivo['name'];
+	        $tamanho_arquivo = $arquivo['size'];
+	            
+	        /* pega a extensão do arquivo */
+	        $ext = strtolower(strrchr($nome_arquivo,"."));
 
-        /* converte o tamanho para KB */
-        $tamanho = round($tamanho_arquivo / 1024);
-           
-        //testa o tamanho em pixels da imagem
-        if($tamanho < 1024){ //se imagem for até 500KB envia
-            $nome_atual = md5($nome_arquivo).$ext; //nome que dará a imagem
-            $tmp = $arquivo['tmp_name']; //caminho temporário da imagem
+	        /* converte o tamanho para KB */
+	        $tamanho = round($tamanho_arquivo / 1024);
+	           
+	        //testa o tamanho em pixels da imagem
+	        if($tamanho < 1024){ //se imagem for até 500KB envia
+	            $nome_atual = md5($nome_arquivo).$ext; //nome que dará a imagem
+	            $tmp = $arquivo['tmp_name']; //caminho temporário da imagem
 
-            if(move_uploaded_file($tmp,$pasta.$nome_atual)){
-                //ACAO PARA SALVAR NO BANCO
-                return $nome_atual;
-            } else {
-                //Falha no UPLOAD;
-                echo "<script type='text/javascript'>alert('Ocorreu um erro ao enviar a mensagem! Tente novamente'); history.back();</script>";
-                exit();
-            }
-        } else {
-        	//Falha no UPLOAD;
-            echo "<script type='text/javascript'>alert('O arquivo deve ter no máximo 1MB!'); history.back();</script>";
-            exit();
-        }
+	            if(move_uploaded_file($tmp,$pasta.$nome_atual)){
+	                //ACAO PARA SALVAR NO BANCO
+	                return $nome_atual;
+	            } else {
+	                //Falha no UPLOAD;
+	                echo "<script type='text/javascript'>alert('Ocorreu um erro ao enviar a mensagem! Tente novamente'); history.back();</script>";
+	                exit();
+	            }
+	        } else {
+	        	//Falha no UPLOAD;
+	            echo "<script type='text/javascript'>alert('O arquivo deve ter no máximo 1MB!'); history.back();</script>";
+	            exit();
+	        }
+	    }
     }
 
     function insereContato($nome, $email, $cidade, $estado, $telefone, $departamento, $mensagem, $arquivo){
@@ -93,13 +97,25 @@
 	$bodyMensagem .= "<strong>Telefone:</strong> $telefone <br />";
 	$bodyMensagem .= "<strong>departamento:</strong> $departamento <br />";
 	$bodyMensagem .= "<strong>Mensagem:</strong> ".$mensagem." <br />";
-	$bodyMensagem .= "<strong>Arquivo:</strong> <a href='http://www.joelini.com.br/v1/contato/".pegaNome($arquivo)."'>".pegaNome($arquivo)."</a> <br />";
+	if($arquivo["name"] != ""){
+		$bodyMensagem .= "<strong>Arquivo:</strong> <a href='http://www.joelini.com.br/v1/contato/".pegaNome($arquivo)."'>".pegaNome($arquivo)."</a> <br />";
+	}
 
 	$Message = $bodyMensagem;
 
-	$Host = "mx1.weblink.com.br";
+	/*$Host = "mx1.weblink.com.br";
 	$Username = "no-reply@joelini.com.br";
 	$Password = "AnA4ipixTgR69gped8";
+	$Port = "587";*/
+
+	/*$Host = "mail.joelini.com.br";
+	$Username = "contato@joelini.com.br";
+	$Password = "joelini4359";
+	$Port = "587";*/
+
+	$Host = "smtp.live.com";
+	$Username = "damasio.rafael@outlook.com";
+	$Password = "Danzinho.131285";
 	$Port = "587";
 
 	$mail = new PHPMailer();
@@ -117,17 +133,19 @@
 	$mail->Password = $Password; // account password
 
 	//$mail->Sender='cristina1@unopar.br';
-	$mail->SetFrom("no-reply@joelini.com.br", $destinatario);
+	$mail->SetFrom("contato@joelini.com.br", "Contato");
 	$mail->Subject = $Subject;
 	$mail->MsgHTML($body);
 	$mail->AddAddress($To, 'Contato');
+	//$mail->AddAddress('artefinal@joelini.com.br', 'Contato');
+	$mail->AddBcc($departamento, 'Contato');
 	$mail->AddBcc('damasio_damasio@hotmail.com', 'Rafael Damasio'); // Cópia Oculta
 
 	//echo $body;
 
 	if(insereContato($nome, $email, $cidade, $estado, $telefone, $departamento, $mensagem, upload($arquivo))){
 		if(!$mail->Send()) {
-			echo '<script type="text/javascript">alert("Erro ao enviar e-mail: '.print($mail->ErrorInfo).'"); history.back();</script>';
+			echo "<script type='text/javascript'>alert('Erro ao enviar e-mail: ".print($mail->ErrorInfo)."); history.back();</script>";
 		} else {
 			echo '<script type="text/javascript">alert("Mensagem enviada com sucesso!"); history.back();</script>';
 		}

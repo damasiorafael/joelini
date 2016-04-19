@@ -106,7 +106,7 @@
     		<div class="lista-categorias-home">
     			<ul class="categorias">
                     <?php
-                        $sqlCats = "SELECT * FROM categorias WHERE ocultar = 0 ORDER BY id ASC";
+                        $sqlCats = "SELECT * FROM categorias WHERE ocultar = 0 ORDER BY ordem, id ASC";
                         $resultCats = consulta_db($sqlCats);
                         while($consultaCats = mysql_fetch_array($resultCats)){
                     ?>
@@ -183,7 +183,7 @@
                 <div class="infos address">
                     <?php echo $address_joelini[$_SESSION['lang']]; ?>
                     <span><?php echo $telefone[$_SESSION['lang']]; ?>: (43) 3172-4359</span>
-                    <span>E-mail: joelini@joelini.com.br</span>
+                    <span>E-mail: sac@joelini.com.br</span>
                 </div>
                 <?php
                     $sqlSocial = "SELECT * FROM facebook WHERE ativo = 1";
@@ -229,7 +229,12 @@
 
                     <div class="form-group">
                         <label for="departamento"><?php echo $departamento[$_SESSION['lang']]; ?></label>
-                        <select name="departamento" id="departamento" required="required" class="departamento form-control"><option value="" selected="selected">Selecione...</option><option value="Dúvidas">Dúvidas</option><option value="Sugestões">Sugestões</option></select>
+                        <select name="departamento" id="departamento" required="required" class="departamento form-control">
+                            <option value="" selected="selected">Selecione...</option>
+                            <option value="artefinal@joelini.com.br"><?php echo $departamento1[$_SESSION['lang']]; ?></option>
+                            <option value="vendas@joelini.com.br"><?php echo $departamento2[$_SESSION['lang']]; ?></option>
+                            <option value="rh@joelini.com.br"><?php echo $departamento3[$_SESSION['lang']]; ?></option>
+                        </select>
                     </div>
 
                     <div class="form-group">

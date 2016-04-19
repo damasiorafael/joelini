@@ -48,9 +48,14 @@
 	$bodyMensagem .= "<strong>Mensagem:</strong> ".$mensagem." <br />";
 	$Message = $bodyMensagem;
 
-	$Host = "mx1.weblink.com.br";
+	/*$Host = "mx1.weblink.com.br";
 	$Username = "no-reply@joelini.com.br";
 	$Password = "AnA4ipixTgR69gped8";
+	$Port = "587";*/
+
+	$Host = "smtp.live.com";
+	$Username = "damasio.rafael@outlook.com";
+	$Password = "Danzinho.131285";
 	$Port = "587";
 
 	$mail = new PHPMailer();
@@ -68,7 +73,7 @@
 	$mail->Password = $Password; // account password
 
 	//$mail->Sender='cristina1@unopar.br';
-	$mail->SetFrom("no-reply@joelini.com.br", $destinatario);
+	$mail->SetFrom("contato@joelini.com.br", "Contato");
 	$mail->Subject = $Subject;
 	$mail->MsgHTML($body);
 	$mail->AddAddress($To, 'Vendas');

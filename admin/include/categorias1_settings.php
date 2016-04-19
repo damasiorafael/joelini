@@ -575,6 +575,7 @@ $proto10["m_columns"][] = "nome_eng";
 $proto10["m_columns"][] = "nome_esp";
 $proto10["m_columns"][] = "imagem";
 $proto10["m_columns"][] = "ocultar";
+$proto10["m_columns"][] = "ordem";
 $obj = new SQLTable($proto10);
 
 $proto9["m_table"] = $obj;
@@ -612,6 +613,7 @@ $proto14["m_columns"][] = "nome_por";
 $proto14["m_columns"][] = "nome_eng";
 $proto14["m_columns"][] = "nome_esp";
 $proto14["m_columns"][] = "ocultar";
+$proto14["m_columns"][] = "ordem";
 $obj = new SQLTable($proto14);
 
 $proto13["m_table"] = $obj;

@@ -38,7 +38,7 @@
                 <?php } ?>
                 <ul class="categorias">
                     <?php
-                        $sqlCats = "SELECT * FROM categorias WHERE ocultar = 0 ORDER BY id ASC";
+                        $sqlCats = "SELECT * FROM categorias WHERE ocultar = 0 ORDER BY ordem, id ASC";
                         $resultCats = consulta_db($sqlCats);
                         $numCats = mysql_num_rows($resultCats);
                         if($numCats > 0){
@@ -48,7 +48,7 @@
                                     <a href="produtos.php?categoria=<?php echo $consultaCats["id"]; ?>" tittle="<?php echo $consultaCats["nome_".$_SESSION["lang"]]; ?>"><?php echo $consultaCats["nome_".$_SESSION["lang"]]; ?></a>
                                     <ul class="subcategorias">
                                         <?php
-                                            $sqlSub = "SELECT * FROM subcategorias WHERE id_categoria = ".$consultaCats["id"]." ORDER BY id ASC";
+                                            $sqlSub = "SELECT * FROM subcategorias WHERE id_categoria = ".$consultaCats["id"]." ORDER BY ordem, id ASC";
                                             $resultSubs = consulta_db($sqlSub);
                                             $numSubs = mysql_num_rows($resultSubs);
                                             if($numSubs > 0){
