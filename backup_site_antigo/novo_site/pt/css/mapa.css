@@ -1,0 +1,103 @@
+ul#mapa_brasil {
+	width: 327px;
+	height: 327px;
+	margin: 45px 0px 0px 0px;
+	background: url(../estru/brasil.png) no-repeat 0 0;
+	padding: 0;
+	position: relative;
+	
+}
+
+ul#mapa_brasil li {
+	position: absolute;
+}
+
+ul#mapa_brasil li a{
+	display: block;
+	height: 100%;
+	text-indent: -9000px;
+}
+
+
+
+
+
+
+#outros_estados {
+	width: 327px;
+	height: 205px;
+	top: 2px;
+	left: 0px;
+}
+
+
+
+#sao_paulo {
+	width: 50px;
+	height: 35px;
+	top: 210px;
+	left: 180px;
+}
+
+
+#sul_do_pais {
+	width: 70px;
+	height: 90px;
+	top: 235px;
+	left: 140px;
+}
+
+
+
+ul#mapa_brasil li a:hover {
+	background: url(../estru/brasil.png) no-repeat 0 0;	
+	height: 240px;
+}
+
+
+ul#mapa_brasil li#outros_estados a:hover {
+	background-position: 0 -330px;
+}
+
+ul#mapa_brasil li#outros_estados a.active {
+	background: url(../estru/brasil.png) no-repeat;
+	background-position: 0 -330px;
+	height: 240px;
+}
+
+
+
+
+
+
+ul#mapa_brasil li#sao_paulo a:hover {
+	background-position: -180px -638px;
+	height: 100px;
+}
+
+
+ul#mapa_brasil li#sao_paulo a.active {
+	background: url(../estru/brasil.png) no-repeat;
+	background-position: -180px -638px;
+	height: 50px;
+}
+
+
+
+
+
+
+
+ul#mapa_brasil li#sul_do_pais a:hover {
+	background-position: -140px -750px;
+	height: 90px;
+}
+
+
+ul#mapa_brasil li#sul_do_pais a.active {
+	background: url(../estru/brasil.png) no-repeat;
+	background-position: -140px -750px;
+	height: 90px;
+}
+
+

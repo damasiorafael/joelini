@@ -1,0 +1,88 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: small;
+}
+
+* img {
+	border: none;
+}
+
+body {
+	font-family: "Myriad Pro", sans-serif;
+	background: url(../estru/background_2azul.jpg) no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+#all {
+	width: 1024px;
+	margin: 15px auto 0px auto;
+}
+
+#conteudo  {
+	width: 1024px;
+	height: 242px;
+	margin: 140px auto 0px auto;
+	
+}
+
+.back_banner_entrada {
+	width: 1000px;
+	height: 242px;
+	border: 1px solid transparent;
+	margin: 0px 0px 0px 480px;
+	background: url(../estru/back_banner_entrada.png) repeat-x;
+}
+
+
+#banner_entrada {
+	width: 542px;
+	height: 242px;
+	text-align: center;
+}
+
+#banner_entrada img {
+	margin: 70px 0px 5px 28px;
+	display: block;
+}
+#banner_entrada a {
+	font-size: 25px;
+	font-family: "Myriad Pro", sans-serif;
+	color: #AAAAAA;
+	text-decoration: none;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+#banner_entrada span {
+	font-size: 25px;
+	color: #AAAAAA;
+	margin: 0px 10px 0px 10px;
+}
+
+
+
+
+
+
+footer {
+	width: 237px;
+	height: 100px;
+	position: absolute;
+	bottom:0;
+	background: url(../estru/bg_footer.png) no-repeat top center;
+	margin: 0px auto 0px auto;
+	text-align: center;
+}
+
+footer img {
+	margin: 20px 10px 10px 0px;	
+}
+
+footer p {
+	font-size: 18px;
+	color: #616161;
+	font-style: italic;
+}

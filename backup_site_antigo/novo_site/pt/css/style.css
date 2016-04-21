@@ -1,0 +1,957 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: small;
+}
+
+* img {
+	border: none;
+}
+
+body {
+	font-family: "Myriad Pro", sans-serif;
+	background: url(../estru/background_2azul.jpg) no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------------------------------------
+// * PAGINA INTRODUCAO
+--------------------------------------------------------------------------------------------*/
+
+div.back_banner_entrada {
+	width: 1000px;
+	height: 242px;
+	border: 1px solid black;
+
+}
+
+#banner_entrada {
+
+
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------
+// * PAGINA INTRODUCAO
+--------------------------------------------------------------------------------------------*/
+
+header {
+	width: 1084px;
+	height: 90px;
+	background: url(../estru/bg_header.png) no-repeat top center;
+	margin: 0px auto 0px auto;
+}
+
+header img {
+	position: relative;
+	left: 85px;
+	top: 27px;
+}
+
+header nav {
+	width: 740px;
+	height: 90px;
+	float: right;
+}
+
+header ul {
+	list-style: none;
+	margin: 18px 0px 0px 0px;
+}	
+
+header ul li {
+	list-style: none;
+	display: inline;
+}
+
+header ul li a {
+	list-style: none;
+	display: inline;
+	font-family: "Myriad Pro", sans-serif;
+	color: #fff;
+	text-decoration: none;
+	border-right: 3px solid #374D7E;
+	padding: 7px 12px 7px 12px;
+	font-size: 22px;
+	height: 30px;
+	float: left;
+}
+
+header ul li a:hover {
+	color: #E2341D;
+}
+
+header ul li a.active {
+	color: #E2341D;
+}
+
+header nav ul.submenu {
+	width: 450px;
+	height: 20px;
+	display: none;
+	margin: 19px 0px 0px 40px;
+}
+
+header nav li:hover > ul.submenu {
+	position: absolute;
+	top: 40px;
+	width: 500px;
+	display: block;
+	
+}
+header nav ul.submenu a {
+	border: none;
+	font-size: 17px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#all {
+	width: 1024px;
+	margin: 15px auto 0px auto;
+}
+
+div.back_conteudo {
+	width: 1000px;
+	height: 420px;
+	background-color: #EBF0F5;
+	margin: 0px 0px 0px -1000px;
+}
+
+#conteudo {
+	width: 944px;
+	height: 420px;
+	margin: 0px 0px 0px 999px;
+	background: url(../estru/bg_empresa.png) no-repeat top center;
+}
+
+.backbanner {
+	width: 1000px;
+	height: 194px;
+	position: relative;
+	left: -1000px;
+	background-color: #EBF0F5;
+}
+
+div#banner {
+	width: 729px;
+	height: 194px;
+	margin: 0px 0px 0px 1000px;
+}
+
+div.backnews {
+	width: 1000px;
+	height: 217px;
+	margin: 15px -1000px 0px 0px;
+	float: right;
+	background-color: #EBF0F5;
+}
+
+article#news {
+	width: 475px;
+	height: 217px;
+	margin: 0px 0px 0px -476px;
+	background: url(../estru/back_banner_entrada.png) repeat-x;
+	overflow: hidden;
+	padding: 0px 0px 0px 10px;
+	box-sizing: border-box;
+}
+
+article#news h6 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 25px;
+	color: #4B6FAB;
+	font-weight: lighter;
+	padding: 0px 0px 0px 0px;
+}
+
+
+div.backconhecaprodutos {
+	width: 1000px;
+	height: 217px;
+	margin: 15px 0px 0px -725px;
+	background-color: #EBF0F5;
+}
+
+article#conheca_nossos_produtos {
+	width: 275px;
+	height: 217px;
+	float: right;
+	background: url(../estru/slidesegunda_imagem_0.png.png) no-repeat top center;
+}
+
+article#news a {
+	margin: 0px 0px 0px 10px;
+	font-size: 15px;
+	color: #4B6FAB;
+}
+
+footer {
+	width: 237px;
+	height: 100px;
+	position: absolute;
+	bottom:0;
+	background: url(../estru/bg_footer.png) no-repeat top center;
+	margin: 0px auto 0px auto;
+	text-align: center;
+}
+
+footer img {
+	margin: 20px 10px 10px 0px;	
+}
+
+footer p {
+	font-size: 18px;
+	color: #616161;
+	font-style: italic;
+}
+
+/*--------------------------------------------------------------------------------------------
+// * EMPRESA
+--------------------------------------------------------------------------------------------*/
+
+#empresa {
+	width: 944px;
+	height: 420px;
+}
+
+#empresa h1 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 35px;
+	color: #4B6FAB;
+	font-weight: lighter;
+}
+
+#empresa p {
+	color: #65696E;
+	font-size: 18px;
+	font-weight: lighter;
+	font-style: italic;
+}
+
+#empresa .linha_do_tempo{
+	width: 3640px;
+	height: 267px;	
+	margin: 3px 0px 0px 0px;
+}
+
+#empresa .linha_do_tempo h2 {
+	font-size: 45px;
+	color: #B4C8DE;
+	font-style: italic;
+	font-weight: lighter;
+}
+
+#empresa .linha_do_tempo article {
+	width: 230px;
+	height: 345px;
+	background: url(../estru/bg_linha_tempo.png) no-repeat bottom center;
+	float: left;
+	text-align: center;
+}
+
+#empresa .linha_do_tempo article h3 {
+	font-size: 27px;
+	color: #034693;
+	font-style: italic;
+	font-weight: lighter;
+}
+
+#empresa .linha_do_tempo article p {
+	font-size: 13px;
+	color: #034693;
+	font-style: italic;
+	font-weight: lighter;
+
+}
+
+#empresa .linha_do_tempo img {
+	margin: 40px 0px 0px 0px;
+}
+#empresa .linha_do_tempo img.imagem_1987 {
+	margin: 7px 0px 0px 0px;
+}
+#empresa .linha_do_tempo img.imagem_1996 {
+	margin: 7px 0px 0px 0px;
+}
+#empresa .linha_do_tempo img.imagem_1998 {
+	margin: 37px 0px 0px 0px;
+}
+
+
+
+
+/*--------------------------------------------------------------------------------------------
+// * PALAVRA DO FUNDADOR
+--------------------------------------------------------------------------------------------*/
+
+#palavra_do_fundador {
+	width: 944px;
+	height: 420px;
+}
+
+#palavra_do_fundador h1 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 35px;
+	color: #4B6FAB;
+	font-weight: lighter;
+}
+
+#palavra_do_fundador .video_youtube {
+	width: 560px;
+	height: 315px;
+	border: 1px solid black;
+	margin: 23px 0px 0px 0px;
+}
+
+
+/*--------------------------------------------------------------------------------------------
+// * MISSAO, VISAO E VALORES
+--------------------------------------------------------------------------------------------*/
+
+#missao_visao_valores {
+	width: 944px;
+	height: 420px;
+}
+
+#missao_visao_valores h1 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 35px;
+	color: #4B6FAB;
+	font-weight: lighter;
+}
+
+#missao_visao_valores article {
+	margin: 15px 0px 35px 0px;
+}
+
+#missao_visao_valores article h5 {
+	color: #65696E;
+	font-size: 25px;
+	font-family: "Myriad Pro", sans-serif;
+	font-style: italic;
+	font-weight: lighter;
+	margin: 0px 0px 2px 0px;
+}
+
+#missao_visao_valores article p {
+	color: #65696E;
+	font-size: 17px;
+	font-family: "Myriad Pro", sans-serif;
+	font-style: italic;
+	font-weight: lighter;
+	padding-right: 30px;
+}
+
+
+
+/*--------------------------------------------------------------------------------------------
+// * PRODUTOS
+--------------------------------------------------------------------------------------------*/
+
+#produtos {
+	width: 944px;
+	height: 420px;
+}
+
+#produtos h1 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 35px;
+	color: #4B6FAB;
+	font-weight: lighter;
+}
+
+
+
+
+
+
+
+.produtos_menu {
+	width: 390px;
+	height: 260px;
+	/*border: 1px solid green;*/
+	background: url(../estru/bg_menu_bar.png) no-repeat right top;
+	float: left;
+	margin: 15px 0px 0px -5px;
+}
+
+#produtos div.produtos_menu ul {
+	list-style: none;
+}
+
+#produtos div.produtos_menu ul li {
+	list-style: none;
+	margin: 0px 0px 5px 0px;
+	padding: 0px 0px 0px 27px;
+}
+
+#produtos div.produtos_menu ul li:hover {
+	list-style: none;
+	margin: 0px 0px 5px 0px;
+	background: url(../estru/bg_geral.png) no-repeat left center;
+}
+
+#produtos div.produtos_menu ul li.active {
+	list-style: none;
+	margin: 0px 0px 5px 0px;
+	background: url(../estru/bg_geral.png) no-repeat left center;
+}
+
+/*#produtos div.produtos_menu ul li.sis {
+	list-style: none;
+	margin: 0px 0px 5px 0px;
+	width: 340px;
+	padding: 0px 0px 0px 27px;
+}
+#produtos div.produtos_menu ul li.sis:hover {
+	background: url(../estru/bg_sis.png) no-repeat left center;
+	text-decoration: none;
+}
+#produtos div.produtos_menu ul li.sis#active {
+	background: url(../estru/bg_sis.png) no-repeat left center;
+	text-decoration: none;
+}
+
+
+#produtos div.produtos_menu ul li.reg {
+	list-style: none;
+	width: 340px;
+	padding: 0px 0px 0px 27px;
+}
+#produtos div.produtos_menu ul li.reg:hover{
+	background: url(../estru/bg_reg.png) no-repeat left center;
+	text-decoration: none;
+}
+
+#produtos div.produtos_menu ul li.reg#active{
+	background: url(../estru/bg_reg.png) no-repeat left center;
+	text-decoration: none;
+}
+
+
+
+
+#produtos div.produtos_menu ul li.pux {
+	list-style: none;
+	width: 340px;
+	padding: 0px 0px 0px 27px;
+}
+#produtos div.produtos_menu ul li.pux:hover{
+	background: url(../estru/bg_pux.png) no-repeat left center;
+	text-decoration: none;
+}
+#produtos div.produtos_menu ul li.pux#active{
+	background: url(../estru/bg_pux.png) no-repeat left center;
+	text-decoration: none;
+}
+
+
+
+
+
+
+#produtos div.produtos_menu ul li.pes{
+	list-style: none;
+	width: 340px;
+	padding: 0px 0px 0px 27px;
+}
+#produtos div.produtos_menu ul li.pes:hover{
+	background: url(../estru/bg_pes.png) no-repeat left center;
+	text-decoration: none;
+}
+#produtos div.produtos_menu ul li.pes#active{
+	background: url(../estru/bg_pes.png) no-repeat left center;
+	text-decoration: none;
+}*/
+
+#produtos div.produtos_menu ul li a {
+	color: #666;
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 23px;
+	font-style: italic;
+	font-weight: lighter;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.listagem_prod {
+	width: 543px;
+	height: 400px;
+	margin: -30px 0px 0px 392px;
+	overflow: auto;
+}
+
+div.listagem_prod figure {
+	width: 85px;
+	margin: 0px;
+	float: left;
+	margin: 0px 35px 33px 10px;
+}
+
+div.listagem_prod figure figcaption {
+	font-family: "Myriad Pro", sans-serif;
+	font-style: italic;
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.prod_detalhes {
+	width: 510px;
+	height: 410px;
+	margin: -40px 0px 0px 410px;
+	overflow: auto;
+}
+
+div.prod_detalhes h1 {
+	width: 250px;
+	font-family: "Myriad Pro", sans-serif;
+	color: #034694;
+	font-weight: bold;
+	font-size: 26px;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+
+div.prod_detalhes  div.descricao_paragr {
+	width: 250px;
+	font-family: "Myriad Pro", sans-serif;
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 21px;
+	margin: 0px 0px 0px 0px;
+	float: left;
+	min-height: 250px;
+}
+
+div.prod_detalhes img {
+	float: left;
+}
+
+div.prod_detalhes article.video_desm {
+	width: 230px;
+	height: 173px;
+	float: right;
+	margin: -115px 4px 0px 0px;
+	overflow: hidden;
+}
+div.prod_detalhes article.imagem_prod {
+	width: 230px;
+	float: right;
+	min-height: 150px;
+	margin: 10px 4px 0px 0px;
+}
+
+div.prod_detalhes article.imagem_prod a {
+	width: 108px;
+	height: 59px;
+	float: left;
+	margin: 0px 0px 10px 4px;
+}
+
+
+/*--------------------------------------------------------------------------------------------
+// * CONSULTORES
+--------------------------------------------------------------------------------------------*/
+
+#consultores {
+	width: 944px;
+	height: 420px;
+}
+
+#consultores h1 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 35px;
+	color: #4B6FAB;
+	font-weight: lighter;
+}
+
+#consultores h4 {
+	width: 180px;
+	color: #65696E;
+	font-size: 22px;
+	font-style: italic;
+	font-weight: lighter;
+	margin: 20px 0px 0px 0px;
+}
+
+#mapa {
+	width: 489px;
+	height: 485px;
+	float: right;
+	margin: -80px 0px 0px 0px;
+	background: url(../estru/mapa.png) no-repeat top center;
+}
+
+
+
+
+/*#tabs-1 {
+	width: 230px;
+	height: 350px;
+	border: 1px solid black;
+	float: right;
+	margin: -400px 0px 0px 0px;
+}
+#tabs-1 figure {
+	width: 230px;
+	height: 350px;
+	border: 1px solid red;
+}
+#tabs-1 figure img {
+	margin: 0px 0px 0px 0px;
+}
+#tabs-1 figure figcaption {
+	font-size: 16px;
+	color: #65696E;
+	margin: 5px 0px 0px 0px;
+}
+
+
+
+
+
+#tabs-2 {
+	width: 230px;
+	height: 350px;
+	border: 1px solid black;
+	float: right;
+	margin: -400px 0px 0px 0px;
+}
+#tabs-2 figure {
+	width: 230px;
+	height: 350px;
+	border: 1px solid red;
+}
+#tabs-2 figure img {
+	margin: 0px 0px 0px 0px;
+}
+#tabs-2 figure figcaption {
+	font-size: 16px;
+	color: #65696E;
+	margin: 5px 0px 0px 0px;
+}*/
+
+div#descricao_consultor {
+	width: 240px;
+	height: 400px;
+	float: right;
+	margin: -70px 5px 0px 0px;
+	overflow-x: hidden;
+	overflow-y: auto; 
+}
+
+
+div#descricao_consultor img {
+	margin: 10px 0px 10px 0px; 
+}
+
+div#descricao_consultor p {
+	font-size: 18px;
+}
+
+div#descricao_consultor figure {
+	width: 230px;
+	height: 350px;
+	/*border: 1px solid red;*/
+}
+div#descricao_consultor figure h6 {
+	font-size: 19px;
+	color: #8DA7C7;
+	margin: 5px 0px 0px 0px;
+	font-weight: lighter;
+	margin: 0px 0px 10px 0px;
+}
+div#descricao_consultor figcaption  {
+	font-size: 18px;
+	color: #65696E;
+	margin: 5px 0px 0px 0px;
+}
+
+/*--------------------------------------------------------------------------------------------
+// * NEWS
+--------------------------------------------------------------------------------------------*/
+
+#news {
+	width: 944px;
+	height: 420px;
+}
+
+#news h1 {
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 35px;
+	color: #4B6FAB;
+	font-weight: lighter;
+}
+
+
+
+
+
+div.news_menu {
+	width: 390px;
+	height: 360px;
+	/*border: 1px solid green;*/
+	background: url(../estru/bg_menu_bar.png) no-repeat right top;
+	float: left;
+	overflow: auto;
+	margin: 20px 0px 0px 0px;
+}
+
+#news div.news_menu ul {
+	list-style: none;
+}
+
+div#news_din div.news_menu ul li {
+	list-style: none;
+	margin: 0px 0px 5px 0px;
+}
+#news div.news_menu ul li a {
+	color: #666;
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: lighter;
+	text-decoration: none;
+	line-height: 10px;
+}
+#news div.news_menu ul li a:hover {
+	color: #000;
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 16px;
+	font-style: italic;
+	/*font-weight: bold;*/
+	text-decoration: none;
+	line-height: 10px
+}
+
+div.listagem_news {
+	width: 490px;
+	height: 400px;
+	margin: -40px 0px 0px 420px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0px 20px 0px 0px;
+}
+
+div.limit {
+	width: 488px;
+	overflow-x: hidden;
+	overflow-y: auto
+}
+
+
+/*--------------------------------------------------------------------------------------------
+// * CONTATO - FALE-CONOSCO
+--------------------------------------------------------------------------------------------*/
+
+#fale_conosco {
+	width: 944px;
+	height: 420px;
+}
+
+#fale_conosco h1 {
+	width: 400px;
+	font-family: "Myriad Pro", sans-serif;
+	font-size: 33px;
+	color: #4B6FAB;
+	font-weight: lighter;
+	margin: 0px 0px 23px 0px;
+}
+
+#fale_conosco a {
+	padding: 1px;
+	font-size: 13px;
+	background-color: #B6C8E0;
+	text-decoration: none;
+	color: #333;
+	position: absolute;
+	top: 148px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-bottom: 1px solid black;
+}
+
+#fale_conosco a:hover {
+	padding: 1px;
+	font-size: 13px;
+	background-color: #C8D6E8;
+	color: #333;
+	border-radius: 3px;
+	
+}
+
+div.end_e_mapa {
+	width: 360px;
+	height: 360px;
+	float: left;
+	background: url(../estru/bg_menu_bar.png) no-repeat right top;
+}
+
+div.end_e_mapa span {
+	color: #65696E;
+	font-size: 16px;
+	font-weight: bolder;
+	font-family: "Myriad Pro", sans-serif;
+}
+
+div.end_e_mapa p {
+	color: #65696E;
+	font-size: 16px;
+	font-weight: lighter;
+	font-family: "Myriad Pro", sans-serif;
+}
+
+div.end_e_mapa iframe {
+	position: relative;
+	top: 70px;
+}
+
+
+
+div.form_contato {
+	width: 480px;
+	height: 410px;
+	margin: -58px 0px 0px 400px;
+}
+
+
+#fale_conosco div.form_contato label {
+	display: block;
+	font-family: "Myriad Pro", sans-serif;
+	font-weight: lighter;
+	font-size: 14px;
+	color: #65696E;
+}
+
+#fale_conosco div.form_contato input {
+	height: 28px;
+	background-color: #DBE4F0;
+	border: none;
+}
+
+#fale_conosco div.form_contato input[type="file"] {
+	width: 474px;
+	height: 28px;
+	background-color: #DBE4F0;
+	border: none;
+}
+
+#fale_conosco div.form_contato select {
+	height: 28px;
+	width: 476px;
+	background-color: #DBE4F0;
+	border: none;
+}
+
+#fale_conosco div.form_contato textarea {
+	width: 475px;
+	height: 75px;
+	background-color: #DBE4F0;
+	border: none;
+}
+
+#fale_conosco div.form_contato input[type="submit"] {
+	float: right;
+	height: 30px;
+	padding: 0px 15px 0px 15px;
+	background-color: #DBE4F0;
+	font-size: 16px;
+	margin: 3px 0px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p.sucesso {
+	border: 1px solid black;
+	position: absolute;
+	margin: 0px 0px 0px 280px;
+	padding: 0px;
+	background-color: #95FF95;
+	border-top: 2px solid #00A800;
+	border-bottom: 2px solid #00A800;
+	color: #000;
+
+}
+
+p.error {
+	padding: 0px;
+	border: 1px solid black;
+	position: absolute;
+	margin: 0px 0px 0px 245px;
+	padding: 0px 5px 0px 5px;
+	background-color: #FF8484;
+	border-top: 2px solid #EA0000;
+	border-bottom: 2px solid #EA0000;
+	color: #000;
+}
+
+p.error_size {
+	padding: 0px;
+	border: 1px solid black;
+	position: absolute;
+	margin: 0px 0px 0px 193px;
+	padding: 0px 5px 0px 5px;
+	background-color: #FF8484;
+	border-top: 2px solid #EA0000;
+	border-bottom: 2px solid #EA0000;
+	color: #000;
+}
+
+
+
+
+

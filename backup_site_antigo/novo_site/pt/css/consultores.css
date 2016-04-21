@@ -1,0 +1,889 @@
+/*AMAZONAS*/
+#amazonas {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 82px;
+	left: 120px;
+}
+
+#amazonas:hover {
+	width: 176px;
+	height: 123px;
+	display: block;
+	position: relative;
+	top: 33px;
+	left: 42px;
+	background: url(../estru/mapa/amazonas.png) no-repeat center center;
+}
+
+#amazonas.active {
+	width: 176px;
+	height: 123px;
+	display: block;
+	position: relative;
+	top: 33px;
+	left: 42px;
+	background: url(../estru/mapa/amazonas.png) no-repeat center center;
+}
+/*AMAZONAS*/
+
+/*ACRE*/
+#acre {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 130px;
+	left: 72px;
+}
+
+#acre:hover {
+	width: 70px;
+	height: 33px;
+	display: block;
+	position: relative;
+	top: 119px;
+	left: 40px;
+	background: url(../estru/mapa/acre.png) no-repeat center center;
+}
+
+#acre.active {
+	width: 70px;
+	height: 33px;
+	display: block;
+	position: relative;
+	top: 119px;
+	left: 40px;
+	background: url(../estru/mapa/acre.png) no-repeat center center;
+}
+/*ACRE*/
+
+/*RONDONIA*/
+#rondonia {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 120px;
+	left: 140px;
+}
+
+#rondonia:hover {
+	width: 55px;
+	height: 55px;
+	display: block;
+	position: relative;
+	top: 100px;
+	left: 128px;
+	background: url(../estru/mapa/rondonia.png) no-repeat center center;
+}
+
+#rondonia.active {
+	width: 55px;
+	height: 55px;
+	display: block;
+	position: relative;
+	top: 100px;
+	left: 128px;
+	background: url(../estru/mapa/rondonia.png) no-repeat center center;
+}
+/*RONDONIA*/
+
+/*MATO GROSSO*/
+#mato_grosso {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 125px;
+	left: 225px;
+}
+
+#mato_grosso:hover {
+	width: 112px;
+	height: 100px;
+	display: block;
+	position: relative;
+	top: 79px;
+	left: 170px;
+	background: url(../estru/mapa/mato_grosso.png) no-repeat center center;
+}
+
+#mato_grosso.active {
+	width: 112px;
+	height: 100px;
+	display: block;
+	position: relative;
+	top: 79px;
+	left: 170px;
+	background: url(../estru/mapa/mato_grosso.png) no-repeat center center;
+}
+/*MATO GROSSO*/
+
+
+/*PARA*/
+#para {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 10px;
+	left: 250px;
+}
+
+#para:hover {
+	width: 134px;
+	height: 125px;
+	display: block;
+	position: relative;
+	top: -52px;
+	left: 196px;
+	background: url(../estru/mapa/para.png) no-repeat center center;
+}
+
+#para.active {
+	width: 134px;
+	height: 125px;
+	display: block;
+	position: relative;
+	top: -52px;
+	left: 196px;
+	background: url(../estru/mapa/para.png) no-repeat center center;
+}
+/*PARA*/
+
+
+
+/*RORAIMA*/
+#roraima {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -83px;
+	left: 156px;
+}
+
+#roraima:hover {
+	width: 53px;
+	height: 61px;
+	display: block;
+	position: relative;
+	top: -99px;
+	left: 138px;
+	background: url(../estru/mapa/roraima.png) no-repeat center center;
+}
+
+#roraima.active {
+	width: 53px;
+	height: 61px;
+	display: block;
+	position: relative;
+	top: -99px;
+	left: 138px;
+	background: url(../estru/mapa/roraima.png) no-repeat center center;
+}
+/*RORAIMA*/
+
+
+/*AMAPA*/
+#amapa {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -95px;
+	left: 258px;
+}
+
+#amapa:hover {
+	width: 42px;
+	height: 49px;
+	display: block;
+	position: relative;
+	top: -109px;
+	left: 246px;
+	background: url(../estru/mapa/amapa.png) no-repeat center center;
+}
+
+#amapa.active {
+	width: 42px;
+	height: 49px;
+	display: block;
+	position: relative;
+	top: -109px;
+	left: 246px;
+	background: url(../estru/mapa/amapa.png) no-repeat center center;
+}
+/*AMAPA*/
+
+
+/*MATO GROSSO DO SUL*/
+#mato_grosso_do_sul {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 120px;
+	left: 230px;
+}
+
+#mato_grosso_do_sul:hover {
+	width: 68px;
+	height: 66px;
+	display: block;
+	position: relative;
+	top: 98px;
+	left: 207px;
+	background: url(../estru/mapa/mato_grosso_do_sul.png) no-repeat center center;
+}
+
+#mato_grosso_do_sul.active {
+	width: 68px;
+	height: 66px;
+	display: block;
+	position: relative;
+	top: 98px;
+	left: 207px;
+	background: url(../estru/mapa/mato_grosso_do_sul.png) no-repeat center center;
+}
+/*MATO GROSSO DO SUL*/
+
+
+/*PARANA*/
+#parana {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 142px;
+	left: 257px;
+}
+
+#parana:hover {
+	width: 54px;
+	height: 40px;
+	display: block;
+	position: relative;
+	top: 133px;
+	left: 245px;
+	background: url(../estru/mapa/parana.png) no-repeat center center;
+}
+
+#parana.active {
+	width: 54px;
+	height: 40px;
+	display: block;
+	position: relative;
+	top: 133px;
+	left: 245px;
+	background: url(../estru/mapa/parana.png) no-repeat center center;
+}
+/*PARANA*/
+
+
+/*MARANHAO*/
+#maranhao {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -88px;
+	left: 330px;
+}
+
+#maranhao:hover {
+	width: 60px;
+	height: 88px;
+	display: block;
+	position: relative;
+	top: -110px;
+	left: 312px;
+	background: url(../estru/mapa/maranhao.png) no-repeat center center;
+}
+
+#maranhao.active {
+	width: 60px;
+	height: 88px;
+	display: block;
+	position: relative;
+	top: -110px;
+	left: 312px;
+	background: url(../estru/mapa/maranhao.png) no-repeat center center;
+}
+/*MARANHAO*/
+
+
+/*TOCANTINS*/
+#tocantins {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -43px;
+	left: 295px;
+}
+
+#tocantins:hover {
+	width: 45px;
+	height: 88px;
+	display: block;
+	position: relative;
+	top: -89px;
+	left: 283px;
+	background: url(../estru/mapa/tocantins.png) no-repeat center center;
+}
+
+#tocantins.active {
+	width: 45px;
+	height: 88px;
+	display: block;
+	position: relative;
+	top: -89px;
+	left: 283px;
+	background: url(../estru/mapa/tocantins.png) no-repeat center center;
+}
+/*TOCANTINS*/
+
+
+/*SAO PAULO*/
+#sao_paulo {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 58px;
+	left: 290px;
+}
+
+#sao_paulo:hover {
+	width: 75px;
+	height: 52px;
+	display: block;
+	position: relative;
+	top: 45px;
+	left: 263px;
+	background: url(../estru/mapa/sao_paulo.png) no-repeat center center;
+}
+
+#sao_paulo.active {
+	width: 75px;
+	height: 52px;
+	display: block;
+	position: relative;
+	top: 45px;
+	left: 263px;
+	background: url(../estru/mapa/sao_paulo.png) no-repeat center center;
+}
+/*SAO PAULO*/
+
+
+
+/*GOIAS*/
+#goias {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -30px;
+	left: 265px;
+}
+
+#goias:hover {
+	width: 72px;
+	height: 61px;
+	display: block;
+	position: relative;
+	top: -61px;
+	left: 256px;
+	background: url(../estru/mapa/distrito_federal_goias.png) no-repeat center center;
+}
+
+#goias.active {
+	width: 72px;
+	height: 61px;
+	display: block;
+	position: relative;
+	top: -61px;
+	left: 256px;
+	background: url(../estru/mapa/distrito_federal_goias.png) no-repeat center center;
+}
+/*GOIAS*/
+
+
+/*DISTRITO FEDERAL*/
+#distrito_federal {
+	width: 25px;
+	height: 15px;
+	display: block;
+	position: relative;
+	top: -29px;
+	left: 293px;
+}
+
+#distrito_federal:hover {
+	width: 25px;
+	height: 15px;
+	display: block;
+	position: relative;
+	top: -29px;
+	left: 293px;
+	background-color: #646473;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#distrito_federal.active {
+	width: 25px;
+	height: 15px;
+	display: block;
+	position: relative;
+	top: -29px;
+	left: 293px;
+	background-color: #646473;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+/*DISTRITO FEDERAL*/
+
+
+/*MINAS GERAIS*/
+#minas_gerais {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -38px;
+	left: 335px;
+}
+
+#minas_gerais:hover {
+	width: 108px;
+	height: 86px;
+	display: block;
+	position: relative;
+	top: -66px;
+	left: 281px;
+	background: url(../estru/mapa/minas_gerais.png) no-repeat center center;
+}
+
+#minas_gerais.active {
+	width: 108px;
+	height: 86px;
+	display: block;
+	position: relative;
+	top: -66px;
+	left: 281px;
+	background: url(../estru/mapa/minas_gerais.png) no-repeat center center;
+}
+/*MINAS GERAIS*/
+
+
+/*SANTA CATARINA*/
+#santa_catarina {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 37px;
+	left: 275px;
+}
+
+#santa_catarina:hover {
+	width: 44px;
+	height: 27px;
+	display: block;
+	position: relative;
+	top: 37px;
+	left: 253px;
+	background: url(../estru/mapa/santa_catarina.png) no-repeat center center;
+}
+
+#santa_catarina.active {
+	width: 44px;
+	height: 27px;
+	display: block;
+	position: relative;
+	top: 37px;
+	left: 253px;
+	background: url(../estru/mapa/santa_catarina.png) no-repeat center center;
+}
+/*SANTA CATARINA*/
+
+
+/*RIO GRANDE DO SUL*/
+#rio_grande_do_sul {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: 50px;
+	left: 245px;
+}
+
+
+#rio_grande_do_sul:hover {
+	width: 63px;
+	height: 59px;
+	display: block;
+	position: relative;
+	top: 28px;
+	left: 220px;
+	background: url(../estru/mapa/rio_grande_do_sul.png) no-repeat center center;
+}
+
+#rio_grande_do_sul.active {
+	width: 63px;
+	height: 59px;
+	display: block;
+	position: relative;
+	top: 28px;
+	left: 220px;
+	background: url(../estru/mapa/rio_grande_do_sul.png) no-repeat center center;
+}
+/*RIO GRANDE DO SUL*/
+
+
+
+/*BAHIA*/
+#bahia {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -155px;
+	left: 371px;
+}
+
+
+#bahia:hover {
+	width: 88px;
+	height:98px;
+	display: block;
+	position: relative;
+	top: -185px;
+	left: 328px;
+	background: url(../estru/mapa/bahia.png) no-repeat center center;
+}
+
+#bahia.active {
+	width: 88px;
+	height:98px;
+	display: block;
+	position: relative;
+	top: -185px;
+	left: 328px;
+	background: url(../estru/mapa/bahia.png) no-repeat center center;
+}
+/*BAHIA*/
+
+
+/*PIAUI*/
+#piaui {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -238px;
+	left: 365px;
+}
+
+
+#piaui:hover {
+	width: 54px;
+	height: 77px;
+	display: block;
+	position: relative;
+	top: -266px;
+	left: 335px;
+	background: url(../estru/mapa/piaui.png) no-repeat center center;
+}
+
+#piaui.active {
+	width: 54px;
+	height: 77px;
+	display: block;
+	position: relative;
+	top: -266px;
+	left: 335px;
+	background: url(../estru/mapa/piaui.png) no-repeat center center;
+}
+/*PIAUI*/
+
+
+
+/*CEARA*/
+#ceara {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: relative;
+	top: -278px;
+	left: 393px;
+}
+
+
+#ceara:hover {
+	width: 34px;
+	height: 48px;
+	display: block;
+	position: relative;
+	top: -288px;
+	left: 384px;
+	background: url(../estru/mapa/ceara.png) no-repeat center center;
+}
+
+#ceara.active {
+	width: 34px;
+	height: 48px;
+	display: block;
+	position: relative;
+	top: -288px;
+	left: 384px;
+	background: url(../estru/mapa/ceara.png) no-repeat center center;
+}
+/*CEARA*/
+
+
+/*RIO GRANDE DO NORTE*/
+#rio_grande_do_norte {
+	width: 29px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -285px;
+	left: 417px;
+}
+
+
+#rio_grande_do_norte:hover {
+	width: 29px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -284px;
+	left: 417px;
+	background: url(../estru/mapa/rio_grande_do_norte.png) no-repeat center center;
+}
+
+#rio_grande_do_norte.active {
+	width: 29px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -283px;
+	left: 417px;
+	background: url(../estru/mapa/rio_grande_do_norte.png) no-repeat center center;
+}
+/*RIO GRANDE DO NORTE*/
+
+
+
+/*PARAIBA*/
+#paraiba {
+	width: 15px;
+	height: 15px;
+	display: block;
+	position: relative;
+	top: -289px;
+	left: 430px;
+}
+
+
+#paraiba:hover {
+	width: 37px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -287px;
+	left: 413px;
+	background: url(../estru/mapa/paraiba.png) no-repeat center center;
+}
+
+#paraiba.active {
+	width: 37px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -287px;
+	left: 413px;
+	background: url(../estru/mapa/paraiba.png) no-repeat center center;
+}
+/*PARAIBA*/
+
+
+
+/*PERNAMBUCO*/
+#pernambuco {
+	width: 19px;
+	height: 19px;
+	display: block;
+	position: relative;
+	top: -292px;
+	left: 408px;
+}
+
+
+#pernambuco:hover {
+	width: 60px;
+	height: 19px;
+	display: block;
+	position: relative;
+	top: -291px;
+	left: 388px;
+	background: url(../estru/mapa/pernanbuco.png) no-repeat center center;
+}
+
+#pernambuco.active {
+	width: 60px;
+	height: 19px;
+	display: block;
+	position: relative;
+	top: -291px;
+	left: 388px;
+	background: url(../estru/mapa/pernanbuco.png) no-repeat center center;
+}
+/*PERNAMBUCO*/
+
+
+/*ALAGOAS*/
+#alagoas {
+	width: 19px;
+	height: 11px;
+	display: block;
+	position: relative;
+	top: -291px;
+	left: 420px;
+}
+
+
+#alagoas:hover {
+	width: 19px;
+	height: 11px;
+	display: block;
+	position: relative;
+	top: -290px;
+	left: 421px;
+	background: url(../estru/mapa/alagoas.png) no-repeat center center;
+}
+
+#alagoas.active {
+	width: 19px;
+	height: 11px;
+	display: block;
+	position: relative;
+	top: -290px;
+	left: 421px;
+	background: url(../estru/mapa/alagoas.png) no-repeat center center;
+}
+/*ALAGOAS*/
+
+
+
+/*SERGIPE*/
+#sergipe {
+	width: 11px;
+	height: 13px;
+	display: block;
+	position: relative;
+	top: -294px;
+	left: 415px;
+}
+
+
+#sergipe:hover {
+	width: 11px;
+	height: 13px;
+	display: block;
+	position: relative;
+	top: -292px;
+	left: 417px;
+	background: url(../estru/mapa/sergipe.png) no-repeat center center;
+}
+
+#sergipe.active {
+	width: 11px;
+	height: 13px;
+	display: block;
+	position: relative;
+	top: -292px;
+	left: 417px;
+	background: url(../estru/mapa/sergipe.png) no-repeat center center;
+}
+/*SERGIPE*/
+
+
+
+/*ESPIRITO SANTO*/
+#espirito_santo {
+	width: 19px;
+	height: 19px;
+	display: block;
+	position: relative;
+	top: -221px;
+	left: 374px;
+}
+
+
+#espirito_santo:hover {
+	width: 19px;
+	height: 30px;
+	display: block;
+	position: relative;
+	top: -221px;
+	left: 372px;
+	background: url(../estru/mapa/espirito_santo.png) no-repeat center center;
+}
+
+#espirito_santo.active {
+	width: 19px;
+	height: 30px;
+	display: block;
+	position: relative;
+	top: -221px;
+	left: 372px;
+	background: url(../estru/mapa/espirito_santo.png) no-repeat center center;
+}
+/*ESPIRITO SANTO*/
+
+
+
+/*RIO DE JANEIRO*/
+#rio_de_janeiro {
+	width: 30px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -209px;
+	left: 343px;
+}
+
+
+#rio_de_janeiro:hover {
+	width: 30px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -207px;
+	left: 344px;
+	background: url(../estru/mapa/rio_de_janeiro.png) no-repeat center center;
+}
+
+#rio_de_janeiro.active {
+	width: 30px;
+	height: 17px;
+	display: block;
+	position: relative;
+	top: -208px;
+	left: 343px;
+	background: url(../estru/mapa/rio_de_janeiro.png) no-repeat center center;
+}
+/*RIO DE JANEIRO*/

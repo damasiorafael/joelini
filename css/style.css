@@ -1581,6 +1581,7 @@ span.departamento.form-control {
     font-family: "RobotoCondensedRegular", sans-serif;
     display: block;
     float: left;
+    height: 40px;
 }
 .topo-pag-produto a:hover {
     text-decoration: underline;
