@@ -39,13 +39,13 @@
 	$To = $destinatarios;
 	$Subject = utf8_decode("Vendas - Joelini");
 	$bodyMensagem = "";
-	$bodyMensagem .= "<strong>Nome:</strong> ".$nome." <br />";
+	$bodyMensagem .= "<strong>Nome:</strong> ".utf8_decode($nome)." <br />";
 	$bodyMensagem .= "<strong>E-mail:</strong> $email <br />";
 	$bodyMensagem .= "<strong>Telefone:</strong> $telefone <br />";
-	$bodyMensagem .= "<strong>Cidade:</strong> $cidade <br />";
-	$bodyMensagem .= "<strong>Estado:</strong> $estado <br />";
+	$bodyMensagem .= "<strong>Cidade:</strong> ".utf8_decode($cidade)." <br />";
+	$bodyMensagem .= "<strong>Estado:</strong> ".utf8_decode($estado)." <br />";
 	$bodyMensagem .= "<strong>CEP:</strong> $cep <br />";
-	$bodyMensagem .= "<strong>Mensagem:</strong> ".$mensagem." <br />";
+	$bodyMensagem .= "<strong>Mensagem:</strong> ".utf8_decode($mensagem)." <br />";
 	$Message = $bodyMensagem;
 
 	/*$Host = "mx1.weblink.com.br";
@@ -54,8 +54,8 @@
 	$Port = "587";*/
 
 	$Host = "smtp.live.com";
-	$Username = "damasio.rafael@outlook.com";
-	$Password = "Danzinho.131285";
+	$Username = "contato.joelini@outlook.com";
+	$Password = "$jen@4359";
 	$Port = "587";
 
 	$mail = new PHPMailer();
@@ -72,7 +72,7 @@
 	$mail->Username = $Username; // account username
 	$mail->Password = $Password; // account password
 
-	//$mail->Sender='cristina1@unopar.br';
+	$mail->Sender='contato@joelini.com.br';
 	$mail->SetFrom("contato@joelini.com.br", "Contato");
 	$mail->Subject = $Subject;
 	$mail->MsgHTML($body);

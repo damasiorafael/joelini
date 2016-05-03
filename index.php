@@ -239,7 +239,7 @@
 
                     <div class="form-group">
                         <label for="mensagem"><?php echo $mensagem[$_SESSION['lang']]; ?></label>
-                        <textarea id="mensagem" rows="10" cols="50" name="mensagem" class="mensagem form-control"></textarea>
+                        <textarea id="mensagem" rows="10" cols="50" name="mensagem" class="mensagem form-control" required></textarea>
                     </div>
 
                     <div class="form-group">
